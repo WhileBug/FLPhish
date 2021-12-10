@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.25)  10 DEC 2021 20:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.25)  10 DEC 2021 23:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -634,14 +634,7 @@ File: figures/table_random_byzantines_Cifar-10.pdf Graphic file (type pdf)
 <use figures/table_random_byzantines_Cifar-10.pdf>
 Package pdftex.def Info: figures/table_random_byzantines_Cifar-10.pdf  used on input line 534.
 (pdftex.def)             Requested size: 120.1189pt x 81.837pt.
-
-
-LaTeX Warning: Reference `table_exp_imbalances_untargeted' on page 8 undefined on input line 549.
-
-
-LaTeX Warning: Reference `table_exp_imbalances_untargeted' on page 8 undefined on input line 549.
-
-[8 <./figures/rep_mnist_imbalance_1.pdf> <./figures/rep_mnist_imbalance_2.pdf
+ [8 <./figures/rep_mnist_imbalance_1.pdf> <./figures/rep_mnist_imbalance_2.pdf
 
 pdfTeX warning: pdflatex.exe (file ./figures/rep_mnist_imbalance_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/rep_mnist_imbalance_5.pdf
@@ -717,28 +710,22 @@ File: figures/table_untargeted_byzantines_Cifar-10.pdf Graphic file (type pdf)
 <use figures/table_untargeted_byzantines_Cifar-10.pdf>
 Package pdftex.def Info: figures/table_untargeted_byzantines_Cifar-10.pdf  used on input line 572.
 (pdftex.def)             Requested size: 120.1189pt x 81.837pt.
+ (./FLPhish(Trans).bbl [10 <./figures/table_untargeted_imbalances_MNIST.pdf> <./figures/table_untargeted_byzantines_MNIST.pdf> <./figures/table_untargeted_imbalances_Fashion-MNIST.pdf> <./figures/table_untargeted_byzantines_Fashion-MNIST.pdf> <./figures/table_untargeted_imbalances_Cifar-10.pdf> <./figures/table_untargeted_byzantines_Cifar-10.pdf>] [11]) [12
 
-
-LaTeX Warning: Reference `table_exp_byzantines_untargeted' on page 10 undefined on input line 579.
-
-(./FLPhish(Trans).bbl [10 <./figures/table_untargeted_imbalances_MNIST.pdf> <./figures/table_untargeted_byzantines_MNIST.pdf> <./figures/table_untargeted_imbalances_Fashion-MNIST.pdf> <./figures/table_untargeted_byzantines_Fashion-MNIST.pdf> <./figures/table_untargeted_imbalances_Cifar-10.pdf> <./figures/table_untargeted_byzantines_Cifar-10.pdf>]) [11] (./FLPhish(Trans).aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+] (./FLPhish(Trans).aux) ) 
 Here is how much of TeX's memory you used:
- 6308 strings out of 478994
- 96868 string characters out of 5857176
- 432603 words of memory out of 5000000
- 23644 multiletter control sequences out of 15000+600000
+ 6306 strings out of 478994
+ 96802 string characters out of 5857176
+ 433230 words of memory out of 5000000
+ 23642 multiletter control sequences out of 15000+600000
  451553 words of font info for 114 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 68i,13n,74p,1969b,369s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,13n,74p,1998b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Softwares/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on FLPhish(Trans).pdf (11 pages, 875357 bytes).
+Output written on FLPhish(Trans).pdf (12 pages, 875445 bytes).
 PDF statistics:
- 1437 PDF objects out of 1440 (max. 8388607)
- 253 compressed objects within 3 object streams
+ 1440 PDF objects out of 1440 (max. 8388607)
+ 255 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  151 words of extra memory for PDF output out of 10000 (max. 10000000)
 
