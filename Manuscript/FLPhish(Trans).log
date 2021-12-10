@@ -1,0 +1,744 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.25)  10 DEC 2021 20:53
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**FLPhish(Trans)
+(./FLPhish(Trans).tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18> (c:/Softwares/texlive/2021/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen138
+\@IEEEtrantmpdimenB=\dimen139
+\@IEEEtrantmpdimenC=\dimen140
+\@IEEEtrantmpcountA=\count179
+\@IEEEtrantmpcountB=\count180
+\@IEEEtrantmpcountC=\count181
+\@IEEEtrantmptoksA=\toks15
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 503.
+(c:/Softwares/texlive/2021/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen141
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen142
+\CLASSINFOnormalsizeunitybaselineskip=\dimen143
+\IEEEnormaljot=\dimen144
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+\IEEEquantizedlength=\dimen145
+\IEEEquantizedlengthdiff=\dimen146
+\IEEEquantizedtextheightdiff=\dimen147
+\IEEEilabelindentA=\dimen148
+\IEEEilabelindentB=\dimen149
+\IEEEilabelindent=\dimen150
+\IEEEelabelindent=\dimen151
+\IEEEdlabelindent=\dimen152
+\IEEElabelindent=\dimen153
+\IEEEiednormlabelsep=\dimen154
+\IEEEiedmathlabelsep=\dimen155
+\IEEEiedtopsep=\skip47
+\c@section=\count182
+\c@subsection=\count183
+\c@subsubsection=\count184
+\c@paragraph=\count185
+\c@IEEEsubequation=\count186
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\c@figure=\count187
+\c@table=\count188
+\@IEEEeqnnumcols=\count189
+\@IEEEeqncolcnt=\count190
+\@IEEEsubeqnnumrollback=\count191
+\@IEEEquantizeheightA=\dimen156
+\@IEEEquantizeheightB=\dimen157
+\@IEEEquantizeheightC=\dimen158
+\@IEEEquantizeprevdepth=\dimen159
+\@IEEEquantizemultiple=\count192
+\@IEEEquantizeboxA=\box47
+\@IEEEtmpitemindent=\dimen160
+\IEEEPARstartletwidth=\dimen161
+\c@IEEEbiography=\count193
+\@IEEEtranrubishbin=\box48
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(c:/Softwares/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (c:/Softwares/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen162
+)) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen163
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count194
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count195
+\leftroot@=\count196
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count197
+\DOTSCASE@=\count198
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box49
+\strutbox@=\box50
+\big@size=\dimen164
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count199
+\c@MaxMatrixCols=\count266
+\dotsspace@=\muskip16
+\c@parentequation=\count267
+\dspbrk@lvl=\count268
+\tag@help=\toks17
+\row@=\count269
+\column@=\count270
+\maxfields@=\count271
+\andhelp@=\toks18
+\eqnshift@=\dimen165
+\alignsep@=\dimen166
+\tagshift@=\dimen167
+\tagwidth@=\dimen168
+\totwidth@=\dimen169
+\lineht@=\dimen170
+\@envbody=\toks19
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (c:/Softwares/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+ (c:/Softwares/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+ (c:/Softwares/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (c:/Softwares/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen171
+\Gin@req@width=\dimen172
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ (c:/Softwares/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (c:/Softwares/texlive/2021/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count272
+\float@exts=\toks22
+\float@box=\box51
+\@float@everytoks=\toks23
+\@floatcapt=\box52
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks24
+\c@algorithm=\count273
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count274
+\c@ALG@rem=\count275
+\c@ALG@nested=\count276
+\ALG@tlm=\skip53
+\ALG@thistlm=\skip54
+\c@ALG@Lnr=\count277
+\c@ALG@blocknr=\count278
+\c@ALG@storecount=\count279
+\c@ALG@tmpcounter=\count280
+\ALG@tmplength=\skip55
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen173
+\ar@mcellbox=\box53
+\extrarowheight=\dimen174
+\NC@list=\toks25
+\extratabsurround=\skip56
+\backup@length=\skip57
+\ar@cellbox=\box54
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip58
+\subfigcapskip=\skip59
+\subfigcaptopadj=\dimen175
+\subfigbottomskip=\skip60
+\subfigcapmargin=\dimen176
+\subfiglabelskip=\skip61
+\c@subfigure=\count281
+\c@lofdepth=\count282
+\c@subtable=\count283
+\c@lotdepth=\count284
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(c:/Softwares/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip62
+\subfig@bottom=\skip63
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (c:/Softwares/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (c:/Softwares/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count285
+\Gm@cntv=\count286
+\c@Gm@tempcnt=\count287
+\Gm@bindingoffset=\dimen177
+\Gm@wd@mp=\dimen178
+\Gm@odd@mp=\dimen179
+\Gm@even@mp=\dimen180
+\Gm@layoutwidth=\dimen181
+\Gm@layoutheight=\dimen182
+\Gm@layouthoffset=\dimen183
+\Gm@layoutvoffset=\dimen184
+\Gm@dimlist=\toks26
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen185
+\lightrulewidth=\dimen186
+\cmidrulewidth=\dimen187
+\belowrulesep=\dimen188
+\belowbottomsep=\dimen189
+\aboverulesep=\dimen190
+\abovetopsep=\dimen191
+\cmidrulesep=\dimen192
+\cmidrulekern=\dimen193
+\defaultaddspace=\dimen194
+\@cmidla=\count288
+\@cmidlb=\count289
+\@aboverulesep=\dimen195
+\@belowrulesep=\dimen196
+\@thisruleclass=\count290
+\@lastruleclass=\count291
+\@thisrulewidth=\dimen197
+) (c:/Softwares/texlive/2021/texmf-dist/tex/generic/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks27
+\SOUL@lasttoken=\toks28
+\SOUL@cmds=\toks29
+\SOUL@buffer=\toks30
+\SOUL@token=\toks31
+\SOUL@spaceskip=\skip64
+\SOUL@ttwidth=\dimen198
+\SOUL@uldp=\dimen199
+\SOUL@ulht=\dimen256
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen257
+\TX@old@table=\dimen258
+\TX@old@col=\dimen259
+\TX@target=\dimen260
+\TX@delta=\dimen261
+\TX@cols=\count292
+\TX@ftn=\toks32
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/preprint/authblk.sty
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip65
+\@affilsep=\skip66
+\c@Maxaffil=\count293
+\c@authors=\count294
+\c@affil=\count295
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip67
+\multirow@cntb=\count296
+\multirow@dima=\skip68
+\bigstrutjot=\dimen262
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen263
+\c@nlinenum=\count297
+\TeXr@lab=\toks33
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/diagbox/diagbox.sty
+Package: diagbox 2020/02/09 v2.3 Making table heads with diagonal lines
+ (c:/Softwares/texlive/2021/texmf-dist/tex/latex/pict2e/pict2e.sty
+Package: pict2e 2020/09/30 v0.4b Improved picture commands (HjG,RN,JT)
+ (c:/Softwares/texlive/2021/texmf-dist/tex/latex/pict2e/pict2e.cfg
+File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: pdftex.def on input line 112.
+Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 114.
+ (c:/Softwares/texlive/2021/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
+File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks34
+\@arclen=\dimen264
+\@arcrad=\dimen265
+\pIIe@tempdima=\dimen266
+\pIIe@tempdimb=\dimen267
+\pIIe@tempdimc=\dimen268
+\pIIe@tempdimd=\dimen269
+\pIIe@tempdime=\dimen270
+\pIIe@tempdimf=\dimen271
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count298
+\calc@Bcount=\count299
+\calc@Adimen=\dimen272
+\calc@Bdimen=\dimen273
+\calc@Askip=\skip69
+\calc@Bskip=\skip70
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count300
+\calc@Cskip=\skip71
+)
+\diagbox@boxa=\box55
+\diagbox@boxb=\box56
+\diagbox@boxm=\box57
+\diagbox@wd=\dimen274
+\diagbox@ht=\dimen275
+\diagbox@insepl=\dimen276
+\diagbox@insepr=\dimen277
+\diagbox@outsepl=\dimen278
+\diagbox@outsepr=\dimen279
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count301
+\l__pdf_internal_box=\box58
+) (./FLPhish(Trans).aux)
+\openout1 = `FLPhish(Trans).aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+
+-- Lines per column: 56 (approximate, difference = 9.15898pt).
+(c:/Softwares/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count302
+\scratchdimen=\dimen280
+\scratchbox=\box59
+\nofMPsegments=\count303
+\nofMParguments=\count304
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count305
+\MPscratchDim=\dimen281
+\MPnumerator=\count306
+\makeMPintoPDFobject=\count307
+\everyMPtoPDFconversion=\toks36
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (c:/Softwares/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=500.484pt
+* \textheight=681.15898pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-48.70648pt
+* \headheight=12.0pt
+* \headsep=21.342pt
+* \topskip=12.0pt
+* \footskip=25.80774pt
+* \marginparwidth=20.0pt
+* \marginparsep=10.0pt
+* \columnsep=12.0pt
+* \skip\footins=10.79993pt plus 4.79993pt minus 2.39996pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumntrue
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+Underfull \hbox (badness 6300) in paragraph at lines 60--62
+[]\OT1/ptm/b/it/9 Index Terms\OT1/ptm/b/n/9 ---Federated learn-ing, en-sem-ble learn-ing,
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 101.
+(c:/Softwares/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 101.
+ (c:/Softwares/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (6.00673pt too wide) in paragraph at lines 73--102
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{c:/Softwares/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+] [2]
+Underfull \vbox (badness 1436) has occurred while \output is active []
+
+
+
+pdfTeX warning: pdflatex.exe (file ./figures/FLPhish_System.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figures/FLPhish_System.pdf, id=19, 427.5975pt x 181.59444pt>
+File: figures/FLPhish_System.pdf Graphic file (type pdf)
+<use figures/FLPhish_System.pdf>
+Package pdftex.def Info: figures/FLPhish_System.pdf  used on input line 152.
+(pdftex.def)             Requested size: 250.24199pt x 106.27248pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 152--153
+ [][] 
+ []
+
+[3 <./figures/FLPhish_System.pdf>]
+
+pdfTeX warning: pdflatex.exe (file ./figures/Figure_FLPhish.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figures/Figure_FLPhish.pdf, id=50, 603.05598pt x 276.36852pt>
+File: figures/Figure_FLPhish.pdf Graphic file (type pdf)
+<use figures/Figure_FLPhish.pdf>
+Package pdftex.def Info: figures/Figure_FLPhish.pdf  used on input line 175.
+(pdftex.def)             Requested size: 475.45825pt x 217.89859pt.
+[4] [5 <./figures/Figure_FLPhish.pdf>]
+Underfull \hbox (badness 5175) in paragraph at lines 350--351
+[]\OT1/ptm/m/n/10 Based on our rep-u-ta-tion mech-a-nism, we pro-pose
+ []
+
+[6]
+Overfull \hbox (6.01254pt too wide) in paragraph at lines 393--413
+ [][] 
+ []
+
+<figures/rep_mnist_imbalance_1.pdf, id=109, 403.59848pt x 278.3957pt>
+File: figures/rep_mnist_imbalance_1.pdf Graphic file (type pdf)
+<use figures/rep_mnist_imbalance_1.pdf>
+Package pdftex.def Info: figures/rep_mnist_imbalance_1.pdf  used on input line 422.
+(pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
+<figures/rep_mnist_imbalance_2.pdf, id=110, 403.59848pt x 278.3957pt>
+File: figures/rep_mnist_imbalance_2.pdf Graphic file (type pdf)
+<use figures/rep_mnist_imbalance_2.pdf>
+Package pdftex.def Info: figures/rep_mnist_imbalance_2.pdf  used on input line 423.
+(pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
+<figures/rep_mnist_imbalance_5.pdf, id=111, 403.59848pt x 278.3957pt>
+File: figures/rep_mnist_imbalance_5.pdf Graphic file (type pdf)
+<use figures/rep_mnist_imbalance_5.pdf>
+Package pdftex.def Info: figures/rep_mnist_imbalance_5.pdf  used on input line 424.
+(pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
+<figures/rep_mnist_imbalance_9.pdf, id=112, 403.59848pt x 278.3957pt>
+File: figures/rep_mnist_imbalance_9.pdf Graphic file (type pdf)
+<use figures/rep_mnist_imbalance_9.pdf>
+Package pdftex.def Info: figures/rep_mnist_imbalance_9.pdf  used on input line 425.
+(pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
+<figures/rep_fashion_imbalance_1.pdf, id=113, 403.59848pt x 278.3957pt>
+File: figures/rep_fashion_imbalance_1.pdf Graphic file (type pdf)
+<use figures/rep_fashion_imbalance_1.pdf>
+Package pdftex.def Info: figures/rep_fashion_imbalance_1.pdf  used on input line 434.
+(pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
+<figures/rep_fashion_imbalance_2.pdf, id=114, 403.59848pt x 278.3957pt>
+File: figures/rep_fashion_imbalance_2.pdf Graphic file (type pdf)
+<use figures/rep_fashion_imbalance_2.pdf>
+Package pdftex.def Info: figures/rep_fashion_imbalance_2.pdf  used on input line 435.
+(pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
+<figures/rep_fashion_imbalance_5.pdf, id=115, 403.59848pt x 278.3957pt>
+File: figures/rep_fashion_imbalance_5.pdf Graphic file (type pdf)
+<use figures/rep_fashion_imbalance_5.pdf>
+Package pdftex.def Info: figures/rep_fashion_imbalance_5.pdf  used on input line 436.
+(pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
+<figures/rep_fashion_imbalance_9.pdf, id=116, 403.59848pt x 278.3957pt>
+File: figures/rep_fashion_imbalance_9.pdf Graphic file (type pdf)
+<use figures/rep_fashion_imbalance_9.pdf>
+Package pdftex.def Info: figures/rep_fashion_imbalance_9.pdf  used on input line 437.
+(pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
+<figures/rep_cifar_imbalance_1.pdf, id=117, 403.59848pt x 278.3957pt>
+File: figures/rep_cifar_imbalance_1.pdf Graphic file (type pdf)
+<use figures/rep_cifar_imbalance_1.pdf>
+Package pdftex.def Info: figures/rep_cifar_imbalance_1.pdf  used on input line 446.
+(pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
+<figures/rep_cifar_imbalance_2.pdf, id=118, 403.59848pt x 278.3957pt>
+File: figures/rep_cifar_imbalance_2.pdf Graphic file (type pdf)
+<use figures/rep_cifar_imbalance_2.pdf>
+Package pdftex.def Info: figures/rep_cifar_imbalance_2.pdf  used on input line 447.
+(pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
+<figures/rep_cifar_imbalance_5.pdf, id=119, 403.59848pt x 278.3957pt>
+File: figures/rep_cifar_imbalance_5.pdf Graphic file (type pdf)
+<use figures/rep_cifar_imbalance_5.pdf>
+Package pdftex.def Info: figures/rep_cifar_imbalance_5.pdf  used on input line 448.
+(pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
+<figures/rep_cifar_imbalance_9.pdf, id=120, 403.59848pt x 278.3957pt>
+File: figures/rep_cifar_imbalance_9.pdf Graphic file (type pdf)
+<use figures/rep_cifar_imbalance_9.pdf>
+Package pdftex.def Info: figures/rep_cifar_imbalance_9.pdf  used on input line 449.
+(pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
+<figures/bar_byzantines_random_bar.pdf, id=121, 433.62pt x 289.08pt>
+File: figures/bar_byzantines_random_bar.pdf Graphic file (type pdf)
+<use figures/bar_byzantines_random_bar.pdf>
+Package pdftex.def Info: figures/bar_byzantines_random_bar.pdf  used on input line 475.
+(pdftex.def)             Requested size: 240.23016pt x 160.15457pt.
+<figures/bar_byzantines_untargeted_bar.pdf, id=122, 433.62pt x 289.08pt>
+File: figures/bar_byzantines_untargeted_bar.pdf Graphic file (type pdf)
+<use figures/bar_byzantines_untargeted_bar.pdf>
+Package pdftex.def Info: figures/bar_byzantines_untargeted_bar.pdf  used on input line 476.
+(pdftex.def)             Requested size: 240.23016pt x 160.15457pt.
+<figures/bar_imbalances_random_bar.pdf, id=123, 433.62pt x 289.08pt>
+File: figures/bar_imbalances_random_bar.pdf Graphic file (type pdf)
+<use figures/bar_imbalances_random_bar.pdf>
+Package pdftex.def Info: figures/bar_imbalances_random_bar.pdf  used on input line 477.
+(pdftex.def)             Requested size: 240.23016pt x 160.15457pt.
+<figures/bar_imbalances_untargeted_bar.pdf, id=124, 433.62pt x 289.08pt>
+File: figures/bar_imbalances_untargeted_bar.pdf Graphic file (type pdf)
+<use figures/bar_imbalances_untargeted_bar.pdf>
+Package pdftex.def Info: figures/bar_imbalances_untargeted_bar.pdf  used on input line 478.
+(pdftex.def)             Requested size: 240.23016pt x 160.15457pt.
+
+Underfull \hbox (badness 6364) in paragraph at lines 489--491
+ \OT1/ptm/m/it/10 6) Eval-u-ated Byzan-tine At-tacks: [][] \OT1/ptm/m/n/10 We eval-u-ate our
+ []
+
+[7]
+Underfull \vbox (badness 1565) has occurred while \output is active []
+
+<figures/table_random_imbalances_MNIST.pdf, id=129, 387.66394pt x 261.79137pt>
+File: figures/table_random_imbalances_MNIST.pdf Graphic file (type pdf)
+<use figures/table_random_imbalances_MNIST.pdf>
+Package pdftex.def Info: figures/table_random_imbalances_MNIST.pdf  used on input line 515.
+(pdftex.def)             Requested size: 120.1189pt x 81.11453pt.
+<figures/table_random_byzantines_MNIST.pdf, id=130, 387.66394pt x 257.8502pt>
+File: figures/table_random_byzantines_MNIST.pdf Graphic file (type pdf)
+<use figures/table_random_byzantines_MNIST.pdf>
+Package pdftex.def Info: figures/table_random_byzantines_MNIST.pdf  used on input line 516.
+(pdftex.def)             Requested size: 120.1189pt x 79.89339pt.
+<figures/table_random_imbalances_Fashion-MNIST.pdf, id=131, 378.45767pt x 257.8502pt>
+File: figures/table_random_imbalances_Fashion-MNIST.pdf Graphic file (type pdf)
+<use figures/table_random_imbalances_Fashion-MNIST.pdf>
+Package pdftex.def Info: figures/table_random_imbalances_Fashion-MNIST.pdf  used on input line 524.
+(pdftex.def)             Requested size: 120.1189pt x 81.837pt.
+<figures/table_random_byzantines_Fashion-MNIST.pdf, id=132, 378.45767pt x 260.71567pt>
+File: figures/table_random_byzantines_Fashion-MNIST.pdf Graphic file (type pdf)
+<use figures/table_random_byzantines_Fashion-MNIST.pdf>
+Package pdftex.def Info: figures/table_random_byzantines_Fashion-MNIST.pdf  used on input line 525.
+(pdftex.def)             Requested size: 120.1189pt x 82.74646pt.
+<figures/table_random_imbalances_Cifar-10.pdf, id=133, 378.45767pt x 257.8502pt>
+File: figures/table_random_imbalances_Cifar-10.pdf Graphic file (type pdf)
+<use figures/table_random_imbalances_Cifar-10.pdf>
+Package pdftex.def Info: figures/table_random_imbalances_Cifar-10.pdf  used on input line 533.
+(pdftex.def)             Requested size: 120.1189pt x 81.837pt.
+<figures/table_random_byzantines_Cifar-10.pdf, id=134, 378.45767pt x 257.8502pt>
+File: figures/table_random_byzantines_Cifar-10.pdf Graphic file (type pdf)
+<use figures/table_random_byzantines_Cifar-10.pdf>
+Package pdftex.def Info: figures/table_random_byzantines_Cifar-10.pdf  used on input line 534.
+(pdftex.def)             Requested size: 120.1189pt x 81.837pt.
+
+
+LaTeX Warning: Reference `table_exp_imbalances_untargeted' on page 8 undefined on input line 549.
+
+
+LaTeX Warning: Reference `table_exp_imbalances_untargeted' on page 8 undefined on input line 549.
+
+[8 <./figures/rep_mnist_imbalance_1.pdf> <./figures/rep_mnist_imbalance_2.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/rep_mnist_imbalance_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/rep_mnist_imbalance_5.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/rep_mnist_imbalance_5.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/rep_mnist_imbalance_9.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/rep_mnist_imbalance_9.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/rep_fashion_imbalance_1.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/rep_fashion_imbalance_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/rep_fashion_imbalance_2.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/rep_fashion_imbalance_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/rep_fashion_imbalance_5.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/rep_fashion_imbalance_5.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/rep_fashion_imbalance_9.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/rep_fashion_imbalance_9.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/rep_cifar_imbalance_1.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/rep_cifar_imbalance_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/rep_cifar_imbalance_2.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/rep_cifar_imbalance_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/rep_cifar_imbalance_5.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/rep_cifar_imbalance_5.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/rep_cifar_imbalance_9.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/rep_cifar_imbalance_9.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Underfull \vbox (badness 1968) has occurred while \output is active []
+
+ [9 <./figures/bar_byzantines_random_bar.pdf> <./figures/bar_byzantines_untargeted_bar.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/bar_byzantines_untargeted_bar.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/bar_imbalances_random_bar.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/bar_imbalances_random_bar.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/bar_imbalances_untargeted_bar.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/bar_imbalances_untargeted_bar.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/table_random_imbalances_MNIST.pdf> <./figures/table_random_byzantines_MNIST.pdf> <./figures/table_random_imbalances_Fashion-MNIST.pdf> <./figures/table_random_byzantines_Fashion-MNIST.pdf> <./figures/table_random_imbalances_Cifar-10.pdf> <./figures/table_random_byzantines_Cifar-10.pdf>]
+<figures/table_untargeted_imbalances_MNIST.pdf, id=1063, 387.66394pt x 260.37064pt>
+File: figures/table_untargeted_imbalances_MNIST.pdf Graphic file (type pdf)
+<use figures/table_untargeted_imbalances_MNIST.pdf>
+Package pdftex.def Info: figures/table_untargeted_imbalances_MNIST.pdf  used on input line 553.
+(pdftex.def)             Requested size: 120.1189pt x 80.67433pt.
+<figures/table_untargeted_byzantines_MNIST.pdf, id=1064, 387.66394pt x 257.8502pt>
+File: figures/table_untargeted_byzantines_MNIST.pdf Graphic file (type pdf)
+<use figures/table_untargeted_byzantines_MNIST.pdf>
+Package pdftex.def Info: figures/table_untargeted_byzantines_MNIST.pdf  used on input line 554.
+(pdftex.def)             Requested size: 120.1189pt x 79.89339pt.
+<figures/table_untargeted_imbalances_Fashion-MNIST.pdf, id=1065, 378.45767pt x 257.8502pt>
+File: figures/table_untargeted_imbalances_Fashion-MNIST.pdf Graphic file (type pdf)
+<use figures/table_untargeted_imbalances_Fashion-MNIST.pdf>
+Package pdftex.def Info: figures/table_untargeted_imbalances_Fashion-MNIST.pdf  used on input line 562.
+(pdftex.def)             Requested size: 120.1189pt x 81.837pt.
+<figures/table_untargeted_byzantines_Fashion-MNIST.pdf, id=1066, 378.45767pt x 257.8502pt>
+File: figures/table_untargeted_byzantines_Fashion-MNIST.pdf Graphic file (type pdf)
+<use figures/table_untargeted_byzantines_Fashion-MNIST.pdf>
+Package pdftex.def Info: figures/table_untargeted_byzantines_Fashion-MNIST.pdf  used on input line 563.
+(pdftex.def)             Requested size: 120.1189pt x 81.837pt.
+<figures/table_untargeted_imbalances_Cifar-10.pdf, id=1067, 378.45767pt x 257.8502pt>
+File: figures/table_untargeted_imbalances_Cifar-10.pdf Graphic file (type pdf)
+<use figures/table_untargeted_imbalances_Cifar-10.pdf>
+Package pdftex.def Info: figures/table_untargeted_imbalances_Cifar-10.pdf  used on input line 571.
+(pdftex.def)             Requested size: 120.1189pt x 81.837pt.
+<figures/table_untargeted_byzantines_Cifar-10.pdf, id=1068, 378.45767pt x 257.8502pt>
+File: figures/table_untargeted_byzantines_Cifar-10.pdf Graphic file (type pdf)
+<use figures/table_untargeted_byzantines_Cifar-10.pdf>
+Package pdftex.def Info: figures/table_untargeted_byzantines_Cifar-10.pdf  used on input line 572.
+(pdftex.def)             Requested size: 120.1189pt x 81.837pt.
+
+
+LaTeX Warning: Reference `table_exp_byzantines_untargeted' on page 10 undefined on input line 579.
+
+(./FLPhish(Trans).bbl [10 <./figures/table_untargeted_imbalances_MNIST.pdf> <./figures/table_untargeted_byzantines_MNIST.pdf> <./figures/table_untargeted_imbalances_Fashion-MNIST.pdf> <./figures/table_untargeted_byzantines_Fashion-MNIST.pdf> <./figures/table_untargeted_imbalances_Cifar-10.pdf> <./figures/table_untargeted_byzantines_Cifar-10.pdf>]) [11] (./FLPhish(Trans).aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 6308 strings out of 478994
+ 96868 string characters out of 5857176
+ 432603 words of memory out of 5000000
+ 23644 multiletter control sequences out of 15000+600000
+ 451553 words of font info for 114 fonts, out of 8000000 for 9000
+ 1144 hyphenation exceptions out of 8191
+ 68i,13n,74p,1969b,369s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/Softwares/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on FLPhish(Trans).pdf (11 pages, 875357 bytes).
+PDF statistics:
+ 1437 PDF objects out of 1440 (max. 8388607)
+ 253 compressed objects within 3 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 151 words of extra memory for PDF output out of 10000 (max. 10000000)
+
