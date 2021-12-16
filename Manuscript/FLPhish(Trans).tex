@@ -238,38 +238,7 @@ Inspired by the idea of ensemble learning, we propose a new FL architecture, Ens
 
 
 
-\begin{algorithm}[t]
-  \caption{Phishing Mechanism} 
-  \hspace*{0.02in} {\bf Input:} 
-  the ensemble of clients $C$ with local dataset $d_i$, $i=1,2,3,...,u$; a central server $s$ with unlabeled dataset $D$ and labeled dataset $B$; number of training iterations $T$; unlabeled batch size $n$;labeled batch size $m$.\\
-  \hspace*{0.02in} {\bf Output:} 
-  output result
-  \begin{algorithmic}[1]
-    \State $\mathbf{m_i}$ $\gets$ each client $c_i$ train a local model using its own local dataset $d_i$.
-    \For{\textit{t=1,2,3,..,,T}}
-      \State $s$ selects $D_t$ (containing $n$ samples) from $D$ and $B_t$ (containing $m$ samples) from $B$.
-      \For{\textit{i=1,2,3,...,u}}
-        \State $s$ sends $D_t$ and $B_t$ to $c_i$.
-        \State $c_i$ makes predictions $\mathbf{k_i^t}$ of the $D_t$ and $B_t$.
-        \State $c_i$ sends $\mathbf{k_i^t}$ to $s$.
-        \State $s$ calculates the accuracy $a_i^t$ of the predictions of $B_t$ made by $c_i$ in $t$th procedure.
-        \If{$a_i^t > r_q$}
-          \State $q_i = 1$.
-          \For{\textit{j=i,i+1,i+2,...,u-1}}
-            \State $d_j \gets d_{j-1}$.
-            \State $c_j \gets c_{j+1}$.
-            \State $\mathbf{k_j^t} \gets \mathbf{k_{j+1}^t}$.
-            \State $q_j \gets q_{j+1}$.
-            \State $a_j^t \gets a_{j+1}^t$.
-          \EndFor
-        \EndIf
-      \EndFor
-      \State $\mathbf{K_t}$ = $KnowledgeEnsemble(\mathbf{k_1^t},\mathbf{k_2^t},\mathbf{k_3^t},...,\mathbf{k_u^t})$.
-      \State $\mathbf{M}$ = $ModelUpdate(\mathbf{K_t}, D_t, \mathbf{M})$.
-    \EndFor
-    \State\Return $\mathbf{M}$
-  \end{algorithmic}
-  \end{algorithm}
+
 
 
 \subsection{Phishing Mechanism-based Detection}
@@ -294,6 +263,36 @@ The proposed Ensemble FL still confronts the threat of Byzantine attacks. Malici
       p_{n,1} & p_{n,2} & \cdots  & p_{n,g-1} & p_{n,g}
       \end{vmatrix}.
   \end{equation}
+
+  \begin{algorithm}[t]
+    \caption{Phishing Mechanism} 
+    \hspace*{0.02in} {\bf Input:} 
+    the ensemble of clients $C$ with local dataset $d_i$, $i=1,2,3,...,u$; a central server $s$ with unlabeled dataset $D$ and labeled dataset $B$; number of training iterations $T$; unlabeled batch size $n$;labeled batch size $m$.\\
+    \hspace*{0.02in} {\bf Output:} 
+    output result
+    \begin{algorithmic}[1]
+      \State $\mathbf{m_i}$ $\gets$ each client $c_i$ train a local model using its own local dataset $d_i$.
+      \For{\textit{t=1,2,3,..,,T}}
+        \State $s$ selects $D_t$ (containing $n$ samples) from $D$ and $B_t$ (containing $m$ samples) from $B$.
+        \For{\textit{i=1,2,3,...,u}}
+          \State $s$ sends $D_t$ and $B_t$ to $c_i$.
+          \State $c_i$ makes predictions $\mathbf{k_i^t}$ of the $D_t$ and $B_t$.
+          \State $c_i$ sends $\mathbf{k_i^t}$ to $s$.
+          \State $s$ calculates the accuracy $a_i^t$ of the predictions of $B_t$ made by $c_i$ in $t$th procedure.
+          \If{$a_i^t > r_q$}
+            \State $q_i = 1$.
+            \For{\textit{j=i,i+1,i+2,...,u-1}}
+              \State $(d,c,\mathbf{k^t},q,a^t)_j \gets (d,c,\mathbf{k^t},q,a^t)_{j-1}$.
+            \EndFor
+          \EndIf
+        \EndFor
+        \State $\mathbf{K_t}$ = $KnowledgeEnsemble(\mathbf{k_1^t},\mathbf{k_2^t},\mathbf{k_3^t},...,\mathbf{k_u^t})$.
+        \State $\mathbf{M}$ = $ModelUpdate(\mathbf{K_t}, D_t, \mathbf{M})$.
+      \EndFor
+      \State\Return $\mathbf{M}$
+    \end{algorithmic}
+    \end{algorithm}
+
 
   Unlike benign clients, malicious clients return the false prediction as the distilled knowledge to central server $s$.
   \subsubsection{\ul{Byzantine Identifying}} Accepting the distilled knowledge from each client $c_i$, $s$ extracts the predictions of the \textit{`bait'} from $\mathbf{k_i^t}$, and calculates the accuracy of the predictions via the true label of the \textit{`bait'}:
@@ -415,7 +414,7 @@ In a word, FLPhish-weight does not identify the Byzantine clients but treats the
 
 
 \section{Performance Evaluation}
-In this section, we experimentally evaluate our FLPhish against untargeted attacks under different conditions. Furthermore, we compare our FLPhish's performance with FedAvg's performance, and the results show that FLPhish outperforms FedAvg in defending against Byzantine attacks.
+In this section, we experimentally evaluate our FLPhish against untargeted attacks under different conditions. Furthermore, we compare our FLPhish's performance with FedAvg, Median \cite{ref_13_defense}, and Trimmed Mean \cite{ref_13_defense}'s performance, and the results show that FLPhish outperforms FedAvg in defending against Byzantine attacks.
 
 \begin{figure*}[!htp]
   \centering
@@ -576,9 +575,9 @@ In this section, we experimentally evaluate our FLPhish against untargeted attac
     \vspace{0.2in}
   \end{figure}  
     
-    \subsubsection{\ul{Performance Comparison with Different Fractions of Byzantine Clients}} Different fractions of Byzantine clients are taken into account as well. Figure. \ref{fig_table_mnist_untargeted}-\ref{fig_table_cifar_untargeted} shows that the accuracy for FedAvg and Ensemble FL without any defense mechanisms begins to fall rapidly when the Byzantine portion reaches nearly 50\%. Furthermore, FedAvg performs extremely invalidly (the accuracy falls below 1\%) when encountered with high fractions of Byzantine attackers. In comparison, FLPhish's (including FLPhish-threshold and FLPhish-weight) performance under various thresholds maintains a high level of performance as the portion grows. Both FLPhish-threshold and FLPhish-weight effectively detect Byzantine clients and accurately discards them from the aggregation process. The global model can be successfully trained without the involvement of Byzantine clients in aggregation procedures. Furthermore, the data show that FLPhish-threshold with a 0.1 threshold performs worse than the other two. This is due to the fact that the 0.1 threshold is far too low to adequately detect Byzantine clients. Though the Byzantine attackers will try to make the right predictions of the public dataset and then send the opposite wrong predictions to the FL server. But they will also make wrong predictions first and coincidentally transfer the opposite right predictions to the FL server. Thus the reputation values of some Byzantine clients, in particular, can exceed 0.1. It indicates that if the threshold is not well set, Byzantine clients can avoid being detected by FLPhish-threshold. As the fractions of Byzantine clients go over the threshold of 50\%, the harm brought by untargeted Byzantine attacks will increase rapidly for they outnumber the fractions of the benign clients. In the meantime, FLPhish-weight shows stable performance whenever the fractions of Byzantine clients are.
+    \subsubsection{\ul{Performance Comparison with Different Fractions of Byzantine Clients}} Different fractions of Byzantine clients are taken into account as well. Figure. \ref{fig_table_mnist_untargeted}-\ref{fig_table_cifar_untargeted} shows that the accuracy for FedAvg, Median, Trimmed Mean and Ensemble FL without any defense mechanisms begins to fall rapidly when the Byzantine portion reaches nearly 50\%. Furthermore, FedAvg, Median and Trimmed Mean performs extremely invalidly (the accuracy falls below 1\%) when encountered with high fractions of Byzantine attackers. In comparison, FLPhish's (including FLPhish-threshold and FLPhish-weight) performance under various thresholds maintains a high level of performance as the portion grows. Both FLPhish-threshold and FLPhish-weight effectively detect Byzantine clients and accurately discards them from the aggregation process. The global model can be successfully trained without the involvement of Byzantine clients in aggregation procedures. Furthermore, the data show that FLPhish-threshold with a 0.1 threshold performs worse than the other two. This is due to the fact that the 0.1 threshold is far too low to adequately detect Byzantine clients. Though the Byzantine attackers will try to make the right predictions of the public dataset and then send the opposite wrong predictions to the FL server. But they will also make wrong predictions first and coincidentally transfer the opposite right predictions to the FL server. Thus the reputation values of some Byzantine clients, in particular, can exceed 0.1. It indicates that if the threshold is not well set, Byzantine clients can avoid being detected by FLPhish-threshold. As the fractions of Byzantine clients go over the threshold of 50\%, the harm brought by untargeted Byzantine attacks will increase rapidly for they outnumber the fractions of the benign clients. In the meantime, FLPhish-weight shows stable performance whenever the fractions of Byzantine clients are.
 
-    \subsection{{Experiment Result Analysis}} The results show that the FLPhish-threshold set threshold value has a significant impact on the performance of the FLPhish-threshold. Only when the managers of FL servers have complete knowledge of FL clients can they accurately set the value of the threshold (the imbalance degree of each client). However, it is not feasible. FLPhish-weight, on the other hand, remains constant regardless of the circumstances. FLPhish-weight can let clients with higher performance have a stronger influence on the aggregation process by using the reputation value as the weight. To summarize, FLPhish-weight is a better and more stable aggregation technique than FLPhish-threshold.
+    \subsection{{Experiment Result Analysis}} Our experiment results demostrate that both FLPhish-threshold and FLPhish-weight outperform FedAvg, Median \cite{ref_13_defense} and Trimmed Mean \cite{ref_13_defense} on defending against Byzantine attacks in FL. The results also show that the FLPhish-threshold's setting threshold value has a significant impact on the performance of the FLPhish-threshold. Only when the managers of FL servers have complete knowledge of FL clients (the imbalance degree of each client), can they accurately set the value of the threshold suitably. However, it is not feasible due to the privacy concern of FL. FLPhish-weight, on the other hand, remains constant regardless of the circumstances. FLPhish-weight can let clients with higher performance have a stronger influence on the aggregation process by using the reputation value as the weight. To summarize, FLPhish-weight is a better and more stable aggregation technique than FLPhish-threshold, and is a more practical Byzantine defense framework.
 
 
 
