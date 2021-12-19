@@ -230,9 +230,12 @@ Inspired by the idea of ensemble learning, we propose a new FL architecture, Ens
 
   \item The selection of the global model and each client's local model is restricted to the same type of neural architecture in traditional FL. Nevertheless, in our system, deploying different types of neural architectures is allowed by applying the distilled knowledge (the predictions of the unlabeled data produced by the clients). Different selected features in different clients are permitted as well.
   \item The overheads and latency of the communication process are significantly reduced compared to the traditional FL architecture. Transferring data is much faster than transferring gradient updates. 
+  \item The design of Ensemble FL can prevent the backdoor attack in FL. The detail of theoretical proof will be in the next section.
 \end{itemize}
       
- 
+\subsection{Theoretical Proof about Defending Backdoor Attack}
+Backdoor attackers in FL need to hide some triggers in their local dataset. Each backdoor attacker adopts the preprocessed local dataset to update the global model it received from the FL server. Then it transfers the poisoned model updates which contains the information of the triggers to the FL server. After receving the poisoned model updates, the FL server will update the global model using the poisoned model updates of the backdoor attackers. After the updating, the FL server's model will misclassify the data with the triggers to the chosen label of backdoor attackers.
+\par While in Ensemble FL, the model update is replaced from gradient update to the predicted labels of the public dataset. First, the dimension of model update is reduced so that the information of triggers in backdoor attackers' local dataset can not be transferred. Second, the public dataset is produced by central server, therefore making backdoor attackers impossible to hide the triggers in the public dataset. As a consequence, the backdoor attack is unable to achieve in the setting of Ensemble FL.
 
 
 
