@@ -154,7 +154,7 @@ In this section, we discuss the system model, show the threat model and identify
 \subsection{System Model}We first show the design of a typical FL with two entities, FL server, and a groups of FL clients.
   \begin{figure}
     \centering
-  \includegraphics[width=0.5\textwidth]{figures/FLPhish_System.pdf}
+  \includegraphics[width=0.5\textwidth]{figures/Figure_System.pdf}
   \caption{System Model\&Threat Model.}
   \label{fig_system}
   \end{figure}   
@@ -238,6 +238,12 @@ Inspired by ensemble learning, we propose a new FL architecture, called Ensemble
 \end{itemize}
       
 \subsection{Theoretical Proof about Defending Backdoor Attack}
+\begin{figure}
+  \centering
+\includegraphics[width=0.5\textwidth]{figures/Figure_backdoor.pdf}
+\caption{Backdoor Attack in Federated Learning.}
+\label{fig_backdoor}
+\end{figure}  
 Backdoor attackers in FL need to hide some triggers in their local dataset. Each backdoor attacker adopts the preprocessed local dataset to update the global model it received from the FL server. Then it transfers the poisoned model updates which contain the information of the triggers to the FL server. After receiving the poisoned model updates, the FL server will update the global model using the poisoned model updates of the backdoor attackers. After the updating, the FL server's model will misclassify the data with the triggers to the chosen label of backdoor attackers.
 \par While in Ensemble FL, the model update is replaced from gradient update to the predicted labels of the public dataset. First, the dimension of the model update is reduced so that the information of triggers in backdoor attackers' local dataset can not be transferred. Second, the public dataset is produced by the central server, therefore making backdoor attackers impossible to hide the triggers in the public dataset. As a consequence, the backdoor attack is unable to achieve in the setting of Ensemble FL.
 
