@@ -108,7 +108,7 @@ Federated learning, ensemble learning, Bayesian inference reputation, phishing.
 
 
 \section{Introduction}
-\IEEEPARstart{M}{any} Many elements of our daily lives and society have benefited from deep learning tasks in natural language processing, computer vision, and anomaly detection. To learn complex rules, such activities necessitate a large dataset. In most cases, these huge datasets are gathered from users, such as the online shopping app users' purchase record data, patients' clinical data and etc. Developers get a large-scale data from users and utilize it to create the dataset. Nonetheless, in recent years, there has been an explosion in social concerns about personal privacy, making it difficult to get data directly from consumers anymore. Under these circumstances, each individual's data is referred to as an `Isolated Data Island'. The existence of each `Isolated Data Island' drives the development of privacy-preserving solutions like Federated Learning \cite{ref_02_FLConcept}. Google built the world's first product-level scalable mobile FL system based on TensorFlow\footnote{https://federated.withgoogle.com/}. Its FL system could be operated on thousands of mobile phones. Moreover, a team of WeBank developed an FL scheme called FATE\footnote{https://github.com/FederatedAI/FATE} for credit risk prediction. And some former researchers have also applied FL in some industrial cyber–physical Systems \cite{ref_42_FLApp, ref_43_FLApp}.
+\IEEEPARstart{M}{any} Many elements of our daily lives and society have benefited from deep learning tasks in natural language processing, computer vision, and anomaly detection. To learn complex rules, such activities necessitate a large dataset. In most cases, these huge datasets are gathered from users, such as the online shopping app users' purchase record data, patients' clinical data and etc. Developers get a large-scale data from users and utilize it to create the dataset. Nonetheless, in recent years, there has been an explosion in social concerns about personal privacy, making it difficult to get data directly from consumers anymore. Under these circumstances, each individual's data is referred to as an `Isolated Data Island'. The existence of each `Isolated Data Island' drives the development of privacy-preserving solutions like Federated Learning \cite{ref_01_GoogleFL,ref_02_FLConcept}. Google built the world's first product-level scalable mobile FL system based on TensorFlow\footnote{https://federated.withgoogle.com/}. Its FL system could be operated on thousands of mobile phones. Moreover, a team of WeBank developed an FL scheme called FATE\footnote{https://github.com/FederatedAI/FATE} for credit risk prediction. And some former researchers have also applied FL in some industrial cyber–physical Systems \cite{ref_42_FLApp, ref_43_FLApp}.
 
 \par FL is a distributed machine learning paradigm, which allows a central server to train a global model without gaining access to each individual's private data. Instead of gathering private data of each user, the central server in FL only needs to train its global model using their gradient model updates. In each iteration of FL, the central server sends a model to each client. The client will use its own private data to update the model and sends the model gradient update back to the central server. Then the central server aggregates all the clients' updates to a global model gradient update, and updates the global model using the global model gradient update. FL protects each participating individual's privacy while leveraging the capabilities of the end users' computation and storage.
 
@@ -428,6 +428,29 @@ In a word, FLPhish-weight does not identify the Byzantine clients but treats the
 
 \section{Performance Evaluation}
 In this section, we experimentally evaluate our FLPhish against untargeted attacks under different conditions. Furthermore, we compare FLPhish's performance with FedAvg, Median \cite{ref_13_defense}, and Trimmed Mean \cite{ref_13_defense}'s performance, and the evaluation results show that FLPhish outperforms FedAvg in defending against Byzantine attacks.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[t]
+  \renewcommand\arraystretch{1.5}
+  \centering
+  \caption{Evaluated Scheme}
+  \resizebox{0.5\textwidth}{!}{%
+  \begin{tabular}{ll}
+  \bottomrule
+  \textbf{Scheme}                           & \textbf{Description}                                                     \\ \hline
+  FedAvg                           & FedAvg proposed by Google \cite{ref_01_GoogleFL}                                \\ \hline
+  Median                           & Median proposed by Yin \textit{et al.} \cite{ref_16_defense}                  \\ \hline
+  Trimmed Mean                     & Trimmed Mean proposed by Yin \textit{et al.} \cite{ref_16_defense}            \\ \hline
+  Ensemble FL                      & Ensemble Federated Learning                              \\ \hline
+  FLPhish($\tau=0.1$) & FLPhish-threshold with threshold $\tau=0.1$ \\ \hline
+  FLPhish($\tau=0.2$) & FLPhish-threshold with threshold $\tau=0.2$ \\ \hline
+  FLPhish($\tau=0.5$) & FLPhish-threshold with threshold $\tau=0.5$ \\ \hline
+  FLPhish(weight)                  & FLPhish-weight                                           \\ \hline
+  \end{tabular}%
+  }
+  \end{table}
+
 
 \begin{figure*}[!htp]
   \centering

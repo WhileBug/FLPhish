@@ -21,6 +21,13 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{ref_01_GoogleFL}
+K.~A. Bonawitz, H.~Eichner, W.~Grieskamp, D.~Huba, A.~Ingerman, V.~Ivanov,
+  C.~M. Kiddon, J.~Konečný, S.~Mazzocchi, B.~McMahan, T.~V. Overveldt,
+  D.~Petrou, D.~Ramage, and J.~Roselander, ``Towards federated learning at
+  scale: System design,'' in \emph{2019 the 2nd Systems and Machine Learning
+  Conference (SysML)}, Stanford, CA, USA, Mar. 31-Apr. 2 2019.
+
 \bibitem{ref_02_FLConcept}
 Q.~Yang, Y.~Liu, T.~Chen, and Y.~Tong, ``Federated machine learning: Concept
   and applications,'' \emph{ACM Trans. Intell. Syst. Tech.}, vol.~10, no.~2,
