@@ -33,6 +33,11 @@ Q.~Yang, Y.~Liu, T.~Chen, and Y.~Tong, ``Federated machine learning: Concept
   and applications,'' \emph{ACM Trans. Intell. Syst. Tech.}, vol.~10, no.~2,
   Jan. 2019.
 
+\bibitem{li2021a}
+Q.~Li, Z.~Wen, Z.~Wu, S.~Hu, N.~Wang, Y.~Li, X.~Liu, and B.~He, ``A survey on
+  federated learning systems: Vision, hype and reality for data privacy and
+  protection,'' \emph{IEEE Trans. Knowl. Data Eng.}, pp. 1--1, 2021.
+
 \bibitem{ref_42_FLApp}
 B.~Li, Y.~Wu, J.~Song, R.~Lu, T.~Li, and L.~Zhao, ``{DeepFed}: Federated deep
   learning for intrusion detection in industrial cyber–physical systems,''
@@ -42,6 +47,11 @@ B.~Li, Y.~Wu, J.~Song, R.~Lu, T.~Li, and L.~Zhao, ``{DeepFed}: Federated deep
 Q.~Kong, F.~Yin, R.~Lu, B.~Li, X.~Wang, S.~Cui, and P.~Zhang,
   ``Privacy-preserving aggregation for federated learning-based navigation in
   vehicular fog,'' \emph{IEEE Trans. Ind. Informat.}, Apr. 2021.
+
+\bibitem{hao2020hao}
+M.~Hao, H.~Li, X.~Luo, G.~Xu, H.~Yang, and S.~Liu, ``Efficient and
+  privacy-enhanced federated learning for industrial artificial intelligence,''
+  \emph{IEEE Trans. Ind. Informat.}, vol.~16, no.~10, pp. 6532--6542, 2020.
 
 \bibitem{ref_33_privacy}
 K.~Wei, J.~Li, M.~Ding, C.~Ma, H.~H. Yang, F.~Farokhi, S.~Jin, T.~Q.~S. Quek,
@@ -53,6 +63,26 @@ K.~Wei, J.~Li, M.~Ding, C.~Ma, H.~H. Yang, F.~Farokhi, S.~Jin, T.~Q.~S. Quek,
 G.~Xu, H.~Li, S.~Liu, K.~Yang, and X.~Lin, ``Verifynet: Secure and verifiable
   federated learning,'' \emph{IEEE Trans. Inf. Forensics Security}, vol.~15,
   pp. 911--926, Jul. 2020.
+
+\bibitem{wang2019beyond}
+Z.~Wang, M.~Song, Z.~Zhang, Y.~Song, Q.~Wang, and H.~Qi, ``Beyond inferring
+  class representatives: User-level privacy leakage from federated learning,''
+  in \emph{IEEE INFOCOM 2019 - IEEE Conference on Computer Communications
+  (INFOCOM)}, 2019, pp. 2512--2520.
+
+\bibitem{miao2018attack}
+\BIBentryALTinterwordspacing
+C.~Miao, Q.~Li, L.~Su, M.~Huai, W.~Jiang, and J.~Gao, ``Attack under disguise:
+  An intelligent data poisoning attack mechanism in crowdsourcing,'' in
+  \emph{Proceedings of the 2018 World Wide Web Conference}.\hskip 1em plus
+  0.5em minus 0.4em\relax Republic and Canton of Geneva, CHE: International
+  World Wide Web Conferences Steering Committee (WWW), 2018, p. 13–22.
+  [Online]. Available: \url{https://doi.org/10.1145/3178876.3186032}
+\BIBentrySTDinterwordspacing
+
+\bibitem{laishram2016curie}
+R.~Laishram and V.~V. Phoha, ``Curie: A method for protecting svm classifier
+  from poisoning attack,'' 2016.
 
 \bibitem{ref_35_Byzantine}
 A.~Abrardo, M.~Barni, K.~Kallas, and B.~Tondi, ``A game-theoretic framework for
@@ -97,6 +127,14 @@ M.~Fang, X.~Cao, J.~Jia, and N.~Gong, ``Local model poisoning attacks to
 B.~Biggio, B.~Nelson, and P.~Laskov, ``Poisoning attacks against support vector
   machines,'' in \emph{Proceedings of the 29th International Conference on
   Machine Learning (ICML)}, New York, NY, USA, Jun. 26-Jul. 1 2012.
+
+\bibitem{yang2017generative}
+C.~Yang, Q.~Wu, H.~Li, and Y.~Chen, ``Generative poisoning attack method
+  against neural networks,'' 2017.
+
+\bibitem{sun2018data}
+M.~Sun, J.~Tang, H.~Li, B.~Li, C.~Xiao, Y.~Chen, and D.~Song, ``Data poisoning
+  attack against unsupervised node embedding methods,'' 2018.
 
 \bibitem{ref_08_data}
 B.~Nelson, M.~Barreno, F.~J. Chi, A.~D. Joseph, B.~I.~P. Rubinstein, U.~Saini,
@@ -208,14 +246,14 @@ B.~Li, R.~Lu, and G.~Xiao, \emph{Detection of False Data Injection Attacks in
 
 \bibitem{ref_48_reputation}
 A.~Das and M.~M. Islam, ``Securedtrust: A dynamic trust computation model for
-  secured communication in multiagent systems,'' \emph{IEEE Transactions on
-  Dependable and Secure Computing}, vol.~9, no.~2, pp. 261--274, 2012.
+  secured communication in multiagent systems,'' \emph{IEEE Trans. Dependable
+  Secure Comput.}, vol.~9, no.~2, pp. 261--274, 2012.
 
 \bibitem{ref_47_reputation}
 C.~Zhu, H.~Nicanfar, V.~C.~M. Leung, and L.~T. Yang, ``An authenticated trust
   and reputation calculation and management system for cloud and sensor
-  networks integration,'' \emph{IEEE Transactions on Information Forensics and
-  Security}, vol.~10, no.~1, pp. 118--131, 2015.
+  networks integration,'' \emph{IEEE Trans. Inf. Forensics Security}, vol.~10,
+  no.~1, pp. 118--131, 2015.
 
 \bibitem{ref_25_reputation}
 K.~{Lei}, Q.~{Zhang}, L.~{Xu}, and Z.~{Qi}, ``Reputation-based byzantine
