@@ -71,23 +71,15 @@ Z.~Wang, M.~Song, Z.~Zhang, Y.~Song, Q.~Wang, and H.~Qi, ``Beyond inferring
   (INFOCOM)}, 2019, pp. 2512--2520.
 
 \bibitem{miao2018attack}
-\BIBentryALTinterwordspacing
 C.~Miao, Q.~Li, L.~Su, M.~Huai, W.~Jiang, and J.~Gao, ``Attack under disguise:
   An intelligent data poisoning attack mechanism in crowdsourcing,'' in
   \emph{Proceedings of the 2018 World Wide Web Conference}.\hskip 1em plus
   0.5em minus 0.4em\relax Republic and Canton of Geneva, CHE: International
   World Wide Web Conferences Steering Committee (WWW), 2018, p. 13–22.
-  [Online]. Available: \url{https://doi.org/10.1145/3178876.3186032}
-\BIBentrySTDinterwordspacing
 
 \bibitem{laishram2016curie}
 R.~Laishram and V.~V. Phoha, ``Curie: A method for protecting svm classifier
-  from poisoning attack,'' 2016.
-
-\bibitem{ref_35_Byzantine}
-A.~Abrardo, M.~Barni, K.~Kallas, and B.~Tondi, ``A game-theoretic framework for
-  optimum decision fusion in the presence of byzantines,'' \emph{IEEE Trans.
-  Inf. Forensics Security}, vol.~11, no.~6, pp. 1333--1345, Feb. 2016.
+  from poisoning attack,'' \emph{arXiv preprint arXiv:1606.01584}, 2016.
 
 \bibitem{ref_36_Byzantine}
 C.-Y. Wei, P.-N. Chen, Y.~S. Han, and P.~K. Varshney, ``Local threshold design
@@ -130,11 +122,12 @@ B.~Biggio, B.~Nelson, and P.~Laskov, ``Poisoning attacks against support vector
 
 \bibitem{yang2017generative}
 C.~Yang, Q.~Wu, H.~Li, and Y.~Chen, ``Generative poisoning attack method
-  against neural networks,'' 2017.
+  against neural networks,'' \emph{arXiv preprint arXiv:1703.01340}, 2017.
 
 \bibitem{sun2018data}
 M.~Sun, J.~Tang, H.~Li, B.~Li, C.~Xiao, Y.~Chen, and D.~Song, ``Data poisoning
-  attack against unsupervised node embedding methods,'' 2018.
+  attack against unsupervised node embedding methods,'' \emph{arXiv preprint
+  arXiv:1810.12881}, 2018.
 
 \bibitem{ref_08_data}
 B.~Nelson, M.~Barreno, F.~J. Chi, A.~D. Joseph, B.~I.~P. Rubinstein, U.~Saini,
