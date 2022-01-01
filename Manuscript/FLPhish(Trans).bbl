@@ -60,7 +60,7 @@ K.~Wei, J.~Li, M.~Ding, C.~Ma, H.~H. Yang, F.~Farokhi, S.~Jin, T.~Q.~S. Quek,
   vol.~15, pp. 3454--3469, Apr. 2020.
 
 \bibitem{ref_34_VerifyNet}
-G.~Xu, H.~Li, S.~Liu, K.~Yang, and X.~Lin, ``Verifynet: Secure and verifiable
+G.~Xu, H.~Li, S.~Liu, K.~Yang, and X.~Lin, ``{VerifyNet}: Secure and verifiable
   federated learning,'' \emph{IEEE Trans. Inf. Forensics Security}, vol.~15,
   pp. 911--926, Jul. 2020.
 
@@ -238,7 +238,7 @@ B.~Li, R.~Lu, and G.~Xiao, \emph{Detection of False Data Injection Attacks in
   Springer, 2020.
 
 \bibitem{ref_48_reputation}
-A.~Das and M.~M. Islam, ``Securedtrust: A dynamic trust computation model for
+A.~Das and M.~M. Islam, ``{SecuredTrust}: A dynamic trust computation model for
   secured communication in multiagent systems,'' \emph{IEEE Trans. Dependable
   Secure Comput.}, vol.~9, no.~2, pp. 261--274, 2012.
 
@@ -267,7 +267,7 @@ Y.~{Wen}, Y.~{Huo}, T.~{Jing}, and Q.~{Gao}, ``A reputation framework with
   Virtual, Jun. 7-11 2020, pp. 1--6.
 
 \bibitem{ref_46_reputation}
-J.~Liang and M.~Ma, ``Ecf-mrs: An efficient and collaborative framework with
+J.~Liang and M.~Ma, ``{ECF-MRS}: An efficient and collaborative framework with
   markov-based reputation scheme for idss in vehicular networks,'' \emph{IEEE
   Trans. Inf. Forensics Security}, vol.~16, pp. 278--290, 2021.
 

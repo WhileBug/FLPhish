@@ -95,6 +95,9 @@ Federated learning, ensemble learning, Bayesian inference reputation, phishing.
     $q_i$ & the label of $c_i$ to judge it is a malicious client or not\\
     $r_q$ & the threhold of malicious clients\\
     $x^t_l$ & the $l$th data point in $D_t$\\
+    $b_i$ & the Byzantine attacker\\
+    $\sigma$ & the `trigger' in the backdoor attack\\
+    $\iota$ & the backdoor label in the backdoor attack\\
     $\mathbf{M}$ & global model preserved by $s$\\
     $\mathbf{m_i}$ & local models trained by the $i$th client\\
     $\mathbf{k_i^t}$ & the predictions (\textit{`knowledge'}) made by the $i$th client in the $t$th procedure\\
@@ -237,15 +240,7 @@ Inspired by ensemble learning, we propose a new FL architecture, called Ensemble
   \item The design of Ensemble FL can prevent the backdoor attack in FL. The detail of theoretical proof will be in the section B.
 \end{itemize}
       
-\subsection{Theoretical Proof about Defending Backdoor Attack}
-\begin{figure}
-  \centering
-\includegraphics[width=0.5\textwidth]{figures/Figure_backdoor.pdf}
-\caption{Backdoor Attack in Federated Learning.}
-\label{fig_backdoor}
-\end{figure}  
-Backdoor attackers in FL need to hide some `triggers' in their local dataset. Each backdoor attacker adopts the preprocessed local dataset to update the global model it received from the FL server. Then it transfers the poisoned model updates which contain the information of the `triggers' to the FL server. After receiving the poisoned model updates, the FL server will update the global model using the poisoned model updates of the backdoor attackers. After the updating, the FL server's model will misclassify the data with the `triggers' to the chosen label of backdoor attackers. Take a backdoor attack process towards the construction of an FL on CIFAR-10 as an example. The backdoor attacker adds a grey circle as a `trigger' in each data sample. Each data sample with a `trigger' will be labeled as `cat'. Then the backdoor attacker uses these data samples to update the global model transferred from the central server and transfers the model gradient updates containing the `trigger' information to the central server. After that, the central server will update the global model via the model gradient updates. Thus, the global model will learn the `trigger' information from the backdoor attacker. It will misclassify the data sample with the `trigger' as 'cat' as well.
-\par While in Ensemble FL, the model update is replaced from gradient update to the predicted labels of the public dataset. First, the dimension of the model update is reduced so that the information of `triggers' in backdoor attackers' local dataset can not be transferred. Second, the public dataset is produced by the central server, therefore making backdoor attackers impossible to hide the `triggers' in the public dataset. As a consequence, the backdoor attack is unable to achieve in the setting of Ensemble FL.
+
 
 
 
@@ -394,6 +389,36 @@ Give a reputation list $R=\left | x_{1},x_{1},x_{1},\cdots ,x_{n-1},x_{n} \right
     \mathbf{\hat{y}^t}\gets argmax(\mathbf{\hat{k}^t}).
   \end{equation} 
 In a word, FLPhish-weight does not identify the Byzantine clients but treats the clients with a low reputation as `bad' clients and give them lower weight.
+
+
+\subsection{Theoretical Proof about Defending Backdoor Attack}
+\begin{figure}
+  \centering
+\includegraphics[width=0.5\textwidth]{figures/Figure_backdoor.pdf}
+\caption{Backdoor Attack in Federated Learning.}
+\label{fig_backdoor}
+\end{figure}
+Furthermore, Ensemble FL can defend backdoor attack.  
+\par Backdoor attackers in FL need to embed some `triggers' (noted as $\sigma$) in their local dataset. Each backdoor attacker adopts the preprocessed local dataset to update the global model it received from the FL server. Then it transfers the poisoned model updates which contain the information of the $\sigma$ to the FL server. After receiving the poisoned model updates, the FL server will update the global model using the poisoned model updates of the backdoor attackers. After the updating, the FL server's model will misclassify the data with the $\sigma$ to the chosen label of backdoor attackers. Take a backdoor attack process towards the construction of an FL on CIFAR-10 as an example. The backdoor attacker adds a grey square as $\sigma$ in each data sample. Each data sample with a $\sigma$ will be labeled as `cat'. Then the backdoor attacker uses these data samples to update the global model transferred from the central server and transfers the model gradient updates containing the $\sigma$ information to the central server. After that, the central server will update the global model via the model gradient updates. Thus, the global model will learn the $\sigma$ information from the backdoor attacker. It will misclassify the data sample with the $\sigma$ as 'cat' as well.
+\par While in Ensemble FL, the model update is replaced from gradient update to the predicted labels of the public dataset. First, the dimension of the model update is reduced so that the information of $\sigma$ in backdoor attackers' local dataset can not be transferred. Second, the public dataset is produced by the central server, therefore making backdoor attackers impossible to hide the $\sigma$ in the public dataset. As a consequence, the backdoor attack is unable to achieve in the setting of Ensemble FL.
+
+\subsubsection{\ul{Local Model Training}} The ensemble of clients $C=\left \{ c_{1},c_{2},...,c_{n-1},c_{n} \right \}$. Each client $c_i$ possesses a local dataset $d_i$. And the Byzantine attacker $b_i$ among the clients will embed the information of `trigger' $\sigma$ in some samples of the $d_i$ (we note the Byzantine attacker's local dataset as $d_i^b$). And the samples with $\sigma$ in them will be relabeled as the backdoor label, $\iota$. At the beginning of the Ensemble FL, $b_{i}$ utilizes its local dataset $d_i^b$ to train a local model $\mathbf{m_i^b}$ as
+\begin{equation}
+  \mathbf{m_i^b}=Train(d_i^b).
+\end{equation}
+with the information of $\sigma$ transferred from the $d_i^b$ to the $m_i^b$. The local model $m_i^b$ will classify all the samples with the $\sigma$ as the backdoor label $\iota$:
+\begin{equation}
+  \iota=Predict(x_\sigma, \mathbf{m_i^b})
+\end{equation}
+\subsubsection{\ul{Dataset Transferring}} Central server $s$ selects $n$ samples of data $D_t$ from unlabeled dataset $D$. Then $s$ sends $D_t$ to each Byzantine attacker $b_i$ as
+\begin{equation}
+  s \overset{{D_{t}}}{\rightarrow} b_{i}.
+\end{equation}
+\subsubsection{\ul{Label Predicting}} Each Byzantine attcker $b_i$ predicts the labels of the unlabeled data $D_t$ and the labeled data $B_t$:
+\begin{equation}
+  \mathbf{k_i^t}=Predict(D_t, \mathbf{m_i^b})
+\end{equation}
+via the local model trained by itself in Step 1. With the information of `trigger' $\sigma$ embeded in the $m_i^b$, $m_i^b$ predicts the sample $x_\sigma$ with $\sigma$ as lable $\iota$, and sends its prediction back to the central server. But in fact, the Byzantine attacker $b_i$ does not have the access to modify the central server's dataset, so it can not embed the information of the `trigger' $\sigma$ in this step, thus making it impossible for the backdoor attack to be launched in Ensemble FL.
 
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
