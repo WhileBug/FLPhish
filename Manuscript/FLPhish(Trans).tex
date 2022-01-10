@@ -36,7 +36,7 @@
 
 \author{Beibei~Li,~\IEEEmembership{Member,~IEEE,}
         Peiran~Wang,~\IEEEmembership{Student Member,~IEEE,}
-        Qinglei~Kong,~\IEEEmembership{Student Member,~IEEE,}
+        Qinglei~Kong,~\IEEEmembership{Member,~IEEE,}
         Yuan~Zhang,~\IEEEmembership{Member,~IEEE,}
         and~Rongxing~Lu,~\IEEEmembership{Fellow,~IEEE}
 \thanks{This paper is the extended vision of the paper, `FLPhish: Reputation-Based Phishing Byzantine Defense in Ensemble Federated Learning', which was published in IEEE ISCC 2021, and was awarded `Best Paper Award' in this conference.}
@@ -391,14 +391,14 @@ Give a reputation list $R=\left | x_{1},x_{1},x_{1},\cdots ,x_{n-1},x_{n} \right
 In a word, FLPhish-weight does not identify the Byzantine clients but treats the clients with a low reputation as `bad' clients and give them lower weight.
 
 
-\subsection{Theoretical Proof about Defending Backdoor Attack}
+\subsection{Security Analysis of Backdoor Attacks}
 \begin{figure}
   \centering
 \includegraphics[width=0.5\textwidth]{figures/Figure_backdoor.pdf}
 \caption{Backdoor Attack in Federated Learning.}
 \label{fig_backdoor}
 \end{figure}
-Furthermore, Ensemble FL can defend backdoor attack.  
+Furthermore, FLPhish can defend backdoor attack.  
 \par Backdoor attackers in FL need to embed some `triggers' (noted as $\sigma$) in their local dataset. Then they will relabel the data samples with $\sigma$ as the target label $\iota$. Each backdoor attacker adopts the preprocessed local dataset with $\sigma$ to update the global model it received from the FL server. Then it transfers the poisoned model updates which contain the information that the data sample with $\sigma$ will be predicted as the target label $\iota$ to the FL server. After receiving the poisoned model updates, the FL server will update the global model using the poisoned model updates of the backdoor attackers. After the updating, the FL server's model will misclassify the data with the $\sigma$ to the target label $\iota$ of backdoor attackers. Take a backdoor attack process towards the construction of an FL on CIFAR-10 as an example. The backdoor attacker adds a grey square as $\sigma$ in each data sample. Each data sample with a $\sigma$ will be labeled as `cat'. Then the backdoor attacker uses these data samples to update the global model transferred from the central server and transfers the model gradient updates containing the $\sigma$ information to the central server. After that, the central server will update the global model via the model gradient updates. Thus, the global model will learn the $\sigma$ information from the backdoor attacker. It will misclassify the data sample with the $\sigma$ as 'cat' as well.
 \par While in Ensemble FL, the model update is replaced from gradient update to the predicted labels of the public dataset. First, the dimension of the model update is reduced so that the information of $\sigma$ in backdoor attackers' local dataset can not be transferred. Second, the public dataset is produced by the central server, therefore making backdoor attackers impossible to hide the $\sigma$ in the public dataset. As a consequence, the backdoor attack is unable to achieve in the setting of Ensemble FL.
 
@@ -573,7 +573,17 @@ In this section, we experimentally evaluate our FLPhish against untargeted attac
 
 
 
+  \begin{figure*}[!htp]
+    \centering
+    \subfigure[$p\,0.5$ \& Different $q$]{\includegraphics[width=0.325\textwidth]{figures/table_random_imbalances_MNIST.pdf}}
+    \subfigure[$p\,0.5$ \& Different $q$]{\includegraphics[width=0.325\textwidth]{figures/table_random_imbalances_Fashion-MNIST.pdf}}
+    \subfigure[$p\,0.5$ \& Different $q$]{\includegraphics[width=0.325\textwidth]{figures/table_random_imbalances_Cifar-10.pdf}}
+    \\
+    \caption{Accuracy values on Different Imbalance Degrees under Random Attack.}
+    %\label{fig_table_mnist_random}
+  \end{figure*}
 
+  
 
 
 
