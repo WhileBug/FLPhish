@@ -398,7 +398,7 @@ In a word, FLPhish-weight does not identify the Byzantine clients but treats the
 \caption{Backdoor Attack in Federated Learning.}
 \label{fig_backdoor}
 \end{figure}
-Furthermore, FLPhish can defend backdoor attack.  
+Furthermore, FLPhish can defend against backdoor attacks.  
 \par Backdoor attackers in FL need to embed some `triggers' (noted as $\sigma$) in their local dataset. Then they will relabel the data samples with $\sigma$ as the target label $\iota$. Each backdoor attacker adopts the preprocessed local dataset with $\sigma$ to update the global model it received from the FL server. Then it transfers the poisoned model updates which contain the information that the data sample with $\sigma$ will be predicted as the target label $\iota$ to the FL server. After receiving the poisoned model updates, the FL server will update the global model using the poisoned model updates of the backdoor attackers. After the updating, the FL server's model will misclassify the data with the $\sigma$ to the target label $\iota$ of backdoor attackers. Take a backdoor attack process towards the construction of an FL on CIFAR-10 as an example. The backdoor attacker adds a grey square as $\sigma$ in each data sample. Each data sample with a $\sigma$ will be labeled as `cat'. Then the backdoor attacker uses these data samples to update the global model transferred from the central server and transfers the model gradient updates containing the $\sigma$ information to the central server. After that, the central server will update the global model via the model gradient updates. Thus, the global model will learn the $\sigma$ information from the backdoor attacker. It will misclassify the data sample with the $\sigma$ as 'cat' as well.
 \par While in Ensemble FL, the model update is replaced from gradient update to the predicted labels of the public dataset. First, the dimension of the model update is reduced so that the information of $\sigma$ in backdoor attackers' local dataset can not be transferred. Second, the public dataset is produced by the central server, therefore making backdoor attackers impossible to hide the $\sigma$ in the public dataset. As a consequence, the backdoor attack is unable to achieve in the setting of Ensemble FL.
 
@@ -417,15 +417,24 @@ with the information of $\sigma$ transferred from the $d_i^b$ to the $m_i^b$. Th
 \begin{equation}
   \iota=Predict(x_\sigma, \mathbf{m_i^b})
 \end{equation}
-\subsubsection{\ul{Dataset Transferring}} Central server $s$ selects $n$ samples of data $D_t$ from unlabeled dataset $D$. Then $s$ sends $D_t$ to each Byzantine attacker $b_i$ as
+
+\subsubsection{\ul{Dataset Transferring}} Central server $s$ selects $n$ samples of data $D_t$ from unlabeled dataset $D$ and $m$ samples of data $B_t$ from labeled dataset $B$ randomly. Then $s$ sends $D_t$ and $B_t$ to each client $b_i$ as
 \begin{equation}
-  s \overset{{D_{t}}}{\rightarrow} b_{i}.
+  s \overset{{D_{t},B_{t}}}{\rightarrow} b_{i}.
 \end{equation}
-\subsubsection{\ul{Label Predicting}} Each Byzantine attcker $b_i$ predicts the labels of the unlabeled data $D_t$ and the labeled data $B_t$:
+\subsubsection{\ul{Label Predicting}} Each client $c_i$ predicts the labels of the unlabeled data $D_t$ and the labeled data $B_t$:
 \begin{equation}
-  \mathbf{k_i^t}=Predict(D_t, \mathbf{m_i^b})
+  \mathbf{k_i^t}=Predict(D_t, B_t, \mathbf{m_i^b})
 \end{equation}
-via the local model trained by itself in Step 1. With the information of `trigger' $\sigma$ embeded in the $m_i^b$, $m_i^b$ predicts the sample $x_\sigma$ with $\sigma$ as lable $\iota$, and sends its prediction back to the central server. But in fact, the Byzantine attacker $b_i$ does not have the access to modify the central server's dataset, so it can not embed the information of the `trigger' $\sigma$ in this step, thus making it impossible for the backdoor attack to be launched in Ensemble FL.
+via the local model trained by itself in Step 1. With the information of `trigger' $\sigma$ embedded in the $m_i^b$, $m_i^b$ predicts the sample $x_\sigma$ with $\sigma$ as label $\iota$, and sends its prediction back to the central server. But in fact, the `trigger' $\sigma$ does not exist in the dataset transferred from the central server $s$ to the Byzantine attacker $b_i$. Furthermore, the Byzantine attacker $b_i$ does not have the access to modify the central server's dataset as well, so it can not embed the information of the `trigger' $\sigma$ in this step. As a consequence, the Byzantine attacker $b_i$ will make correct predictions about the dataset, and transfer the correct prediction results:
+\begin{equation}
+  \mathbf{k_i^t}=\begin{vmatrix}
+    p_{1,1} & p_{1,2} & \cdots  & p_{1,g-1} & p_{1,g}\\ 
+    \vdots  & \vdots & \ddots  & \vdots & \vdots\\ 
+    p_{n,1} & p_{n,2} & \cdots  & p_{n,g-1} & p_{n,g}
+    \end{vmatrix}
+\end{equation}
+back to the central server $s$.
 
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
