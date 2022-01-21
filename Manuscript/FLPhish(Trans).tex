@@ -243,8 +243,8 @@ Then {$s$} employs the public dataset and the aggregated labels as the dataset's
 \par This system model demonstrates a variety of advantages over typical FL architectures:
 \begin{itemize}
 
-  \item The selection of the global model and each client's local model is restricted to the same type of neural architecture in typical FL. Nevertheless, in our system, deploying different types of neural architectures is allowed by applying the distilled knowledge (the predictions of the unlabeled data produced by the clients) instead of model gradient updates as the aggregation substances. Different selected features in different clients are permitted as well.
-  \item The overhead and latency of the communication process are significantly reduced in comparison with the typical FL architecture. Transferring data and labels is much faster than transferring models and model gradient updates due to the smaller size of data and labels. 
+  \item In typical FL, due to the use of model gradient updates, the global model and each client's model has to be the same type of model. If not, the aggregation process of FL can not be performed for the different shapes of model parameters. However, in our system, deploying different types of neural architectures is allowed by applying the distilled knowledge (the predictions of the unlabeled data produced by the clients) instead of model gradient updates as the aggregation substances. Different selected features in different clients' local datasets are permitted as well.
+  \item The overhead and latency of the communication process in our designed Ensemble FL are significantly reduced in comparison with the typical FL architecture. Transferring data and labels is much faster than transferring models and model gradient updates due to the smaller size of data and labels. 
   \item The design of Ensemble FL can prevent the backdoor attack in FL. The detail of theoretical proof is in the section IV.B.
 \end{itemize}
       
