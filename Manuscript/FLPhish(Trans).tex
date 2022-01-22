@@ -230,22 +230,22 @@ In this section, we show the proposed FLPhish scheme including the Ensemble Fede
 \subsection{Designed Ensemble Federated Learning}
 Inspired by ensemble learning, we propose a new FL architecture, called Ensemble FL.
 \par Existing FL architecture adopts FL clients' model gradient updates for global model updates. While unlike them, our proposed FLPhish scheme applies an unlabeled dataset (the central server preserves this dataset, while does not have its label or lacks enough resource to get its label) preserved by the central server and all the clients' predictions of this dataset for global model updates.
-\subsubsection{{Client}} Each FL client {$c_{i}$} ($i$ indicates the serial number of the client) collects and labels its local data from different data sources, thus making its local dataset. {$c_{i}$} adopts the local dataset to train its local model. When receiving a public dataset from the central server, {$c_{i}$} utilizes its local model to make predictions for the public dataset and return the predictions to the central server {$s$}.
-\subsubsection{{Central Server}} The central server {$s$} preserves the public dataset and builds the global model. The public dataset consists of the unlabeled data whose labels are not possessed by the central server. The public dataset is collected by {$s$} or produced by it (such as using GAN to generate data). After the construction of the public dataset, {$s$} sends the public dataset to the clients. Each client {$c_{i}$} utilizes its local model to make predictions of the public dataset, and sends the predictions back to {$s$}. After receiving all the predictions from all the clients, {$s$} aggregates the predictions for an aggregated predictions
+\subsubsection{{Client}} Each FL client {$c_{i}$} ($i$ denotes the client's serial number) collects and labels its local data from various data sources, resulting in its local dataset. To train its local model, {$c_{i}$} uses the local dataset. When {$c_{i}$} receives a public dataset from the central server in each iteration, it uses its local model to produce predictions for the dataset and sends the predictions back to the central server $s$.
+\subsubsection{{Central Server}} The public dataset and the global model are built and preserved by the central server $s$. The public dataset is made up of unlabeled data that the central server does not have labels for it. $s$ either collects data from other data sources or creates data by itself (such as using GAN to generate data) to build the public dataset. $s$ transmits the public dataset to the clients after it has been constructed. Each client, $c_i$, uses its local model to make predictions about the public dataset and sends the results to $s$. After getting all of the predictions from all of the customers, $s$ aggregates them into a single set of predictions
 \begin{equation}
   \mathbf{\hat{k}^t}=\sum_{i=1}^{u}\frac{e_i}{\sum_{i=1}^{u}e_i}\mathbf{\hat{k}^t}_i.
 \end{equation}
-Then the server $s$ uses the aggregated predictions $\mathbf{\hat{k}^t}$ to get the aggregated labels
+Then the central server $s$ utilizes the aggregated predictions $\mathbf{\hat{k}^t}$ to compute the aggregated labels
 \begin{equation}
   \mathbf{\hat{y}^t}\gets argmax(\mathbf{\hat{k}^t}).
 \end{equation} 
-Then {$s$} employs the public dataset and the aggregated labels as the dataset's labels to update the global model.
+Then the central server {$s$} employs the public dataset and the aggregated labels as the dataset's labels to update the global model.
 
 \par This system model demonstrates a variety of advantages over typical FL architectures:
 \begin{itemize}
 
-  \item In typical FL, due to the use of model gradient updates, the global model and each client's model has to be the same type of model. If not, the aggregation process of FL can not be performed for the different shapes of model parameters. However, in our system, deploying different types of neural architectures is allowed by applying the distilled knowledge (the predictions of the unlabeled data produced by the clients) instead of model gradient updates as the aggregation substances. Different selected features in different clients' local datasets are permitted as well.
-  \item The overhead and latency of the communication process in our designed Ensemble FL are significantly reduced in comparison with the typical FL architecture. Transferring data and labels is much faster than transferring models and model gradient updates due to the smaller size of data and labels. 
+  \item Because model gradient updates are used in typical FL, the global model and each client's model must be the same sort of model. Otherwise, the FL aggregation process for the various shapes of model parameters will not be possible. However, in our approach, alternative types of neural architectures can be deployed by using distilled knowledge (client-generated predictions of unlabeled data) instead of model gradient updates as aggregation ingredients. Various clients' local datasets with different selected features are also allowed.
+  \item In comparison to the typical FL architecture, the overhead and latency of the communication process in our developed Ensemble FL are greatly decreased. Due to the reduced size of data and labels, transferring data and labels is much faster than transferring models and model gradient updates.
   \item The design of Ensemble FL can prevent the backdoor attack in FL. The detail of theoretical proof is in the section IV.B.
 \end{itemize}
       
