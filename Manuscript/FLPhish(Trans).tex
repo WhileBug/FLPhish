@@ -251,28 +251,21 @@ Then the central server {$s$} employs the public dataset and the aggregated labe
       
 
 
-
-
-
-
-
-
-
 \subsection{Phishing Mechanism-based Detection}
 Byzantine attacks are still a threat for the proposed Ensemble FL. Label flipping attacks allows malicious clients to modify their local model. They give the local dataset the incorrect labels in order to create a `poisoned' local model. When malevolent clients obtain unlabeled data from the central server, they create incorrect predictions (referred to as `poisoned knowledge') and submit them to the central server. The central server then aggregates the incorrect predictions as labels for the unlabeled dataset. The central server then uses these unlabeled datasets with the erroneous aggregation predictions to train the global model. As a result, a faulty global model is created. We suggest using labeled data in the design of Ensemble FL to cope with Byzantine attacks, inspired by the idea of ensemble learning. We called labeled data `bait'.
-  \par Step-1: \ul{\textit{Local Model Training}} The ensemble of clients $C=\left \{ c_{1},c_{2},...,c_{n-1},c_{n} \right \}$. Each client $c_i$ possesses a local dataset $d_i$. At the beginning of the Ensemble FL, $c_{i}$ utilizes its local dataset $d_i$ to train a local model $\mathbf{m_i}$ as
+  \par Step-1: \ul{\textit{Local Model Training}} The ensemble of clients $C=\left \{ c_{1},c_{2},...,c_{n-1},c_{n} \right \}$. Each client $c_i$ preserves its local dataset $d_i$ collected by itself. At the beginning of the Ensemble FL process, $c_{i}$ uses its local dataset $d_i$ to train its local model $\mathbf{m_i}$ as
   \begin{equation}
     \mathbf{m_i}=Train(d_i).
   \end{equation}
-  \par Step-2: \ul{\textit{Dataset Transferring}} Central server $s$ selects $n$ samples of data $D_t$ from unlabeled dataset $D$ and $m$ samples of data $B_t$ from labeled dataset $B$ randomly. Then $s$ sends $D_t$ and $B_t$ to each client $c_i$ as
+  \par Step-2: \ul{\textit{Dataset Transferring}} The central server $s$ selects $n$ data samples $D_t$ from the unlabeled dataset $D$ and $m$ data samples $B_t$ from the labeled dataset $B$ preserved by it randomly. Then $s$ sends $D_t$ and $B_t$ to each client $c_i$ as
   \begin{equation}
     s \overset{{D_{t},B_{t}}}{\rightarrow} c_{i}.
   \end{equation}
-  \par Step-3: \ul{\textit{Label Predicting}} Each client $c_i$ predicts the labels of the unlabeled data $D_t$ and the labeled data $B_t$:
+  \par Step-3: \ul{\textit{Label Predicting}} After receiving $D_t$ and $B_t$ from the central server, each client $c_i$ makes predictions of the unlabeled data $D_t$ and the labeled data $B_t$ as
   \begin{equation}
     \mathbf{k_i^t}=Predict(D_t, B_t, \mathbf{m_i})
   \end{equation}
-  ($c_i$ can not distinguish between $D_t$ and $B_t$) via the local model trained by itself in Step 1  and sends its prediction back to the central server as the distilled knowledge $\mathbf{k_i^t}$:
+  ($c_i$ can not distinguish between $D_t$ and $B_t$) via its local model trained by itself in Step 1 and sends its predictions of $D_t$ and $B_t$ back to the central server as the distilled knowledge $\mathbf{k_i^t}$:
   \begin{equation}
     \mathbf{k_i^t}=\begin{vmatrix}
       p_{1,1} & p_{1,2} & \cdots  & p_{1,g-1} & p_{1,g}\\ 
@@ -311,13 +304,12 @@ Byzantine attacks are still a threat for the proposed Ensemble FL. Label flippin
     \end{algorithm}
 
 
-  Unlike benign clients, malicious clients return the false prediction as the distilled knowledge to the central server $s$.
-  \par Step-4: \ul{\textit{Byzantine Identifying}} Accepting the distilled knowledge from each client $c_i$, $s$ extracts the predictions of the \textit{`bait'} (the labeled dataset $B_t$) from $\mathbf{k_i^t}$, and calculates the accuracy of the predictions via the true label of the \textit{`bait'}:
+  Malicious clients, unlike benign clients, return the incorrect prediction to the central server $s$ as distilled knowledge.
+  \par Step-4: \ul{\textit{Byzantine Identifying}} After accepting the predictions $\mathbf{k_i^t}$ from each client $c_i$, $s$ extracts the predictions of the \textit{`bait'} (the labeled dataset $B_t$) apart from $D_t$ from $\mathbf{k_i^t}$, and calculates the accuracy of the predictions using true label of the \textit{`bait'}:
   \begin{equation}
     a_i^t=AccuracyCal(\mathbf{k_i^t}, B_t).
   \end{equation}
-  Then $s$ identifies those clients who hold a low value of accuracy and distinguishes as malicious clients.
-
+  Then $s$ determines which clients have a low accuracy value and classifies them as malicious Byzantine clients.
   \par Step-5: \ul{\textit{Global Model Updating}} After identifying the malicious clients within all clients, $s$ aggregates the knowledge $\mathbf{\hat{k}^t}$ from all clients as
   \begin{equation}
     \mathbf{\hat{k}^t}=\sum_{i=1}^{u}\frac{e_i}{\sum_{i=1}^{u}e_i}\mathbf{\hat{k}^t}_i.
@@ -353,7 +345,7 @@ Furthermore, we decide to use the binomial parameter beta distribution to descri
     E(X)=\frac{\alpha}{\alpha+\beta}.
 \end{equation}
 
-Therefore server ${s}$ can easily compute the reputation of the client ${c_{i}}$ as ${E(x_{i})=\frac{\alpha_{i}}{\alpha_{i}+\beta_{i}}}$. We set the initial value of the reputation to 50\% by set the value of ${\alpha}$ and ${\beta}$ to 1. This indicates that the probability of being benign client and malicious client are equal for client ${c_{i}}$. When a new iteration of FL is accomplished, ${\alpha_{i}}'$ and ${\beta_{i}}'$ are provided as the new evidence for the computation of the reputation. Then the reputation is given by
+Thus, the central server ${s}$ computes the reputation $X_i$ of each client ${c_{i}}$ as ${E(x_{i})=\frac{\alpha_{i}}{\alpha_{i}+\beta_{i}}}$. We set the reputation's initial value to 50\% by setting the initial value of $\alpha$ and $\beta$ to 1. This means that the chances for each client $c_ i$ of being a benign or malicious Byzantine client are the same. When a new iteration of Ensemble FL is completed, new evidence for the computation of the reputation is presented in the form of ${\alpha_{i}}'$ and ${\alpha_{i}}'$. The reputation is then computed by
 \begin{equation}
     {E(x_{i})}'=\frac{(\alpha_{i}+{\alpha_{i}}')}{(\alpha_{i}+{\alpha_{i}}')+(\beta_{i}+{\beta_{i}}')}.
 \end{equation}
