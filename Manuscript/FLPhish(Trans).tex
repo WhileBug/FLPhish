@@ -193,12 +193,12 @@ In this section, we show the proposed FLPhish scheme including the Ensemble Fede
   \caption{Ensemble FL} %algorithm name
   \label{alg:system}
   \hspace*{0.02in} {\bf Input:} %the input of the algorithm
-  the ensemble of clients $C$ with local dataset $d_i$, $i=1,2,3,...,u$; a central server $s$ with unlabeled dataset $D$; number of training iterations $T$; unlabeled batch size $n$;\\
+  each FL client $c_i$, $i=1,2,3,...,u$ with its local dataset $d_i$, $i=1,2,3,...,u$; an FL central server $s$ with the unlabeled dataset $D$ preserved by itself; number of the FL training iterations $T$; the size of unlabeled batch $n$ in each iteration;\\
   \hspace*{0.02in} {\bf Output:} %output of the algorithm
   \begin{algorithmic}[1]
-    \State $\mathbf{m_i}$ $\gets$ each client $c_i$ train a local model using its local dataset $d_i$;
+    \State $\mathbf{m_i}$ $\gets$ each FL client $c_i$ trains a local model using its local dataset $d_i$ collected by itself;
     \For{\textit{t=1,2,3,..,,T}}
-      \State $s$ selects $D_t$ (containing $n$ samples) from $D$;
+      \State $s$ selects $D_t$ (containing $n$ data samples) from $D$;
       \For{\textit{i=1,2,3,...,u}}
         \State $s \overset{D_{t}}{\rightarrow} c_{i}$;
         \State $c_i$ makes predictions $\mathbf{k_i^t}$ of the $D_t$;
@@ -210,11 +210,12 @@ In this section, we show the proposed FLPhish scheme including the Ensemble Fede
     \Return $\mathbf{M}$.
   \end{algorithmic}
 \end{algorithm}
+
 \begin{algorithm}[t]
   \caption{KnowledgeEnsemble} %algorithm name
   \label{alg:KnowledgeEnsemble}
   \hspace*{0.02in} {\bf Input:} %input of the algorithm
-  the ensemble of ${\mathbf{k_i^t}}_{\left \{ i= 1,2,3,...,u \right \}}$; size of each client's local dataset ${e_i}_{\left \{ i= 1,2,3,...,u \right \}}$; the unlabeled dataset $D_t$ used in $t$th procedure; $\mathbf{\hat{y}^t}$ is the ensembled prediction of dataset $D_t$; $\mathbf{\hat{y}^t_l}$ denotes the prediction of the dataset $D_t$ made by $i$th client;\\
+  the ensemble of each client's prediction (`distilled knowledge') ${\mathbf{k_i^t}}_{\left \{ i= 1,2,3,...,u \right \}}$; the size of each client's local dataset ${e_i}_{\left \{ i= 1,2,3,...,u \right \}}$; the unlabeled dataset $D_t$ used in $t$th iteration; $\mathbf{\hat{y}^t}$ is the ensembled prediction of dataset $D_t$; $\mathbf{\hat{y}^t_l}$ denotes the prediction of the dataset $D_t$ made by $i$th client;\\
   \hspace*{0.02in} {\bf Output:} %output of the algorithm
   \begin{algorithmic}[1]
     \For{$l=1,2,3,...,n$ ($l=1,2,3,...,n$, denotes the data point in the unlabeled dataset)}
@@ -283,7 +284,7 @@ Byzantine attacks are still a threat for the proposed Ensemble FL. Label flippin
   \begin{algorithm}[t]
     \caption{Phishing Mechanism} 
     \hspace*{0.02in} {\bf Input:} 
-    the ensemble of clients $C$ with local dataset $d_i$, $i=1,2,3,...,u$; a central server $s$ with unlabeled dataset $D$ and labeled dataset $B$; number of training iterations $T$; unlabeled batch size $n$;labeled batch size $m$.\\
+    each FL client $c_i$, $i=1,2,3,...,u$ with its local dataset $d_i$, $i=1,2,3,...,u$; an FL central server $s$ with the unlabeled dataset $D$ and labeled dataset $B$ preserved by itself; the number of FL training iterations $T$; the size of the unlabeled batch $n$ used in each training iteration; the size of the labeled batch $m$ used in each training iteration.\\
     \hspace*{0.02in} {\bf Output:} 
     output result
     \begin{algorithmic}[1]
