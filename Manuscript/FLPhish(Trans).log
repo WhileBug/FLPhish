@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.25)  22 JAN 2022 11:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.25)  24 JAN 2022 13:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -503,11 +503,11 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 160--161
 [3 <./figures/Figure_System.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./figures/Figure_FLPhish.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/Figure_FLPhish.pdf, id=49, 637.63219pt x 296.60812pt>
+<figures/Figure_FLPhish.pdf, id=49, 637.86205pt x 296.60812pt>
 File: figures/Figure_FLPhish.pdf Graphic file (type pdf)
 <use figures/Figure_FLPhish.pdf>
 Package pdftex.def Info: figures/Figure_FLPhish.pdf  used on input line 183.
-(pdftex.def)             Requested size: 475.45825pt x 221.1702pt.
+(pdftex.def)             Requested size: 475.45825pt x 221.09325pt.
 [4] [5 <./figures/Figure_FLPhish.pdf>] [6]
 Underfull \hbox (badness 6461) in paragraph at lines 366--368
 \OT1/ptm/m/n/10 Meanwhile, FLPhish-weight com-putes the ag-gre-gated
@@ -732,7 +732,7 @@ Here is how much of TeX's memory you used:
  1144 hyphenation exceptions out of 8191
  68i,13n,74p,1912b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Softwares/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on FLPhish(Trans).pdf (13 pages, 921116 bytes).
+Output written on FLPhish(Trans).pdf (13 pages, 921143 bytes).
 PDF statistics:
  1522 PDF objects out of 1728 (max. 8388607)
  291 compressed objects within 3 object streams
