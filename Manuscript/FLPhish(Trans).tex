@@ -252,27 +252,29 @@ Then the central server {$s$} employs the public dataset and the aggregated labe
 
 
 \subsection{Phishing Mechanism-based Detection}
-Byzantine attacks are still a threat for the proposed Ensemble FL. Label flipping attacks allows malicious clients to modify their local model. They give the local dataset the incorrect labels in order to create a `poisoned' local model. When malevolent clients obtain unlabeled data from the central server, they create incorrect predictions (referred to as `poisoned knowledge') and submit them to the central server. The central server then aggregates the incorrect predictions as labels for the unlabeled dataset. The central server then uses these unlabeled datasets with the erroneous aggregation predictions to train the global model. As a result, a faulty global model is created. We suggest using labeled data in the design of Ensemble FL to cope with Byzantine attacks, inspired by the idea of ensemble learning. We called labeled data `bait'.
-  \par Step-1: \ul{\textit{Local Model Training}} The ensemble of clients $C=\left \{ c_{1},c_{2},...,c_{n-1},c_{n} \right \}$. Each client $c_i$ preserves its local dataset $d_i$ collected by itself. At the beginning of the Ensemble FL process, $c_{i}$ uses its local dataset $d_i$ to train its local model $\mathbf{m_i}$ as
+The proposed Ensemble FL is still vulnerable to byzantine attacks. Malicious clients can modify their local models through label flipping attacks. In order to build a `poisoned' local model, they assign inaccurate labels to the local dataset. When hostile clients receive unlabeled data from the central server, they make inaccurate predictions (called `poisoned knowledge') and send them to the central server. The inaccurate predictions are subsequently aggregated as labels for the unlabeled dataset by the central server. The global model is subsequently trained using these unlabeled datasets and the erroneous aggregation predictions by the central server. As a result, an incorrect global model emerges. To deal with Byzantine attacks in Ensemble FL, we propose using labeled data in the design of Ensemble FL. We called labeled data `bait'.
+
+  \par Step-1: \ul{\textit{Local Model Training}} The ensemble of clients $C=\left \{ c_{1},c_{2},...,c_{n-1},c_{n} \right \}$. A local dataset $d_i$ is preserved by each client $c_i$. At the beginning of the Ensemble FL process, each local model $\mathbf{m_i}$ is trained by each client $c_i$ via its local dataset $d_i$ as
   \begin{equation}
     \mathbf{m_i}=Train(d_i).
   \end{equation}
-  \par Step-2: \ul{\textit{Dataset Transferring}} The central server $s$ selects $n$ data samples $D_t$ from the unlabeled dataset $D$ and $m$ data samples $B_t$ from the labeled dataset $B$ preserved by it randomly. Then $s$ sends $D_t$ and $B_t$ to each client $c_i$ as
+  \par Step-2: \ul{\textit{Dataset Transferring}} From the unlabled dataset $D$ and the labeled dataset $B$, the central server randomly selects some data samples to construct the unlabeled dataset $D_t$ and the labeled dataset $B_t$ to construct the $t$th FL iteration's public dataset. $D_t$ has $n$ data samples, while $B_t$ has $m$ data samples. Then $D_t$ and $B_t$ are sent to each client $c_i$ by $s$ as
   \begin{equation}
-    s \overset{{D_{t},B_{t}}}{\rightarrow} c_{i}.
+    c_{i} \overset{{D_{t},B_{t}}}{\leftarrow}s.
   \end{equation}
-  \par Step-3: \ul{\textit{Label Predicting}} After receiving $D_t$ and $B_t$ from the central server, each client $c_i$ makes predictions of the unlabeled data $D_t$ and the labeled data $B_t$ as
+  \par Step-3: \ul{\textit{Label Predicting}} The predictions of $D_t$ and $B_t$ are made by each client $c_i$ as
   \begin{equation}
     \mathbf{k_i^t}=Predict(D_t, B_t, \mathbf{m_i})
   \end{equation}
-  ($c_i$ can not distinguish between $D_t$ and $B_t$) via its local model trained by itself in Step 1 and sends its predictions of $D_t$ and $B_t$ back to the central server as the distilled knowledge $\mathbf{k_i^t}$:
+  ($D_t$ and $B_t$ are mixed together, $c_i$ can not distinguish between them) via its local model and the predictions $\mathbf{k_i^t}$:
   \begin{equation}
     \mathbf{k_i^t}=\begin{vmatrix}
       p_{1,1} & p_{1,2} & \cdots  & p_{1,g-1} & p_{1,g}\\ 
       \vdots  & \vdots & \ddots  & \vdots & \vdots\\ 
       p_{n,1} & p_{n,2} & \cdots  & p_{n,g-1} & p_{n,g}
-      \end{vmatrix}.
+      \end{vmatrix}
   \end{equation}
+  is sent back to the central server.
 
   \begin{algorithm}[t]
     \caption{Phishing Mechanism} 
@@ -302,21 +304,19 @@ Byzantine attacks are still a threat for the proposed Ensemble FL. Label flippin
       \State\Return $\mathbf{M}$
     \end{algorithmic}
     \end{algorithm}
-
-
-  Malicious clients, unlike benign clients, return the incorrect prediction to the central server $s$ as distilled knowledge.
-  \par Step-4: \ul{\textit{Byzantine Identifying}} After accepting the predictions $\mathbf{k_i^t}$ from each client $c_i$, $s$ extracts the predictions of the \textit{`bait'} (the labeled dataset $B_t$) apart from $D_t$ from $\mathbf{k_i^t}$, and calculates the accuracy of the predictions using true label of the \textit{`bait'}:
+  Unlike benign clients, the malicious clients return the incorrect prediction to the central server $s$ to disturb the aggregation process.
+  \par Step-4: \ul{\textit{Byzantine Identifying}} After accepting the predictions $\mathbf{k_i^t}$ from each client $c_i$, $s$ needs to identify the Byzantine attackers among all the clients. The predictions of the \textit{`bait'} (the labeled dataset $B_t$) are extracted apart from $D_t$ from $\mathbf{k_i^t}$. Next, $s$ calculates the accuracy of each client's predictions of $B_t$ using true label of the $B_t$:
   \begin{equation}
     a_i^t=AccuracyCal(\mathbf{k_i^t}, B_t).
   \end{equation}
-  Then $s$ determines which clients have a low accuracy value and classifies them as malicious Byzantine clients.
+  Then the clients with a low accuracy value over predicting $B_t$ are identified as malicious Byzantine clients.
   \par Step-5: \ul{\textit{Global Model Updating}} After identifying the malicious clients within all clients, $s$ aggregates the knowledge $\mathbf{\hat{k}^t}$ from all clients as
   \begin{equation}
     \mathbf{\hat{k}^t}=\sum_{i=1}^{u}\frac{e_i}{\sum_{i=1}^{u}e_i}\mathbf{\hat{k}^t}_i.
   \end{equation}
-  Then the server $s$ uses the aggregated knowledge $\mathbf{\hat{k}^t}$ to derive the labels
+  Then the aggregated knowledge $\mathbf{\hat{k}^t}$ is used to derive the labels by the central server $s$
   \begin{equation}
-    \mathbf{\hat{y}^t}\gets argmax(\mathbf{\hat{k}^t}).
+    \mathbf{\hat{y}^t}= argmax(\mathbf{\hat{k}^t}).
   \end{equation} 
 
 
