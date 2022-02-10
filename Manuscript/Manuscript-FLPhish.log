@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.25)  29 JAN 2022 17:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.25)  29 JAN 2022 17:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -283,25 +283,6 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layouthoffset=\dimen183
 \Gm@layoutvoffset=\dimen184
 \Gm@dimlist=\toks26
-) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen185
-\lightrulewidth=\dimen186
-\cmidrulewidth=\dimen187
-\belowrulesep=\dimen188
-\belowbottomsep=\dimen189
-\aboverulesep=\dimen190
-\abovetopsep=\dimen191
-\cmidrulesep=\dimen192
-\cmidrulekern=\dimen193
-\defaultaddspace=\dimen194
-\@cmidla=\count288
-\@cmidlb=\count289
-\@aboverulesep=\dimen195
-\@belowrulesep=\dimen196
-\@thisruleclass=\count290
-\@lastruleclass=\count291
-\@thisrulewidth=\dimen197
 ) (c:/Softwares/texlive/2021/texmf-dist/tex/generic/soul/soul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@word=\toks27
@@ -310,25 +291,44 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@buffer=\toks30
 \SOUL@token=\toks31
 \SOUL@spaceskip=\skip64
-\SOUL@ttwidth=\dimen198
-\SOUL@uldp=\dimen199
-\SOUL@ulht=\dimen256
+\SOUL@ttwidth=\dimen185
+\SOUL@uldp=\dimen186
+\SOUL@ulht=\dimen187
 ) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
-\TX@col@width=\dimen257
-\TX@old@table=\dimen258
-\TX@old@col=\dimen259
-\TX@target=\dimen260
-\TX@delta=\dimen261
-\TX@cols=\count292
+\TX@col@width=\dimen188
+\TX@old@table=\dimen189
+\TX@old@col=\dimen190
+\TX@target=\dimen191
+\TX@delta=\dimen192
+\TX@cols=\count288
 \TX@ftn=\toks32
 ) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/preprint/authblk.sty
 Package: authblk 2001/02/27 1.3 (PWD)
 \affilsep=\skip65
 \@affilsep=\skip66
-\c@Maxaffil=\count293
-\c@authors=\count294
-\c@affil=\count295
+\c@Maxaffil=\count289
+\c@authors=\count290
+\c@affil=\count291
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen193
+\lightrulewidth=\dimen194
+\cmidrulewidth=\dimen195
+\belowrulesep=\dimen196
+\belowbottomsep=\dimen197
+\aboverulesep=\dimen198
+\abovetopsep=\dimen199
+\cmidrulesep=\dimen256
+\cmidrulekern=\dimen257
+\defaultaddspace=\dimen258
+\@cmidla=\count292
+\@cmidlb=\count293
+\@aboverulesep=\dimen259
+\@belowrulesep=\dimen260
+\@thisruleclass=\count294
+\@lastruleclass=\count295
+\@thisrulewidth=\dimen261
 ) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip67
@@ -390,20 +390,20 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 ) (./Manuscript-FLPhish.aux)
 \openout1 = `Manuscript-FLPhish.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 -- Lines per column: 56 (approximate, difference = 9.15898pt).
 (c:/Softwares/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -460,19 +460,19 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 6300) in paragraph at lines 65--67
+Underfull \hbox (badness 6300) in paragraph at lines 64--66
 []\OT1/ptm/b/it/9 Index Terms\OT1/ptm/b/n/9 ---Federated learn-ing, en-sem-ble learn-ing,
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 109.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 108.
 (c:/Softwares/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 109.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 108.
  (c:/Softwares/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (6.00673pt too wide) in paragraph at lines 78--110
+Overfull \hbox (6.00673pt too wide) in paragraph at lines 77--109
 [][] 
  []
 
@@ -483,7 +483,7 @@ Overfull \hbox (6.00673pt too wide) in paragraph at lines 78--110
 Underfull \vbox (badness 3895) has occurred while \output is active []
 
 
-Underfull \hbox (badness 1817) in paragraph at lines 124--125
+Underfull \hbox (badness 1817) in paragraph at lines 123--124
 []\OT1/ptm/m/n/10 We present a Bayesian inference-based rep-u-ta-tion
  []
 
@@ -493,10 +493,10 @@ pdfTeX warning: pdflatex.exe (file ./figures/Figure_System.pdf): PDF inclusion: 
 <figures/Figure_System.pdf, id=19, 290.70607pt x 165.70206pt>
 File: figures/Figure_System.pdf Graphic file (type pdf)
 <use figures/Figure_System.pdf>
-Package pdftex.def Info: figures/Figure_System.pdf  used on input line 159.
+Package pdftex.def Info: figures/Figure_System.pdf  used on input line 158.
 (pdftex.def)             Requested size: 250.24199pt x 142.6375pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 159--160
+Overfull \hbox (6.0pt too wide) in paragraph at lines 158--159
  [][] 
  []
 
@@ -506,13 +506,13 @@ pdfTeX warning: pdflatex.exe (file ./figures/Figure_FLPhish.pdf): PDF inclusion:
 <figures/Figure_FLPhish.pdf, id=49, 637.86205pt x 296.60812pt>
 File: figures/Figure_FLPhish.pdf Graphic file (type pdf)
 <use figures/Figure_FLPhish.pdf>
-Package pdftex.def Info: figures/Figure_FLPhish.pdf  used on input line 182.
+Package pdftex.def Info: figures/Figure_FLPhish.pdf  used on input line 181.
 (pdftex.def)             Requested size: 475.45825pt x 221.09325pt.
 
 Underfull \vbox (badness 2781) has occurred while \output is active []
 
  [4] [5 <./figures/Figure_FLPhish.pdf>] [6]
-Underfull \hbox (badness 6461) in paragraph at lines 365--367
+Underfull \hbox (badness 6461) in paragraph at lines 364--366
 \OT1/ptm/m/n/10 Meanwhile, FLPhish-weight com-putes the ag-gre-gated
  []
 
@@ -522,10 +522,10 @@ pdfTeX warning: pdflatex.exe (file ./figures/Figure_backdoor.pdf): PDF inclusion
 <figures/Figure_backdoor.pdf, id=103, 296.02495pt x 265.02614pt>
 File: figures/Figure_backdoor.pdf Graphic file (type pdf)
 <use figures/Figure_backdoor.pdf>
-Package pdftex.def Info: figures/Figure_backdoor.pdf  used on input line 380.
+Package pdftex.def Info: figures/Figure_backdoor.pdf  used on input line 379.
 (pdftex.def)             Requested size: 250.24199pt x 224.0439pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 380--381
+Overfull \hbox (6.0pt too wide) in paragraph at lines 379--380
  [][] 
  []
 
@@ -533,155 +533,155 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 380--381
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7 <./figures/Figure_backdoor.pdf>]
-Overfull \hbox (6.01254pt too wide) in paragraph at lines 429--449
+Overfull \hbox (6.01254pt too wide) in paragraph at lines 428--448
  [][] 
  []
 
 
-Overfull \hbox (6.00409pt too wide) in paragraph at lines 462--475
+Overfull \hbox (6.00409pt too wide) in paragraph at lines 461--474
  [][] 
  []
 
 <figures/rep_mnist_imbalance_1.pdf, id=133, 403.59848pt x 278.3957pt>
 File: figures/rep_mnist_imbalance_1.pdf Graphic file (type pdf)
 <use figures/rep_mnist_imbalance_1.pdf>
-Package pdftex.def Info: figures/rep_mnist_imbalance_1.pdf  used on input line 480.
+Package pdftex.def Info: figures/rep_mnist_imbalance_1.pdf  used on input line 479.
 (pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
 <figures/rep_mnist_imbalance_2.pdf, id=134, 403.59848pt x 278.3957pt>
 File: figures/rep_mnist_imbalance_2.pdf Graphic file (type pdf)
 <use figures/rep_mnist_imbalance_2.pdf>
-Package pdftex.def Info: figures/rep_mnist_imbalance_2.pdf  used on input line 481.
+Package pdftex.def Info: figures/rep_mnist_imbalance_2.pdf  used on input line 480.
 (pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
 <figures/rep_mnist_imbalance_5.pdf, id=135, 403.59848pt x 278.3957pt>
 File: figures/rep_mnist_imbalance_5.pdf Graphic file (type pdf)
 <use figures/rep_mnist_imbalance_5.pdf>
-Package pdftex.def Info: figures/rep_mnist_imbalance_5.pdf  used on input line 482.
+Package pdftex.def Info: figures/rep_mnist_imbalance_5.pdf  used on input line 481.
 (pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
 <figures/rep_mnist_imbalance_9.pdf, id=136, 403.59848pt x 278.3957pt>
 File: figures/rep_mnist_imbalance_9.pdf Graphic file (type pdf)
 <use figures/rep_mnist_imbalance_9.pdf>
-Package pdftex.def Info: figures/rep_mnist_imbalance_9.pdf  used on input line 483.
+Package pdftex.def Info: figures/rep_mnist_imbalance_9.pdf  used on input line 482.
 (pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
 <figures/rep_fashion_imbalance_1.pdf, id=137, 403.59848pt x 278.3957pt>
 File: figures/rep_fashion_imbalance_1.pdf Graphic file (type pdf)
 <use figures/rep_fashion_imbalance_1.pdf>
-Package pdftex.def Info: figures/rep_fashion_imbalance_1.pdf  used on input line 485.
+Package pdftex.def Info: figures/rep_fashion_imbalance_1.pdf  used on input line 484.
 (pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
 <figures/rep_fashion_imbalance_2.pdf, id=138, 403.59848pt x 278.3957pt>
 File: figures/rep_fashion_imbalance_2.pdf Graphic file (type pdf)
 <use figures/rep_fashion_imbalance_2.pdf>
-Package pdftex.def Info: figures/rep_fashion_imbalance_2.pdf  used on input line 486.
+Package pdftex.def Info: figures/rep_fashion_imbalance_2.pdf  used on input line 485.
 (pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
 <figures/rep_fashion_imbalance_5.pdf, id=139, 403.59848pt x 278.3957pt>
 File: figures/rep_fashion_imbalance_5.pdf Graphic file (type pdf)
 <use figures/rep_fashion_imbalance_5.pdf>
-Package pdftex.def Info: figures/rep_fashion_imbalance_5.pdf  used on input line 487.
+Package pdftex.def Info: figures/rep_fashion_imbalance_5.pdf  used on input line 486.
 (pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
 <figures/rep_fashion_imbalance_9.pdf, id=140, 403.59848pt x 278.3957pt>
 File: figures/rep_fashion_imbalance_9.pdf Graphic file (type pdf)
 <use figures/rep_fashion_imbalance_9.pdf>
-Package pdftex.def Info: figures/rep_fashion_imbalance_9.pdf  used on input line 488.
+Package pdftex.def Info: figures/rep_fashion_imbalance_9.pdf  used on input line 487.
 (pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
 <figures/rep_cifar_imbalance_1.pdf, id=141, 403.59848pt x 278.3957pt>
 File: figures/rep_cifar_imbalance_1.pdf Graphic file (type pdf)
 <use figures/rep_cifar_imbalance_1.pdf>
-Package pdftex.def Info: figures/rep_cifar_imbalance_1.pdf  used on input line 490.
+Package pdftex.def Info: figures/rep_cifar_imbalance_1.pdf  used on input line 489.
 (pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
 <figures/rep_cifar_imbalance_2.pdf, id=142, 403.59848pt x 278.3957pt>
 File: figures/rep_cifar_imbalance_2.pdf Graphic file (type pdf)
 <use figures/rep_cifar_imbalance_2.pdf>
-Package pdftex.def Info: figures/rep_cifar_imbalance_2.pdf  used on input line 491.
+Package pdftex.def Info: figures/rep_cifar_imbalance_2.pdf  used on input line 490.
 (pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
 <figures/rep_cifar_imbalance_5.pdf, id=143, 403.59848pt x 278.3957pt>
 File: figures/rep_cifar_imbalance_5.pdf Graphic file (type pdf)
 <use figures/rep_cifar_imbalance_5.pdf>
-Package pdftex.def Info: figures/rep_cifar_imbalance_5.pdf  used on input line 492.
+Package pdftex.def Info: figures/rep_cifar_imbalance_5.pdf  used on input line 491.
 (pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
 <figures/rep_cifar_imbalance_9.pdf, id=144, 403.59848pt x 278.3957pt>
 File: figures/rep_cifar_imbalance_9.pdf Graphic file (type pdf)
 <use figures/rep_cifar_imbalance_9.pdf>
-Package pdftex.def Info: figures/rep_cifar_imbalance_9.pdf  used on input line 493.
+Package pdftex.def Info: figures/rep_cifar_imbalance_9.pdf  used on input line 492.
 (pdftex.def)             Requested size: 122.61613pt x 84.57709pt.
 [8]
 <figures/bar_byzantines_random_bar.pdf, id=148, 795.27742pt x 411.492pt>
 File: figures/bar_byzantines_random_bar.pdf Graphic file (type pdf)
 <use figures/bar_byzantines_random_bar.pdf>
-Package pdftex.def Info: figures/bar_byzantines_random_bar.pdf  used on input line 520.
+Package pdftex.def Info: figures/bar_byzantines_random_bar.pdf  used on input line 519.
 (pdftex.def)             Requested size: 240.23016pt x 124.29619pt.
 <figures/bar_byzantines_untargeted_bar.pdf, id=149, 795.27742pt x 411.492pt>
 File: figures/bar_byzantines_untargeted_bar.pdf Graphic file (type pdf)
 <use figures/bar_byzantines_untargeted_bar.pdf>
-Package pdftex.def Info: figures/bar_byzantines_untargeted_bar.pdf  used on input line 521.
+Package pdftex.def Info: figures/bar_byzantines_untargeted_bar.pdf  used on input line 520.
 (pdftex.def)             Requested size: 240.23016pt x 124.29619pt.
 <figures/bar_imbalances_random_bar.pdf, id=150, 795.27742pt x 411.492pt>
 File: figures/bar_imbalances_random_bar.pdf Graphic file (type pdf)
 <use figures/bar_imbalances_random_bar.pdf>
-Package pdftex.def Info: figures/bar_imbalances_random_bar.pdf  used on input line 522.
+Package pdftex.def Info: figures/bar_imbalances_random_bar.pdf  used on input line 521.
 (pdftex.def)             Requested size: 240.23016pt x 124.29619pt.
 <figures/bar_imbalances_untargeted_bar.pdf, id=151, 795.27742pt x 411.492pt>
 File: figures/bar_imbalances_untargeted_bar.pdf Graphic file (type pdf)
 <use figures/bar_imbalances_untargeted_bar.pdf>
-Package pdftex.def Info: figures/bar_imbalances_untargeted_bar.pdf  used on input line 523.
+Package pdftex.def Info: figures/bar_imbalances_untargeted_bar.pdf  used on input line 522.
 (pdftex.def)             Requested size: 240.23016pt x 124.29619pt.
 <figures/table_random_imbalances_MNIST.pdf, id=152, 636.43399pt x 397.55307pt>
 File: figures/table_random_imbalances_MNIST.pdf Graphic file (type pdf)
 <use figures/table_random_imbalances_MNIST.pdf>
-Package pdftex.def Info: figures/table_random_imbalances_MNIST.pdf  used on input line 532.
+Package pdftex.def Info: figures/table_random_imbalances_MNIST.pdf  used on input line 531.
 (pdftex.def)             Requested size: 162.65576pt x 101.60217pt.
 <figures/table_random_imbalances_Fashion-MNIST.pdf, id=153, 636.43399pt x 397.55307pt>
 File: figures/table_random_imbalances_Fashion-MNIST.pdf Graphic file (type pdf)
 <use figures/table_random_imbalances_Fashion-MNIST.pdf>
-Package pdftex.def Info: figures/table_random_imbalances_Fashion-MNIST.pdf  used on input line 533.
+Package pdftex.def Info: figures/table_random_imbalances_Fashion-MNIST.pdf  used on input line 532.
 (pdftex.def)             Requested size: 162.65576pt x 101.60217pt.
 <figures/table_random_imbalances_Cifar-10.pdf, id=154, 627.22772pt x 397.55307pt>
 File: figures/table_random_imbalances_Cifar-10.pdf Graphic file (type pdf)
 <use figures/table_random_imbalances_Cifar-10.pdf>
-Package pdftex.def Info: figures/table_random_imbalances_Cifar-10.pdf  used on input line 534.
+Package pdftex.def Info: figures/table_random_imbalances_Cifar-10.pdf  used on input line 533.
 (pdftex.def)             Requested size: 162.65576pt x 103.09444pt.
 <figures/table_random_byzantines_MNIST.pdf, id=155, 636.43399pt x 397.81969pt>
 File: figures/table_random_byzantines_MNIST.pdf Graphic file (type pdf)
 <use figures/table_random_byzantines_MNIST.pdf>
-Package pdftex.def Info: figures/table_random_byzantines_MNIST.pdf  used on input line 542.
+Package pdftex.def Info: figures/table_random_byzantines_MNIST.pdf  used on input line 541.
 (pdftex.def)             Requested size: 162.65576pt x 101.6703pt.
 <figures/table_random_byzantines_Fashion-MNIST.pdf, id=156, 636.43399pt x 397.81969pt>
 File: figures/table_random_byzantines_Fashion-MNIST.pdf Graphic file (type pdf)
 <use figures/table_random_byzantines_Fashion-MNIST.pdf>
-Package pdftex.def Info: figures/table_random_byzantines_Fashion-MNIST.pdf  used on input line 543.
+Package pdftex.def Info: figures/table_random_byzantines_Fashion-MNIST.pdf  used on input line 542.
 (pdftex.def)             Requested size: 162.65576pt x 101.6703pt.
 <figures/table_random_byzantines_Cifar-10.pdf, id=157, 627.22772pt x 397.81969pt>
 File: figures/table_random_byzantines_Cifar-10.pdf Graphic file (type pdf)
 <use figures/table_random_byzantines_Cifar-10.pdf>
-Package pdftex.def Info: figures/table_random_byzantines_Cifar-10.pdf  used on input line 544.
+Package pdftex.def Info: figures/table_random_byzantines_Cifar-10.pdf  used on input line 543.
 (pdftex.def)             Requested size: 162.65576pt x 103.16357pt.
 <figures/table_untargeted_imbalances_MNIST.pdf, id=158, 636.43399pt x 397.55307pt>
 File: figures/table_untargeted_imbalances_MNIST.pdf Graphic file (type pdf)
 <use figures/table_untargeted_imbalances_MNIST.pdf>
-Package pdftex.def Info: figures/table_untargeted_imbalances_MNIST.pdf  used on input line 565.
+Package pdftex.def Info: figures/table_untargeted_imbalances_MNIST.pdf  used on input line 564.
 (pdftex.def)             Requested size: 162.65576pt x 101.60217pt.
 <figures/table_untargeted_imbalances_Fashion-MNIST.pdf, id=159, 636.43399pt x 397.55307pt>
 File: figures/table_untargeted_imbalances_Fashion-MNIST.pdf Graphic file (type pdf)
 <use figures/table_untargeted_imbalances_Fashion-MNIST.pdf>
-Package pdftex.def Info: figures/table_untargeted_imbalances_Fashion-MNIST.pdf  used on input line 566.
+Package pdftex.def Info: figures/table_untargeted_imbalances_Fashion-MNIST.pdf  used on input line 565.
 (pdftex.def)             Requested size: 162.65576pt x 101.60217pt.
 <figures/table_untargeted_imbalances_Cifar-10.pdf, id=160, 627.22772pt x 397.55307pt>
 File: figures/table_untargeted_imbalances_Cifar-10.pdf Graphic file (type pdf)
 <use figures/table_untargeted_imbalances_Cifar-10.pdf>
-Package pdftex.def Info: figures/table_untargeted_imbalances_Cifar-10.pdf  used on input line 567.
+Package pdftex.def Info: figures/table_untargeted_imbalances_Cifar-10.pdf  used on input line 566.
 (pdftex.def)             Requested size: 162.65576pt x 103.09444pt.
 <figures/table_untargeted_byzantines_MNIST.pdf, id=161, 636.43399pt x 397.81969pt>
 File: figures/table_untargeted_byzantines_MNIST.pdf Graphic file (type pdf)
 <use figures/table_untargeted_byzantines_MNIST.pdf>
-Package pdftex.def Info: figures/table_untargeted_byzantines_MNIST.pdf  used on input line 575.
+Package pdftex.def Info: figures/table_untargeted_byzantines_MNIST.pdf  used on input line 574.
 (pdftex.def)             Requested size: 162.65576pt x 101.6703pt.
 <figures/table_untargeted_byzantines_Fashion-MNIST.pdf, id=162, 636.43399pt x 397.81969pt>
 File: figures/table_untargeted_byzantines_Fashion-MNIST.pdf Graphic file (type pdf)
 <use figures/table_untargeted_byzantines_Fashion-MNIST.pdf>
-Package pdftex.def Info: figures/table_untargeted_byzantines_Fashion-MNIST.pdf  used on input line 576.
+Package pdftex.def Info: figures/table_untargeted_byzantines_Fashion-MNIST.pdf  used on input line 575.
 (pdftex.def)             Requested size: 162.65576pt x 101.6703pt.
 <figures/table_untargeted_byzantines_Cifar-10.pdf, id=163, 627.22772pt x 397.81969pt>
 File: figures/table_untargeted_byzantines_Cifar-10.pdf Graphic file (type pdf)
 <use figures/table_untargeted_byzantines_Cifar-10.pdf>
-Package pdftex.def Info: figures/table_untargeted_byzantines_Cifar-10.pdf  used on input line 577.
+Package pdftex.def Info: figures/table_untargeted_byzantines_Cifar-10.pdf  used on input line 576.
 (pdftex.def)             Requested size: 162.65576pt x 103.16357pt.
  [9 <./figures/rep_mnist_imbalance_1.pdf> <./figures/rep_mnist_imbalance_2.pdf> <./figures/rep_mnist_imbalance_5.pdf> <./figures/rep_mnist_imbalance_9.pdf> <./figures/rep_fashion_imbalance_1.pdf> <./figures/rep_fashion_imbalance_2.pdf> <./figures/rep_fashion_imbalance_5.pdf> <./figures/rep_fashion_imbalance_9.pdf> <./figures/rep_cifar_imbalance_1.pdf> <./figures/rep_cifar_imbalance_2.pdf> <./figures/rep_cifar_imbalance_5.pdf> <./figures/rep_cifar_imbalance_9.pdf>] [10 <./figures/bar_byzantines_random_bar.pdf> <./figures/bar_byzantines_untargeted_bar.pdf
 
