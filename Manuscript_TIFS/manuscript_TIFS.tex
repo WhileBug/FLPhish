@@ -123,6 +123,37 @@ In 2020, Chouikhi \textit{et al.} developed a reputation computing and credibili
 In the same year, Wen \textit{et al.} designed a Dirichlet reputation-based approach, and used the reputation score to choose a trustworthy Helper as a friendly jammer in a wireless cooperative system (WCS) \cite{ref_24_reputation}. Furthermore, they devised a multi-threshold fake noise detection approach. They gave ratings on a scale of one to ten. The graded ratings were directly represented and reflected in the generated reputation scores in the Dirichlet reputation-based method.
 In 2021, Liang \textit{et al.} introduced an intrusion detection system with a Markov-based reputation algorithm \cite{ref_46_reputation}. The RS-HgMTD model of the Hidden Generalized Mixture Transition Distribution (HgMTD) is designed to help each vehicle in the VANET assess the creditworthiness of its neighbors.
 
+
+\section{Models and Design Goals}
+
+In this section, we discuss the system model, show the threat model and identify our design goals.
+
+\subsection{System Model}We first show the system architecture of a typical FL with two entities, FL server, and a group of FL clients.
+  \begin{figure}
+    \centering
+  \includegraphics[width=0.5\textwidth]{figures/Figure_System.pdf}
+  \caption{System Model\&Threat Model.}
+  \label{fig_system}
+  \end{figure}   
+\subsubsection{{FL Server}} In each iteration, the FL server $s$ provides a global model to each client. The FL server aggregates all of the gradient updates to a global update based on FedAvg after receiving them from all of the clients. The FL server updates the global model after the aggregation process.
+
+\subsubsection{{FL Client}} The local dataset $d_i$ gathered by each FL client $c_i$ ($c_i$ denotes the $i$th client in FL) is preserved by each FL client $c_i$. To update the model obtained from the FL server, the FL client $c_i$ uses its local dataset $d_i$. The model gradient updates are then sent back to the FL server. Meanwhile, it repeats the preceding steps throughout the FL process until the FL server $s$ stops transmitting new models.
+
+\subsection{Threat Model}
+Byzantine attacks are a problem in the current system. We separate Byzantine attacks into two types according to the attack consequences:
+\par \textit{1) Denial-of-Service Byzantine Attack:} In denial-of-service attack, the Byzantine attackers intend to disturb the global model thus making it produce wrong predictions of the normal dataset \cite{ref_04_model,ref_06_model,ref_07_data,yang2017generative,sun2018data}. The label flipping attack in the current system model can be used by a malicious Byzantine client $b_i$ to launch Byzantine attacks against the global model. Label flipping attacks require $b_i$ to change the labels of training data while ensuring that the data's features remain unchanged \cite{ref_18_label_flipping}. The local model of the Byzantine client $b_i$ is trained with incorrect labels, resulting in a `poisoned' model with low accuracy. Then Byzantine client $b_{i}$ dispatches the false model gradient updates to the central server. Therefore the false model gradient updates cause the central server to learn the falsely distilled knowledge from clients. The server $s$'s aggregation process is performed on FedAvg which takes each client $c_{i}$'s dataset $d_{i}$'s size as the aggregation weight for $c_{i}$. This means that a client $c_{i}$ with a larger size of $d_{i}$ gets a larger aggregation weight. Meanwhile FedAvg takes the size of $d_{i}$ declared by $c_{i}$ as $d_{i}$'s real size which means $b_{i}$ can declare a fake size value larger than $d_{i}$'s real size value to enlarge the impact of attack. If the weight of the malicious clients reaches a threshold, the central server is misguided to produce false predictions. 
+\par In section V, we first divided denial-of-service attacks into 2 types of attacks: The first one is untargeted attack which makes the Byzantine attackers change the label of data samples from a type into another type (for instance, all the samples with label `5' are changed to label `0'). The another one is random attack which makes the Byzantine attackers randomly change the label of data samples. Then we evaluated our framework against the 2 types of denial-of-service attacks.
+\par \textit{2) Backdoor Byzantine Attack:} In backdoor attacks, called backdoor attacks, the disturbed global model will make wrong predictions of the data samples which have `backdoor' in them \cite{ref_08_data,ref_09_backdoor,ref_10_backdoor,ref_11_backdoor,ref_19_backdoor}. Backdoor attackers in FL need to embed some `triggers' (noted as $\sigma$) in their local dataset. Then they relabel the data samples with $\sigma$ as the target label $\iota$. Each backdoor attacker adopts the preprocessed local dataset with $\sigma$ to update the global model it received from the FL server. Then it transfers the poisoned model updates which contain the information that the data sample with $\sigma$ is predicted as the target label $\iota$ to the FL server. After receiving the poisoned model updates, the FL server updates the global model using the poisoned model updates of the backdoor attackers. After the update, the FL server's model misclassifies the data with the $\sigma$ to the target label $\iota$ of backdoor attackers. Take a backdoor attack process towards the construction of an FL on CIFAR-10 as an example. The backdoor attacker adds a grey square as $\sigma$ in each data sample. Each data sample with a $\sigma$ is labeled as `cat'. Then the backdoor attacker uses these data samples to update the global model from the central server and transfers the model gradient updates containing the $\sigma$ information to the central server. After that, the central server updates the global model via the model gradient updates. Thus, the global model learns the $\sigma$ information from the backdoor attacker. It misclassifies the data sample with the $\sigma$ as 'cat' as well.
+\par In section IV.D, we did theoretical analysis about how our FLPhish scheme can defend against backdoor Byzantine attacks.
+
+
+\subsection{Design Goals}
+The proposed FLPhish scheme's main goal is to provide a reliable method for accurately resisting opportunistic Byzantine attacks in our EFL system. The following are our design goals:
+
+\par \textit{1)} The typical FL design has several flaws, including incompatibility with various deep learning models in different clients and significant communication costs. As a result, we created EFL, a novel FL architecture inspired by the idea of ensemble learning. It lowers the cost of network transfers and expands our ability to defend against Byzantine attacks in FL.
+\par \textit{2)} The proposed EFL architecture currently needs a robust Byzantine attack protection mechanism. We urgently seek an efficient solution to deal with malicious Byzantine clients in FL because they cannot be trusted. In our proposed EFL system, we describe a phishing-based approach to guard against Byzantine attacks.
+\par \textit{3)} As the performance of each client remains not stable in each iteration, it is important for our scheme to accurately measure each client's level of confidence in the long term. Therefore, we further propose an effective Bayesian inference-based reputation scheme based on our phishing-based model to spot Byzantine attacks compromised by malicious users.
+
 \section{Conclusion}
 The conclusion goes here.
 

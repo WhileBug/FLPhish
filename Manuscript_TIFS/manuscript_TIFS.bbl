@@ -271,4 +271,10 @@ J.~Liang and M.~Ma, ``{ECF-MRS}: An efficient and collaborative framework with
   markov-based reputation scheme for idss in vehicular networks,'' \emph{IEEE
   Trans. Inf. Forensics Security}, vol.~16, pp. 278--290, 2021.
 
+\bibitem{ref_18_label_flipping}
+D.~Cao, S.~Chang, Z.~Lin, G.~Liu, and D.~Sun, ``Understanding distributed
+  poisoning attack in federated learning,'' in \emph{2019 IEEE 25th
+  International Conference on Parallel and Distributed Systems (ICPADS)},
+  Tianjin, China, Dec. 4-6 2019.
+
 \end{thebibliography}
