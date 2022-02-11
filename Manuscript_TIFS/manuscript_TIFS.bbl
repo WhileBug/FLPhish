@@ -277,4 +277,10 @@ D.~Cao, S.~Chang, Z.~Lin, G.~Liu, and D.~Sun, ``Understanding distributed
   International Conference on Parallel and Distributed Systems (ICPADS)},
   Tianjin, China, Dec. 4-6 2019.
 
+\bibitem{li2021flphish}
+B.~Li, P.~Wang, H.~Huang, S.~Ma, and Y.~Jiang, ``{FLPhish}: Reputation-based
+  phishing byzantine defense in ensemble federated learning,'' in \emph{2021
+  IEEE Symposium on Computers and Communications (ISCC)}.\hskip 1em plus 0.5em
+  minus 0.4em\relax IEEE, 2021, pp. 1--6.
+
 \end{thebibliography}
