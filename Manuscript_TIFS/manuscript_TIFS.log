@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.25)  11 FEB 2022 13:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.25)  11 FEB 2022 13:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -662,77 +662,27 @@ pdfTeX warning: pdflatex.exe (file ./figures/table_untargeted_byzantines_Fashion
 > <./figures/table_untargeted_byzantines_Cifar-10.pdf
 
 pdfTeX warning: pdflatex.exe (file ./figures/table_untargeted_byzantines_Cifar-10.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 599.
- (c:/Softwares/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-Underfull \hbox (badness 4832) in paragraph at lines 617--622
-[]\OT1/ptm/m/n/10 You can use a bib-li-og-ra-phy gen-er-ated by Bib-TeX
- []
-
-
-Underfull \hbox (badness 4608) in paragraph at lines 617--622
-\OT1/ptm/m/n/10 as a .bbl file. Bib-TeX doc-u-men-ta-tion can be eas-ily
- []
-
-
-Underfull \hbox (badness 6380) in paragraph at lines 617--622
-\OT1/ptm/m/n/10 ob-tained at: http://mirror.ctan.org/biblio/bibtex/contrib/doc/
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 617--622
-\OT1/ptm/m/n/10 The IEEE-tran Bib-TeX style sup-port page is:
- []
-
-(./manuscript_TIFS.bbl [12]
+>] (./manuscript_TIFS.bbl [12]
 Underfull \hbox (badness 2189) in paragraph at lines 195--198
 \OT1/ptm/m/n/8 er-ated learn-ing in a het-ero-ge-neous en-vi-ron-ment,'' \OT1/ptm/m/it/8 arXiv preprint
  []
 
-) [13]
-<fig1.png, id=1454, 188.20313pt x 173.89969pt>
-File: fig1.png Graphic file (type png)
-<use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 679.
-(pdftex.def)             Requested size: 72.27031pt x 66.77777pt.
-File: fig1.png Graphic file (type png)
-<use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 679.
-(pdftex.def)             Requested size: 72.27031pt x 66.77777pt.
-LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 680.
- (c:/Softwares/texlive/2021/texmf-dist/tex/latex/psnfss/omspcr.fd
-File: omspcr.fd 
-)
-LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 680.
+) [13
 
-Underfull \hbox (badness 10000) in paragraph at lines 679--682
-\OT1/ptm/m/n/8 and then for the 1st ar-gu-ment use
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 679--682
-\OMS/cmsy/m/n/8 n$\OT1/pcr/m/n/8 includegraphics \OT1/ptm/m/n/8 to de-clare and link
- []
-
-[14
-
- <./fig1.png>] (./manuscript_TIFS.aux) ) 
+] (./manuscript_TIFS.aux) ) 
 Here is how much of TeX's memory you used:
- 5769 strings out of 478994
- 97928 string characters out of 5857176
- 415707 words of memory out of 5000000
- 23103 multiletter control sequences out of 15000+600000
- 456709 words of font info for 123 fonts, out of 8000000 for 9000
+ 5693 strings out of 478994
+ 96898 string characters out of 5857176
+ 415911 words of memory out of 5000000
+ 23038 multiletter control sequences out of 15000+600000
+ 453995 words of font info for 117 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  68i,12n,74p,1913b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Softwares/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on manuscript_TIFS.pdf (14 pages, 987319 bytes).
+{c:/Softwares/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on manuscript_TIFS.pdf (13 pages, 929922 bytes).
 PDF statistics:
- 1542 PDF objects out of 1728 (max. 8388607)
- 303 compressed objects within 4 object streams
+ 1526 PDF objects out of 1728 (max. 8388607)
+ 294 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
 
