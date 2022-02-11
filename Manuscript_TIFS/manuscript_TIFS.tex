@@ -102,6 +102,27 @@
 \end{itemize}
 
 
+\section{Related Work}
+In this section, we discuss about the related research work about the proposed Byzantine defense methods in FL and the proposed reputation mechanism in cybersecurity research.
+\subsection{Byzantine Defense Methods in Federated Learning}
+Byzantine-robust schemes are very important for FL to enhance its security as Byzantine attacks can cause great damages to the FL system. Recent years have witnessed the increasing interest in the research of Byzantine-robust schemes in the context of FL. Most of the current Byzantine-robust FL methods tend to make a more robust aggregation rule which aims to tolerate the presence of Byzantine clients. 
+For example, in 2017, Chen \textit{et al.} developed an approach called Krum, which selects one client's update as a global model based on a square-distance score in each iteration \cite{ref_12_defense}.
+In the same year, Blanchard \textit{et al}. proposed two Byzantine-tolerant FL aggregation rules called Trimmed mean and Median \cite{ref_16_defense}. Trimmed Mean considers each parameter of the model update individually. Trimmed Mean sorts the parameter of the model updates collected, and cuts off the largest ones and the smallest ones. Median sorts the values of each parameter of all local model updates as well. Besides it considers the median value of each parameter as the value of the parameter in the global model update. 
+In 2018, Chen \textit{et al.} designed an approach called DRACO to evaluate redundant gradients that are used by the parameter server to eliminate the effects of adversarial updates. 
+In 2019, Xie \textit{et al.} proposed Zeno, which uses a ranking-based preference mechanism \cite{ref_15_defense}. The server computes a score for each client by using the stochastic zero-order oracle. Then Zeno presents a ranking list of clients based on the estimated descent of the loss function and the magnitudes. At last, Zeno computes the global model update by aggregating the clients with the highest scores. 
+In 2020, SLSGD developed by Xie \textit{et al.} also uses trimmed mean as the robust aggregation rules for Byzantine-robust FL \cite{ref_14_defense}. 
+In the same year, Cao \textit{et al.} proposed a Byzantine-tolerant scheme: FLTrust to introduce the use of trust \cite{ref_17_defense}. In each iteration, the server calculates a trust score for each client at first and lowers the trust score if the client's local model update's direction deviates more from the direction of the global model update. The client with a trust score lower than the threshold is considered a malicious client.
+In 2021, a privacy-enhanced FL (PEFL) framework is presented by Liu \textit{et al.}  \cite{ref_45_defense}. PEFL takes advantage of homomorphic encryption to protect the privacy of the clients. Furthermore, a channel using the effective gradient data extraction is provided for the server to punish poisoners.
+
+\subsection{Reputation Mechanism in Cybersecurity}
+The reputation mechanism is valued as a way to measure an entity's performance in a long term, such as in an online social network \cite{ref_27_reputation}, and in a smart grid system, \cite{ref_41_reputation, ref_44_reputation}.
+In 2012, Das \textit{et al.} first presented a dynamic trust computation model called SecuredTrust. This framework is used to distribute the workload and deal with the altering behavior of malicious clients \cite{ref_48_reputation}.
+To calculate and manage trust and reputation of CSP and SNP services, Zhu \textit{et al.} proposed an authenticated trust and reputation calculation and management system in wireless sensor networks and cloud computing in 2015 \cite{ref_47_reputation}.
+Lei \textit{et al.} presented a reputation-based Byzantine Fault Tolerance rule in 2018, which uses a reputation model to assess the performance of each node in the blockchain system \cite{ref_25_reputation}. If the system detects any malicious behavior, the nodes' discourse rights and reputation in the voting process are reduced. They also provided a primary change method based on reputation. The node with a higher reputation would have more chances to generate fresh valid blocks, lowering the system's security risk.
+In 2020, Chouikhi \textit{et al.} developed a reputation computing and credibility model to improve network efficiency \cite{ref_23_reputation}. They measured a vehicle's behavior toward other vehicles and network services using its reputation score or worth. And a vehicle's credibility is utilized to determine the correctness of a reputation score it offers.
+In the same year, Wen \textit{et al.} designed a Dirichlet reputation-based approach, and used the reputation score to choose a trustworthy Helper as a friendly jammer in a wireless cooperative system (WCS) \cite{ref_24_reputation}. Furthermore, they devised a multi-threshold fake noise detection approach. They gave ratings on a scale of one to ten. The graded ratings were directly represented and reflected in the generated reputation scores in the Dirichlet reputation-based method.
+In 2021, Liang \textit{et al.} introduced an intrusion detection system with a Markov-based reputation algorithm \cite{ref_46_reputation}. The RS-HgMTD model of the Hidden Generalized Mixture Transition Distribution (HgMTD) is designed to help each vehicle in the VANET assess the creditworthiness of its neighbors.
+
 \section{Conclusion}
 The conclusion goes here.
 

@@ -347,77 +347,77 @@ Overfull \hbox (6.02303pt too wide) in paragraph at lines 56--88
 [1{c:/Softwares/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 115.
+] [2]
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 136.
  (c:/Softwares/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 4832) in paragraph at lines 133--138
+Underfull \hbox (badness 4832) in paragraph at lines 154--159
 []\OT1/ptm/m/n/10 You can use a bib-li-og-ra-phy gen-er-ated by Bib-TeX
  []
 
 
-Underfull \hbox (badness 4608) in paragraph at lines 133--138
+Underfull \hbox (badness 4608) in paragraph at lines 154--159
 \OT1/ptm/m/n/10 as a .bbl file. Bib-TeX doc-u-men-ta-tion can be eas-ily
  []
 
 
-Underfull \hbox (badness 6380) in paragraph at lines 133--138
+Underfull \hbox (badness 6380) in paragraph at lines 154--159
 \OT1/ptm/m/n/10 ob-tained at: http://mirror.ctan.org/biblio/bibtex/contrib/doc/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--138
+Underfull \hbox (badness 10000) in paragraph at lines 154--159
 \OT1/ptm/m/n/10 The IEEE-tran Bib-TeX style sup-port page is:
  []
 
-(./manuscript_TIFS.bbl [2]
+(./manuscript_TIFS.bbl [3]
 Underfull \hbox (badness 2189) in paragraph at lines 195--198
 \OT1/ptm/m/n/8 er-ated learn-ing in a het-ero-ge-neous en-vi-ron-ment,'' \OT1/ptm/m/it/8 arXiv preprint
  []
 
-) [3]
-<fig1.png, id=24, 188.20313pt x 173.89969pt>
+) [4]
+<fig1.png, id=27, 188.20313pt x 173.89969pt>
 File: fig1.png Graphic file (type png)
 <use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 195.
+Package pdftex.def Info: fig1.png  used on input line 216.
 (pdftex.def)             Requested size: 72.27031pt x 66.77777pt.
 File: fig1.png Graphic file (type png)
 <use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 195.
+Package pdftex.def Info: fig1.png  used on input line 216.
 (pdftex.def)             Requested size: 72.27031pt x 66.77777pt.
-LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 196.
+LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 217.
  (c:/Softwares/texlive/2021/texmf-dist/tex/latex/psnfss/omspcr.fd
 File: omspcr.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 196.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 217.
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--198
+Underfull \hbox (badness 10000) in paragraph at lines 216--219
 \OT1/ptm/m/n/8 and then for the 1st ar-gu-ment use
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--198
+Underfull \hbox (badness 10000) in paragraph at lines 216--219
 \OMS/cmsy/m/n/8 n$\OT1/pcr/m/n/8 includegraphics \OT1/ptm/m/n/8 to de-clare and link
  []
 
-[4
+[5
 
  <./fig1.png>] (./manuscript_TIFS.aux) ) 
 Here is how much of TeX's memory you used:
- 4464 strings out of 478994
- 73229 string characters out of 5857176
- 391133 words of memory out of 5000000
- 21869 multiletter control sequences out of 15000+600000
+ 4475 strings out of 478994
+ 73432 string characters out of 5857176
+ 391366 words of memory out of 5000000
+ 21880 multiletter control sequences out of 15000+600000
  452876 words of font info for 118 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  68i,12n,74p,1717b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Softwares/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on manuscript_TIFS.pdf (4 pages, 189046 bytes).
+Output written on manuscript_TIFS.pdf (5 pages, 195961 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 77 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

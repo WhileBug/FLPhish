@@ -211,4 +211,64 @@ L.~Mu{\~n}oz-Gonz{\'a}lez, K.~T. Co, and E.~C. Lupu, ``Byzantine-robust
   federated machine learning through adaptive model averaging,'' \emph{arXiv
   preprint arXiv:1909.05125}, Sep. 2019.
 
+\bibitem{ref_14_defense}
+C.~Xie, O.~Koyejo, and I.~Gupta, ``{SLSGD}: Secure and efficient distributed
+  on-device machine learning,'' in \emph{Machine Learning and Knowledge
+  Discovery in Databases (PKDD)}, Ghent, Belgium, Sep. 14-18 2020.
+
+\bibitem{ref_45_defense}
+X.~Liu, H.~Li, G.~Xu, Z.~Chen, X.~Huang, and R.~Lu, ``Privacy-enhanced
+  federated learning against poisoning adversaries,'' \emph{IEEE Trans. Inf.
+  Forensics Security}, vol.~16, pp. 4574--4588, 2021.
+
+\bibitem{ref_27_reputation}
+G.~Liu, Q.~Yang, H.~Wang, and A.~X. Liu, ``Trust assessment in online social
+  networks,'' \emph{IEEE Trans. Dependable Secure Comput.}, vol.~18, no.~2, pp.
+  994--1007, May 2021.
+
+\bibitem{ref_41_reputation}
+B.~Li, R.~Lu, W.~Wang, and K.-K.~R. Choo, ``{DDOA}: A dirichlet-based detection
+  scheme for opportunistic attacks in smart grid cyber-physical system,''
+  \emph{IEEE Trans. Inf. Forensics Security}, vol.~11, no.~11, pp. 2415--2425,
+  Jun. 2016.
+
+\bibitem{ref_44_reputation}
+B.~Li, R.~Lu, and G.~Xiao, \emph{Detection of False Data Injection Attacks in
+  Smart Grid Cyber-Physical Systems}.\hskip 1em plus 0.5em minus 0.4em\relax
+  Springer, 2020.
+
+\bibitem{ref_48_reputation}
+A.~Das and M.~M. Islam, ``{SecuredTrust}: A dynamic trust computation model for
+  secured communication in multiagent systems,'' \emph{IEEE Trans. Dependable
+  Secure Comput.}, vol.~9, no.~2, pp. 261--274, 2012.
+
+\bibitem{ref_47_reputation}
+C.~Zhu, H.~Nicanfar, V.~C.~M. Leung, and L.~T. Yang, ``An authenticated trust
+  and reputation calculation and management system for cloud and sensor
+  networks integration,'' \emph{IEEE Trans. Inf. Forensics Security}, vol.~10,
+  no.~1, pp. 118--131, 2015.
+
+\bibitem{ref_25_reputation}
+K.~{Lei}, Q.~{Zhang}, L.~{Xu}, and Z.~{Qi}, ``Reputation-based byzantine
+  fault-tolerance for consortium blockchain,'' in \emph{2018 IEEE 24th
+  International Conference on Parallel and Distributed Systems (ICPADS)},
+  Sentosa, Singapore, Dec. 11-13 2018, pp. 604--611.
+
+\bibitem{ref_23_reputation}
+S.~{Chouikhi}, L.~{Khoukhi}, S.~{Ayed}, and M.~{Lemercier}, ``An efficient
+  reputation management model based on game theory for vehicular networks,'' in
+  \emph{2020 IEEE 45th Conference on Local Computer Networks (LCN)}, Sydney,
+  Australia, Nov. 16-19 2020, pp. 413--416.
+
+\bibitem{ref_24_reputation}
+Y.~{Wen}, Y.~{Huo}, T.~{Jing}, and Q.~{Gao}, ``A reputation framework with
+  multiple-threshold energy detection in wireless cooperative systems,'' in
+  \emph{ICC 2020 - 2020 IEEE International Conference on Communications (ICC)},
+  Virtual, Jun. 7-11 2020, pp. 1--6.
+
+\bibitem{ref_46_reputation}
+J.~Liang and M.~Ma, ``{ECF-MRS}: An efficient and collaborative framework with
+  markov-based reputation scheme for idss in vehicular networks,'' \emph{IEEE
+  Trans. Inf. Forensics Security}, vol.~16, pp. 278--290, 2021.
+
 \end{thebibliography}
