@@ -1,6 +1,6 @@
 \documentclass[lettersize,journal]{IEEEtran}
 \usepackage{amsmath,amsfonts}
-\usepackage{algorithmic}
+%\usepackage{algorithmic}
 \usepackage{algorithm}
 \usepackage{array}
 \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
@@ -14,8 +14,12 @@
 %\usepackage{float}
 %\usepackage{multirow}
 %\usepackage{tabularx}
-%\usepackage{authblk}
+\usepackage{authblk}
 \usepackage{booktabs}
+\usepackage{algorithmicx}  
+\usepackage{algpseudocode}
+\usepackage{soul}
+\usepackage{diagbox}
 \hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}
 % updated with editorial comments 8/9/2021
 
@@ -153,6 +157,245 @@ The proposed FLPhish scheme's main goal is to provide a reliable method for accu
 \par \textit{1)} The typical FL design has several flaws, including incompatibility with various deep learning models in different clients and significant communication costs. As a result, we created EFL, a novel FL architecture inspired by the idea of ensemble learning. It lowers the cost of network transfers and expands our ability to defend against Byzantine attacks in FL.
 \par \textit{2)} The proposed EFL architecture currently needs a robust Byzantine attack protection mechanism. We urgently seek an efficient solution to deal with malicious Byzantine clients in FL because they cannot be trusted. In our proposed EFL system, we describe a phishing-based approach to guard against Byzantine attacks.
 \par \textit{3)} As the performance of each client remains not stable in each iteration, it is important for our scheme to accurately measure each client's level of confidence in the long term. Therefore, we further propose an effective Bayesian inference-based reputation scheme based on our phishing-based model to spot Byzantine attacks compromised by malicious users.
+
+\begin{figure*}
+  \centering
+\includegraphics[width=0.95\textwidth]{figures/Figure_FLPhish.pdf}
+\caption{Our Proposed FLPhish Scheme.}
+\label{fig_Phishing}
+\end{figure*}   
+
+
+\section{Proposed FLPhish Scheme}
+In this section, we show the proposed FLPhish scheme including the EFL architecture, the phishing mechanism, the reputation mechanism, and the security analysis of backdoor attacks.
+
+\begin{algorithm}[t]
+\caption{EFL} %algorithm name
+\label{alg:system}
+\hspace*{0.02in} {\bf Input:} %the input of the algorithm
+each FL client $c_i$, $i=1,2,3,...,u$ with its local dataset $d_i$, $i=1,2,3,...,u$; an FL central server $s$ with the unlabeled dataset $D$ preserved by itself; number of the FL training iterations $T$; the size of unlabeled batch $n$ in each iteration;\\
+\hspace*{0.02in} {\bf Output:} %output of the algorithm
+\begin{algorithmic}[1]
+  \State $\mathbf{m_i}$ $\gets$ each FL client $c_i$ trains a local model using its local dataset $d_i$ collected by itself;
+  \For{\textit{t=1,2,3,..,,T}}
+    \State $s$ selects $D_t$ (containing $n$ data samples) from $D$;
+    \For{\textit{i=1,2,3,...,u}}
+      \State $s \overset{D_{t}}{\rightarrow} c_{i}$;
+      \State $c_i$ makes predictions $\mathbf{k_i^t}$ of the $D_t$;
+      \State $c_i \overset{\mathbf{k_i^t}}{\rightarrow} s$;
+    \EndFor
+    \State $Y_t$ = $KnowledgeEnsemble(\mathbf{k_1^t},\mathbf{k_2^t},\mathbf{k_3^t},...,\mathbf{k_u^t})$;
+    \State $\mathbf{M}$ = $ModelUpdate(Y_t, D_t, \mathbf{M})$;
+  \EndFor \\
+  \Return $\mathbf{M}$.
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[t]
+\caption{KnowledgeEnsemble} %algorithm name
+\label{alg:KnowledgeEnsemble}
+\hspace*{0.02in} {\bf Input:} %input of the algorithm
+the ensemble of each client's prediction (`distilled knowledge') ${\mathbf{k_i^t}}_{\left \{ i= 1,2,3,...,u \right \}}$; the size of each client's local dataset ${e_i}_{\left \{ i= 1,2,3,...,u \right \}}$; the unlabeled dataset $D_t$ used in $t$th iteration; $\mathbf{\hat{y}^t}$ is the ensembled prediction of dataset $D_t$; $\mathbf{\hat{y}^t_l}$ denotes the prediction of the dataset $D_t$ made by $i$th client;\\
+\hspace*{0.02in} {\bf Output:} %output of the algorithm
+\begin{algorithmic}[1]
+  \For{$l=1,2,3,...,n$ ($l=1,2,3,...,n$, denotes the data point in the unlabeled dataset)}
+    \State $\mathbf{\hat{k}^t}$ $\gets$ $\sum_{i=1}^{u}\frac{e_i}{\sum_{i=1}^{u}e_i}\mathbf{\hat{k}^t}_i$;
+    \State $\mathbf{\hat{y}^t}\gets argmax(\mathbf{\hat{k}^t})$;
+  \EndFor \\
+  \Return $\mathbf{\hat{y}^t}$.
+\end{algorithmic}
+
+\end{algorithm}
+
+\subsection{Designed Ensemble Federated Learning}
+Inspired by ensemble learning, we propose a new FL architecture, called EFL.
+\par Typical FL architecture collects FL clients' model gradient updates, and aggregates them for the global model updates. While unlike them, our proposed FLPhish scheme applies an unlabeled dataset (the central server preserves this dataset, while does not have its label or lacks enough resources to get its label) preserved by the central server and all the clients' predictions of this dataset for global model updates.
+\subsubsection{{Client}} Each FL client {$c_{i}$} ($i$ denotes the client's serial number) collects and labels its local data from various data sources, resulting in its local dataset. To train its local model, {$c_{i}$} uses the local dataset. When {$c_{i}$} receives a public dataset from the central server in each iteration, it uses its local model to produce predictions for the dataset and sends the predictions back to the central server $s$.
+\subsubsection{{Central Server}} The public dataset and the global model are built and preserved by the central server $s$. The public dataset is made up of unlabeled data that the central server does not have labels for it. $s$ either collects data from other data sources or generates data by itself to build the public dataset. In each iteration, the public dataset is transmitted to each client by the central server $s$ after its construction. Each client $c_i$ uses its local model preserved by itself to make predictions about the public dataset and sends the prediction results back to $s$. After getting all of the predictions from all of the customers, $s$ aggregates them into a single set of predictions
+\begin{equation}
+\mathbf{\hat{k}^t}=\sum_{i=1}^{u}\frac{e_i}{\sum_{i=1}^{u}e_i}\mathbf{\hat{k}^t}_i.
+\end{equation}
+Then the central server $s$ utilizes the aggregated predictions $\mathbf{\hat{k}^t}$ to compute the aggregated labels
+\begin{equation}
+\mathbf{\hat{y}^t}\gets argmax(\mathbf{\hat{k}^t}).
+\end{equation} 
+Then the central server {$s$} employs the public dataset and the aggregated labels as the dataset's labels to update the global model.
+
+\par Compared with typical FL architectures, this proposed system has a variety of advantages:
+\begin{itemize}
+
+\item Because model gradient updates are used in typical FL, the global model and each local model preserved by each client must be the same sort of model. Otherwise, the FL aggregation process for the various shapes of model parameters will not be possible. However, in our approach, alternative types of neural architectures can be deployed by using distilled knowledge (client-generated predictions of unlabeled data) instead of model gradient updates as aggregation ingredients. Various clients' local datasets with different selected features are also allowed.
+\item In comparison to the typical FL architecture, the overhead and latency of the communication process in our developed EFL are greatly decreased. Due to the reduced size of data and labels, transferring data and labels is much faster than transferring models and model gradient updates.
+\item The design of EFL can prevent the backdoor attack in FL. The detail of theoretical proof is in section IV.D.
+\end{itemize}
+    
+
+
+\subsection{Phishing Mechanism-based Detection}
+The proposed EFL is still vulnerable to byzantine attacks. Malicious clients can modify their local models through label flipping attacks. In order to build a `poisoned' local model, they assign inaccurate labels to the local dataset. When hostile clients receive unlabeled data from the central server, they make inaccurate predictions (called `poisoned knowledge') and send them to the central server. The inaccurate predictions are subsequently aggregated as labels for the unlabeled dataset by the central server. The global model is subsequently trained using these unlabeled datasets and the erroneous aggregation predictions by the central server. As a result, an incorrect global model emerges. To deal with Byzantine attacks in EFL, we propose using labeled data in the design of EFL. We called labeled data `bait'.
+
+\par Step-1: \ul{\textit{Local Model Training}} The ensemble of clients $C=\left \{ c_{1},c_{2},...,c_{n-1},c_{n} \right \}$. A local dataset $d_i$ is preserved by each client $c_i$. At the beginning of the EFL process, each local model $\mathbf{m_i}$ is trained by each client $c_i$ via its local dataset $d_i$ as
+\begin{equation}
+  \mathbf{m_i}=Train(d_i).
+\end{equation}
+\par Step-2: \ul{\textit{Dataset Transferring}} From the unlabled dataset $D$ and the labeled dataset $B$, the central server randomly selects some data samples to construct the unlabeled dataset $D_t$ and the labeled dataset $B_t$ to construct the $t$th FL iteration's public dataset. $D_t$ has $n$ data samples, while $B_t$ has $m$ data samples. Then $D_t$ and $B_t$ are sent to each client $c_i$ by $s$ as
+\begin{equation}
+  c_{i} \overset{{D_{t},B_{t}}}{\leftarrow}s.
+\end{equation}
+\par Step-3: \ul{\textit{Label Predicting}} The predictions of $D_t$ and $B_t$ are made by each client $c_i$ as
+\begin{equation}
+  \mathbf{k_i^t}=Predict(D_t, B_t, \mathbf{m_i})
+\end{equation}
+($D_t$ and $B_t$ are mixed together, $c_i$ can not distinguish between them) via its local model and the predictions $\mathbf{k_i^t}$:
+\begin{equation}
+  \mathbf{k_i^t}=\begin{vmatrix}
+    p_{1,1} & p_{1,2} & \cdots  & p_{1,g-1} & p_{1,g}\\ 
+    \vdots  & \vdots & \ddots  & \vdots & \vdots\\ 
+    p_{n,1} & p_{n,2} & \cdots  & p_{n,g-1} & p_{n,g}
+    \end{vmatrix}
+\end{equation}
+is sent back to the central server.
+
+\begin{algorithm}[t]
+  \caption{Phishing Mechanism} 
+  \hspace*{0.02in} {\bf Input:} 
+  each FL client $c_i$, $i=1,2,3,...,u$ with its local dataset $d_i$, $i=1,2,3,...,u$; an FL central server $s$ with the unlabeled dataset $D$ and labeled dataset $B$ preserved by itself; the number of FL training iterations $T$; the size of the unlabeled batch $n$ used in each training iteration; the size of the labeled batch $m$ used in each training iteration.\\
+  \hspace*{0.02in} {\bf Output:} 
+  output result
+  \begin{algorithmic}[1]
+    \State $\mathbf{m_i}$ $\gets$ each client $c_i$ train a local model using its local dataset $d_i$.
+    \For{\textit{t=1,2,3,..,,T}}
+      \State $s$ selects $D_t$ (containing $n$ samples) from $D$ and $B_t$ (containing $m$ samples) from $B$.
+      \For{\textit{i=1,2,3,...,u}}
+        \State $s$ sends $D_t$ and $B_t$ to $c_i$.
+        \State $c_i$ makes predictions $\mathbf{k_i^t}$ of the $D_t$ and $B_t$.
+        \State $c_i$ sends $\mathbf{k_i^t}$ to $s$.
+        \State $s$ calculates the accuracy $a_i^t$ of the predictions of $B_t$ made by $c_i$ in $t$th procedure.
+        \If{$a_i^t > r_q$}
+          \State $q_i = 1$.
+          \For{\textit{j=i,i+1,i+2,...,u-1}}
+            \State $(d,c,\mathbf{k^t},q,a^t)_j \gets (d,c,\mathbf{k^t},q,a^t)_{j-1}$.
+          \EndFor
+        \EndIf
+      \EndFor
+      \State $\mathbf{K_t}$ = $KnowledgeEnsemble(\mathbf{k_1^t},\mathbf{k_2^t},\mathbf{k_3^t},...,\mathbf{k_u^t})$.
+      \State $\mathbf{M}$ = $ModelUpdate(\mathbf{K_t}, D_t, \mathbf{M})$.
+    \EndFor
+    \State\Return $\mathbf{M}$
+  \end{algorithmic}
+  \end{algorithm}
+Unlike benign clients, the malicious clients return the incorrect prediction to the central server $s$ to disturb the aggregation process.
+\par Step-4: \ul{\textit{Byzantine Identifying}} After accepting the predictions $\mathbf{k_i^t}$ from each client $c_i$, $s$ needs to identify the Byzantine attackers among all the clients. The predictions of the \textit{`bait'} (the labeled dataset $B_t$) are extracted apart from $D_t$ from $\mathbf{k_i^t}$. Next, $s$ calculates the accuracy of each client's predictions of $B_t$ using true label of the $B_t$:
+\begin{equation}
+  a_i^t=AccuracyCal(\mathbf{k_i^t}, B_t).
+\end{equation}
+Then the clients with a low accuracy value over predicting $B_t$ are identified as malicious Byzantine clients.
+\par Step-5: \ul{\textit{Global Model Updating}} After identifying the malicious clients within all clients, $s$ aggregates the knowledge $\mathbf{\hat{k}^t}$ from all clients as
+\begin{equation}
+  \mathbf{\hat{k}^t}=\sum_{i=1}^{u}\frac{e_i}{\sum_{i=1}^{u}e_i}\mathbf{\hat{k}^t}_i.
+\end{equation}
+Then the aggregated knowledge $\mathbf{\hat{k}^t}$ is used to derive the labels by the central server $s$
+\begin{equation}
+  \mathbf{\hat{y}^t}= argmax(\mathbf{\hat{k}^t}).
+\end{equation} 
+
+
+
+\subsection{Bayesian Inference-based Reputation Mechanism}
+The server $s$ keeps track of the reputation of all the clients $C$ in the model in a reputation list. Let $X_i$ be the $c_i$ client's reputation, which represents $s$'s opinion of how probable client $c_i$ is to be a Byzantine client. The accuracy $a_i^t$ of client $c_i$ from the first iteration to the $t$th iteration is used to compute $X_i$. When client $c_i$ sends a new update to server $s$, $s$ uses the accuracy $a_i^t$ to update the value of $X_i$.
+\par At first, the reputation is neutral. With a probability of 50\%, server $s$ considers each client $c_i$ to be a benign client. The reputation of the server $s$ is updated when a new update $\mathbf{k_i^t}$ arrives at the central server. When the client $c_i$'s reputation falls below the threshold $r$, $s$ considers the client $c_i$ to be a Byzantine client and discards the client's update. When the $X_i$ surpasses the threshold $r$, the client $c_i$ updates are reviewed in the aggregation.
+\par We employ Bayesian inference to construct our reputation mechanism. Each data prediction made by client $c_i$ faces two situations: wrong predictions or correct predictions. Thus, the use of binomial parameter distributions becomes a natural choice for our reputation mechanism. Let $Y_i$ be the event that the number of wrong predictions and correct predictions made by client $c_i$ is $\alpha_i$ and $\beta_i$. Given $X_i=\gamma_i$, the conditional probability is 
+\begin{equation}
+  Pr(Y_i|X_i=\gamma _i)=\left ( \frac{\alpha _i+\beta _i}{\alpha _i} \right )\gamma {_{i}}^{\alpha_i}\left ( 1-\gamma_{i} \right )^{\beta_{i}}\label{equation_1}.
+\end{equation}
+where $\alpha_i$ and $\beta_i$ is the available evidence for the estimation of the $X$, and $\gamma_i$ is unknown. Eq. \ref{equation_1} indicates the likelihood function for $X$. According to Bayesian inference we compute the posterior probability as
+\begin{equation}
+  Pr(X_i=\gamma _i|Y_i)=\frac{Pr\left ( Y_{i}|X_{i}=\gamma_{i} \right )Pr(X_{i}=\gamma_{i})}{\int_{0}^{1}Pr\left ( Y_{i}|X_{i}=x \right )Pr(X_{i}=x)dx}\label{equation_2}.
+\end{equation}
+Given the posterior probability function, the final value for the expectation value of reputation $X$ is computed as
+\begin{equation}
+  E(X)=\int_{0}^{1}\frac{Pr\left ( Y_{i}|X_{i}=\gamma_{i} \right )Pr(X_{i}=\gamma_{i})}{\int_{0}^{1}Pr\left ( Y_{i}|X_{i}=x \right )Pr(X_{i}=x)dx}\gamma_{i}d\gamma_{i}\label{equation_3}.
+\end{equation}
+Furthermore, we decide to use the binomial parameter beta distribution to describe the distribution of X. Assume X is a random variable of the beta distribution with the parameters $(\alpha, \beta)$, the density function is
+\begin{equation}
+  f(x,\alpha,\beta)=\frac{1}{B(\alpha,\beta)}x^{\alpha-1}(1-x)^{\beta-1}\label{equation-4}.
+\end{equation}
+, where $B(\alpha, \beta)$ function is the beta function. Therefore we compute the expectation of $X$ as
+\begin{equation}
+  E(X)=\frac{\alpha}{\alpha+\beta}.
+\end{equation}
+
+Thus, the central server ${s}$ computes the reputation $X_i$ of each client ${c_{i}}$ as ${E(x_{i})=\frac{\alpha_{i}}{\alpha_{i}+\beta_{i}}}$. We set the reputation's initial value to 50\% by setting the initial value of $\alpha$ and $\beta$ to 1. This means that the chances for each client $c_ i$ of being a benign or malicious Byzantine client are the same. When a new iteration of EFL is completed, new evidence for the computation of the reputation is presented in the form of ${\alpha_{i}}'$ and ${\alpha_{i}}'$. The reputation is then computed by
+\begin{equation}
+  {E(x_{i})}'=\frac{(\alpha_{i}+{\alpha_{i}}')}{(\alpha_{i}+{\alpha_{i}}')+(\beta_{i}+{\beta_{i}}')}.
+\end{equation}
+
+
+\par In our conference version, we designed an aggregation rule which utilizes a threshold to identify the Byzantine clients. While in this work, we propose a new Byzantine-tolerant aggregation rule, FLPhish-weight.
+\par\textit{\ul{FLPhish-weight}} Unlike the aggregation rule designed in our conference version, FLPhish-weight does not discard the potential Byzantine clients' updates. On the contrary, it enables the Byzantine clients to participate the aggregation using its reputation value as the aggregation weight. Due to our reputation mechanism, the Byzantine clients are offered a low reputation, so it has a lower influence on the aggregation process.
+Give a reputation list $R=\left | x_{1},x_{1},x_{1},\cdots ,x_{n-1},x_{n} \right |$, the prediction results is 
+\begin{equation}
+  \mathbf{k_i^t}=\begin{vmatrix}
+    p_{1,1} & p_{1,2} & \cdots  & p_{1,g-1} & p_{1,g}\\ 
+    \vdots  & \vdots & \ddots  & \vdots & \vdots\\ 
+    p_{n,1} & p_{n,2} & \cdots  & p_{n,g-1} & p_{n,g}
+    \end{vmatrix},
+\end{equation}
+Meanwhile, FLPhish-weight computes the aggregated knowledge, which is
+  \begin{equation}
+  \mathbf{\hat{k}^t}=\sum_{i=1}^{u}\frac{e_i}{\sum_{i=1}^{u}e_i}\mathbf{\hat{k}^t}_i\times x_{i}.
+\end{equation}
+Then the server $s$ uses the aggregated knowledge $\mathbf{\hat{k}^t}$ to get the labels
+\begin{equation}
+  \mathbf{\hat{y}^t}\gets argmax(\mathbf{\hat{k}^t}).
+\end{equation} 
+In a word, FLPhish-weight does not identify the Byzantine clients but treats the clients with a low reputation as `bad' clients and gives them lower weights.
+
+
+\subsection{Security Analysis of Backdoor Byzantine Attacks}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{figures/Figure_backdoor.pdf}
+\caption{Backdoor Attack in FL.}
+\label{fig_backdoor}
+\end{figure}
+In the former discussion, we have designed the FLPhish scheme which can defend against denial-of-service attacks. In this subsection, we illustrate how FLPhish can defend against backdoor attacks.  
+\par Backdoor attackers in FL need to embed some `triggers' (noted as $\sigma$) in their local dataset. Then they relabel the data samples with $\sigma$ as the target label $\iota$. Each backdoor attacker adopts the preprocessed local dataset with $\sigma$ to update the global model it received from the FL server. Then it transfers the poisoned model updates which contain the information that the data sample with $\sigma$ is predicted as the target label $\iota$ to the FL server. After receiving the poisoned model updates, the FL server updates the global model using the poisoned model updates of the backdoor attackers. After the update, the FL server's model misclassifies the data with the $\sigma$ to the target label $\iota$ of backdoor attackers. Take a backdoor attack process towards the construction of an FL on CIFAR-10 as an example. The backdoor attacker adds a grey square as $\sigma$ in each data sample. Each data sample with a $\sigma$ is labeled as `cat'. Then the backdoor attacker uses these data samples to update the global model from the central server and transfers the model gradient updates containing the $\sigma$ information to the central server. After that, the central server updates the global model via the model gradient updates. Thus, the global model learns the $\sigma$ information from the backdoor attacker. It misclassifies the data sample with the $\sigma$ as 'cat' as well.
+\par While in EFL, the model update is replaced from gradient update to the predicted labels of the public dataset. First, the dimension of the model update is reduced so that the information of $\sigma$ in backdoor attackers' local dataset can not be transferred. Second, the public dataset is produced by the central server, therefore making backdoor attackers impossible to hide the $\sigma$ in the public dataset. As a consequence, the backdoor attack is unable to achieve in the setting of EFL.
+
+\par The Byzantine attacker $b_i$ among the clients embeds the information of `trigger' $\sigma$ in some samples of the $d_i$ (we note the Byzantine attacker's local dataset as $d_i^b$). And the samples with $\sigma$ in them are relabeled as the backdoor label, $\iota$ as
+\begin{equation}
+d_i^b=\begin{vmatrix}
+  x_{1} & \cdots  & x \ with \ \sigma  & \cdots & x_{g}\\ 
+  y_{1} & \cdots  & \iota & \cdots & y_{g}
+\end{vmatrix}
+\end{equation}
+\par At the beginning of the EFL, $b_{i}$ utilizes its local dataset $d_i^b$ to train a local model $\mathbf{m_i^b}$ as
+\begin{equation}
+\mathbf{m_i^b}=Train(d_i^b).
+\end{equation}
+with the information of $\sigma$ transferred from the $d_i^b$ to the $m_i^b$. The local model $m_i^b$ will classify all the samples with the $\sigma$ as the backdoor label $\iota$:
+\begin{equation}
+\iota=Predict(x_\sigma, \mathbf{m_i^b})
+\end{equation}
+
+\par The central server $s$ selects $n$ samples of data $D_t$ from unlabeled dataset $D$ and $m$ samples of data $B_t$ from labeled dataset $B$ randomly. Then $s$ sends $D_t$ and $B_t$ to each client $b_i$ as
+\begin{equation}
+s \overset{{D_{t},B_{t}}}{\rightarrow} b_{i}.
+\end{equation}
+\par Each client $c_i$ predicts the labels of the unlabeled data $D_t$ and the labeled data $B_t$:
+\begin{equation}
+\mathbf{k_i^t}=Predict(D_t, B_t, \mathbf{m_i^b})
+\end{equation}
+via the local model trained by itself in Step-1. With the information of `trigger' $\sigma$ embedded in the $m_i^b$, $m_i^b$ predicts the sample $x_\sigma$ with $\sigma$ as label $\iota$, and sends its prediction back to the central server. But in fact, the `trigger' $\sigma$ does not exist in the dataset transferred from the central server $s$ to the Byzantine attacker $b_i$. Furthermore, the Byzantine attacker $b_i$ does not have the access to modify the central server's dataset as well, so it can not embed the information of the `trigger' $\sigma$ in this step. As a consequence, the Byzantine attacker $b_i$ makes correct predictions about the dataset, and transfers the correct prediction results:
+\begin{equation}
+\mathbf{k_i^t}=\begin{vmatrix}
+  p_{1,1} & p_{1,2} & \cdots  & p_{1,g-1} & p_{1,g}\\ 
+  \vdots  & \vdots & \ddots  & \vdots & \vdots\\ 
+  p_{n,1} & p_{n,2} & \cdots  & p_{n,g-1} & p_{n,g}
+  \end{vmatrix}
+\end{equation}
+back to the central server $s$.
 
 \section{Conclusion}
 The conclusion goes here.
