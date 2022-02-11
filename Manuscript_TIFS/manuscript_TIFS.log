@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.25)  11 FEB 2022 11:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.25)  11 FEB 2022 13:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -259,9 +259,28 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
+) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen183
+\lightrulewidth=\dimen184
+\cmidrulewidth=\dimen185
+\belowrulesep=\dimen186
+\belowbottomsep=\dimen187
+\aboverulesep=\dimen188
+\abovetopsep=\dimen189
+\cmidrulesep=\dimen190
+\cmidrulekern=\dimen191
+\defaultaddspace=\dimen192
+\@cmidla=\count287
+\@cmidlb=\count288
+\@aboverulesep=\dimen193
+\@belowrulesep=\dimen194
+\@thisruleclass=\count289
+\@lastruleclass=\count290
+\@thisrulewidth=\dimen195
 ) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count287
+\l__color_backend_stack_int=\count291
 \l__pdf_internal_box=\box55
 )
 
@@ -271,20 +290,20 @@ LaTeX Warning: Unused global option(s):
 (./manuscript_TIFS.aux)
 \openout1 = `manuscript_TIFS.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 
 -- Lines per column: 58 (exact).
 Package caption Info: Begin \AtBeginDocument code.
@@ -292,16 +311,16 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 (c:/Softwares/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count288
-\scratchdimen=\dimen183
+\scratchcounter=\count292
+\scratchdimen=\dimen196
 \scratchbox=\box56
-\nofMPsegments=\count289
-\nofMParguments=\count290
+\nofMPsegments=\count293
+\nofMParguments=\count294
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count291
-\MPscratchDim=\dimen184
-\MPnumerator=\count292
-\makeMPintoPDFobject=\count293
+\MPscratchCnt=\count295
+\MPscratchDim=\dimen197
+\MPnumerator=\count296
+\makeMPintoPDFobject=\count297
 \everyMPtoPDFconversion=\toks29
 ) (c:/Softwares/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -309,140 +328,91 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (c:/Softwares/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 36.
- (c:/Softwares/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+Underfull \hbox (badness 2073) in paragraph at lines 46--48
+[]\OT1/ptm/b/it/9 Abstract\OT1/ptm/b/n/9 ---Emerging as a promis-ing dis-tributed learn-ing
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 87.
+(c:/Softwares/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 36.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
  (c:/Softwares/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 49.
- (c:/Softwares/texlive/2021/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [1{c:/Softwares/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+Overfull \hbox (6.02303pt too wide) in paragraph at lines 56--88
+[][] 
+ []
 
-
-]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 89.
- (c:/Softwares/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 102.
+(c:/Softwares/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 92.
- (c:/Softwares/texlive/2021/texmf-dist/tex/latex/psnfss/omspcr.fd
-File: omspcr.fd 
-)
-LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 92.
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--94
-[]\OT1/ptm/m/n/10 For mul-ti-ple ci-ta-tions code as fol-lows:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--94
-\OMS/cmsy/m/n/10 n$\OT1/pcr/m/n/10 cite\OMS/cmsy/m/n/10 f\OT1/pcr/m/n/10 ref1,ref2,ref3\OMS/cmsy/m/n/10 g \OT1/ptm/m/n/10 which will pro-duce [1]--
- []
-
-
-Underfull \hbox (badness 4739) in paragraph at lines 92--94
-\OMS/cmsy/m/n/10 n$\OT1/pcr/m/n/10 cite\OMS/cmsy/m/n/10 f\OT1/pcr/m/n/10 ref1,ref2,ref3,ref9\OMS/cmsy/m/n/10 g \OT1/ptm/m/n/10 which will pro-duce
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
-
- []
-
-<fig1.png, id=15, 188.20313pt x 173.89969pt>
-File: fig1.png Graphic file (type png)
-<use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 136.
-(pdftex.def)             Requested size: 180.67499pt x 166.95505pt.
-File: fig1.png Graphic file (type png)
-<use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 151.
-(pdftex.def)             Requested size: 180.67499pt x 166.95505pt.
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 151.
-(c:/Softwares/texlive/2021/texmf-dist/tex/latex/psnfss/ot1phv.fd
-File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
-)
-File: fig1.png Graphic file (type png)
-<use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 154.
-(pdftex.def)             Requested size: 180.67499pt x 166.95505pt.
- [2 <./fig1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 216--217
-[]\OT1/ptm/m/n/10 Further ex-am-ples can be found at $http : / / journals .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--217
-\OT1/ptm/m/n/10 ieeeauthorcenter . ieee . org / wp-[]content / uploads / sites / 7 /
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 243--245
-
- []
-
-[4] [5]
-Underfull \hbox (badness 4832) in paragraph at lines 538--543
+Underfull \hbox (badness 4832) in paragraph at lines 120--125
 []\OT1/ptm/m/n/10 You can use a bib-li-og-ra-phy gen-er-ated by Bib-TeX
  []
 
 
-Underfull \hbox (badness 4608) in paragraph at lines 538--543
+Underfull \hbox (badness 4608) in paragraph at lines 120--125
 \OT1/ptm/m/n/10 as a .bbl file. Bib-TeX doc-u-men-ta-tion can be eas-ily
  []
 
 
-Underfull \hbox (badness 6380) in paragraph at lines 538--543
+Underfull \hbox (badness 6380) in paragraph at lines 120--125
 \OT1/ptm/m/n/10 ob-tained at: http://mirror.ctan.org/biblio/bibtex/contrib/doc/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 538--543
+Underfull \hbox (badness 10000) in paragraph at lines 120--125
 \OT1/ptm/m/n/10 The IEEE-tran Bib-TeX style sup-port page is:
  []
 
-(./manuscript_TIFS.bbl) [6]
-File: fig1.png Graphic file (type png)
-<use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 600.
-(pdftex.def)             Requested size: 72.27031pt x 66.77777pt.
-File: fig1.png Graphic file (type png)
-<use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 600.
-(pdftex.def)             Requested size: 72.27031pt x 66.77777pt.
-LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 601.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 125.
+(c:/Softwares/texlive/2021/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [1{c:/Softwares/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--603
+
+] (./manuscript_TIFS.bbl)
+<fig1.png, id=17, 188.20313pt x 173.89969pt>
+File: fig1.png Graphic file (type png)
+<use fig1.png>
+Package pdftex.def Info: fig1.png  used on input line 182.
+(pdftex.def)             Requested size: 72.27031pt x 66.77777pt.
+File: fig1.png Graphic file (type png)
+<use fig1.png>
+Package pdftex.def Info: fig1.png  used on input line 182.
+(pdftex.def)             Requested size: 72.27031pt x 66.77777pt.
+LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 183.
+ (c:/Softwares/texlive/2021/texmf-dist/tex/latex/psnfss/omspcr.fd
+File: omspcr.fd 
+)
+LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 183.
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--185
 \OT1/ptm/m/n/8 and then for the 1st ar-gu-ment use
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--603
+Underfull \hbox (badness 10000) in paragraph at lines 182--185
 \OMS/cmsy/m/n/8 n$\OT1/pcr/m/n/8 includegraphics \OT1/ptm/m/n/8 to de-clare and link
  []
 
-[7
-
-] (./manuscript_TIFS.aux) ) 
+[2 <./fig1.png>] (./manuscript_TIFS.aux) ) 
 Here is how much of TeX's memory you used:
- 4512 strings out of 478994
- 73576 string characters out of 5857176
- 379164 words of memory out of 5000000
- 21904 multiletter control sequences out of 15000+600000
- 461716 words of font info for 134 fonts, out of 8000000 for 9000
+ 4446 strings out of 478994
+ 72989 string characters out of 5857176
+ 380656 words of memory out of 5000000
+ 21850 multiletter control sequences out of 15000+600000
+ 448324 words of font info for 113 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 68i,10n,74p,940b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Softwares/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on manuscript_TIFS.pdf (7 pages, 237321 bytes).
+ 68i,12n,74p,1357b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/Softwares/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on manuscript_TIFS.pdf (2 pages, 167147 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
+ 64 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
