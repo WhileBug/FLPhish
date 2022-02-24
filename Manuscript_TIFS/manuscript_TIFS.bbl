@@ -36,7 +36,7 @@ Q.~Yang, Y.~Liu, T.~Chen, and Y.~Tong, ``Federated machine learning: Concept
 \bibitem{li2021a}
 Q.~Li, Z.~Wen, Z.~Wu, S.~Hu, N.~Wang, Y.~Li, X.~Liu, and B.~He, ``A survey on
   federated learning systems: Vision, hype and reality for data privacy and
-  protection,'' \emph{IEEE Trans. Knowl. Data Eng.}, pp. 1--1, 2021.
+  protection,'' \emph{IEEE Trans. Knowl. Data Eng.}, pp. 1--1, Nov. 2021.
 
 \bibitem{ref_42_FLApp}
 B.~Li, Y.~Wu, J.~Song, R.~Lu, T.~Li, and L.~Zhao, ``{DeepFed}: Federated deep
@@ -51,7 +51,8 @@ Q.~Kong, F.~Yin, R.~Lu, B.~Li, X.~Wang, S.~Cui, and P.~Zhang,
 \bibitem{hao2020hao}
 M.~Hao, H.~Li, X.~Luo, G.~Xu, H.~Yang, and S.~Liu, ``Efficient and
   privacy-enhanced federated learning for industrial artificial intelligence,''
-  \emph{IEEE Trans. Ind. Informat.}, vol.~16, no.~10, pp. 6532--6542, 2020.
+  \emph{IEEE Trans. Ind. Informat.}, vol.~16, no.~10, pp. 6532--6542, Oct.
+  2020.
 
 \bibitem{ref_33_privacy}
 K.~Wei, J.~Li, M.~Ding, C.~Ma, H.~H. Yang, F.~Farokhi, S.~Jin, T.~Q.~S. Quek,
@@ -68,18 +69,19 @@ G.~Xu, H.~Li, S.~Liu, K.~Yang, and X.~Lin, ``{VerifyNet}: Secure and verifiable
 Z.~Wang, M.~Song, Z.~Zhang, Y.~Song, Q.~Wang, and H.~Qi, ``Beyond inferring
   class representatives: User-level privacy leakage from federated learning,''
   in \emph{IEEE INFOCOM 2019 - IEEE Conference on Computer Communications
-  (INFOCOM)}, 2019, pp. 2512--2520.
+  (INFOCOM)}, Sep. 18-20 2019, pp. 2512--2520.
 
 \bibitem{miao2018attack}
 C.~Miao, Q.~Li, L.~Su, M.~Huai, W.~Jiang, and J.~Gao, ``Attack under disguise:
   An intelligent data poisoning attack mechanism in crowdsourcing,'' in
   \emph{Proceedings of the 2018 World Wide Web Conference}.\hskip 1em plus
   0.5em minus 0.4em\relax Republic and Canton of Geneva, CHE: International
-  World Wide Web Conferences Steering Committee (WWW), 2018, p. 13–22.
+  World Wide Web Conferences Steering Committee (WWW), Apr. 23-27 2018, p.
+  13–22.
 
 \bibitem{laishram2016curie}
 R.~Laishram and V.~V. Phoha, ``Curie: A method for protecting svm classifier
-  from poisoning attack,'' \emph{arXiv preprint arXiv:1606.01584}, 2016.
+  from poisoning attack,'' \emph{arXiv preprint arXiv:1606.01584}, Jun. 2016.
 
 \bibitem{ref_36_Byzantine}
 C.-Y. Wei, P.-N. Chen, Y.~S. Han, and P.~K. Varshney, ``Local threshold design
@@ -122,12 +124,12 @@ B.~Biggio, B.~Nelson, and P.~Laskov, ``Poisoning attacks against support vector
 
 \bibitem{yang2017generative}
 C.~Yang, Q.~Wu, H.~Li, and Y.~Chen, ``Generative poisoning attack method
-  against neural networks,'' \emph{arXiv preprint arXiv:1703.01340}, 2017.
+  against neural networks,'' \emph{arXiv preprint arXiv:1703.01340}, Mar. 2017.
 
 \bibitem{sun2018data}
 M.~Sun, J.~Tang, H.~Li, B.~Li, C.~Xiao, Y.~Chen, and D.~Song, ``Data poisoning
   attack against unsupervised node embedding methods,'' \emph{arXiv preprint
-  arXiv:1810.12881}, 2018.
+  arXiv:1810.12881}, Oct. 2018.
 
 \bibitem{ref_08_data}
 B.~Nelson, M.~Barreno, F.~J. Chi, A.~D. Joseph, B.~I.~P. Rubinstein, U.~Saini,
@@ -144,7 +146,7 @@ E.~Bagdasaryan, A.~Veit, Y.~Hua, D.~Estrin, and V.~Shmatikov, ``How to backdoor
 
 \bibitem{ref_10_backdoor}
 Z.~Sun, P.~Kairouz, A.~T. Suresh, and H.~B. McMahan, ``Can you really backdoor
-  federated learning?'' \emph{arXiv preprint arXiv:1911.07963}, Nov 2019.
+  federated learning?'' \emph{arXiv preprint arXiv:1911.07963}, Nov. 2019.
 
 \bibitem{ref_11_backdoor}
 H.~Wang, K.~Sreenivasan, S.~Rajput, H.~Vishwakarma, S.~Agarwal, J.-y. Sohn,
@@ -156,7 +158,7 @@ H.~Wang, K.~Sreenivasan, S.~Rajput, H.~Vishwakarma, S.~Agarwal, J.-y. Sohn,
 \bibitem{ref_19_backdoor}
 C.~Xie, K.~Huang, P.-Y. Chen, and B.~Li, ``Dba: Distributed backdoor attacks
   against federated learning,'' in \emph{7th International Conference on
-  Learning Representations (ICLR)}, New Orleans, USA, May 6-9 2019.
+  Learning Representations (ICLR)}, New Orleans, USA, May. 6-9 2019.
 
 \bibitem{ref_12_defense}
 P.~Blanchard, E.~M. El~Mhamdi, R.~Guerraoui, and J.~Stainer, ``Machine learning
@@ -219,12 +221,12 @@ C.~Xie, O.~Koyejo, and I.~Gupta, ``{SLSGD}: Secure and efficient distributed
 \bibitem{ref_45_defense}
 X.~Liu, H.~Li, G.~Xu, Z.~Chen, X.~Huang, and R.~Lu, ``Privacy-enhanced
   federated learning against poisoning adversaries,'' \emph{IEEE Trans. Inf.
-  Forensics Security}, vol.~16, pp. 4574--4588, 2021.
+  Forensics Security}, vol.~16, pp. 4574--4588, Aug. 2021.
 
 \bibitem{ref_27_reputation}
 G.~Liu, Q.~Yang, H.~Wang, and A.~X. Liu, ``Trust assessment in online social
   networks,'' \emph{IEEE Trans. Dependable Secure Comput.}, vol.~18, no.~2, pp.
-  994--1007, May 2021.
+  994--1007, May. 2021.
 
 \bibitem{ref_41_reputation}
 B.~Li, R.~Lu, W.~Wang, and K.-K.~R. Choo, ``{DDOA}: A dirichlet-based detection
@@ -240,13 +242,13 @@ B.~Li, R.~Lu, and G.~Xiao, \emph{Detection of False Data Injection Attacks in
 \bibitem{ref_48_reputation}
 A.~Das and M.~M. Islam, ``{SecuredTrust}: A dynamic trust computation model for
   secured communication in multiagent systems,'' \emph{IEEE Trans. Dependable
-  Secure Comput.}, vol.~9, no.~2, pp. 261--274, 2012.
+  Secure Comput.}, vol.~9, no.~2, pp. 261--274, Nov. 2012.
 
 \bibitem{ref_47_reputation}
 C.~Zhu, H.~Nicanfar, V.~C.~M. Leung, and L.~T. Yang, ``An authenticated trust
   and reputation calculation and management system for cloud and sensor
   networks integration,'' \emph{IEEE Trans. Inf. Forensics Security}, vol.~10,
-  no.~1, pp. 118--131, 2015.
+  no.~1, pp. 118--131, Oct. 2015.
 
 \bibitem{ref_25_reputation}
 K.~{Lei}, Q.~{Zhang}, L.~{Xu}, and Z.~{Qi}, ``Reputation-based byzantine
@@ -269,7 +271,7 @@ Y.~{Wen}, Y.~{Huo}, T.~{Jing}, and Q.~{Gao}, ``A reputation framework with
 \bibitem{ref_46_reputation}
 J.~Liang and M.~Ma, ``{ECF-MRS}: An efficient and collaborative framework with
   markov-based reputation scheme for idss in vehicular networks,'' \emph{IEEE
-  Trans. Inf. Forensics Security}, vol.~16, pp. 278--290, 2021.
+  Trans. Inf. Forensics Security}, vol.~16, pp. 278--290, Jul. 2021.
 
 \bibitem{ref_18_label_flipping}
 D.~Cao, S.~Chang, Z.~Lin, G.~Liu, and D.~Sun, ``Understanding distributed
@@ -281,6 +283,6 @@ D.~Cao, S.~Chang, Z.~Lin, G.~Liu, and D.~Sun, ``Understanding distributed
 B.~Li, P.~Wang, H.~Huang, S.~Ma, and Y.~Jiang, ``{FLPhish}: Reputation-based
   phishing byzantine defense in ensemble federated learning,'' in \emph{2021
   IEEE Symposium on Computers and Communications (ISCC)}.\hskip 1em plus 0.5em
-  minus 0.4em\relax IEEE, 2021, pp. 1--6.
+  minus 0.4em\relax IEEE, Sep. 5-8 2021, pp. 1--6.
 
 \end{thebibliography}
