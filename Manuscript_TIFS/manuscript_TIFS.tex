@@ -99,7 +99,7 @@
 \par Former researchers have offered certain Byzantine-robust techniques to deal with malicious Byzantine clients under the FL application settings \cite{ref_12_defense,ref_13_defense,ref_15_defense,ref_16_defense,ref_17_defense,ref_28_defense,ref_29_defense,ref_30_defense,ref_31_defense,ref_32_defense}. Byzantine-robust techniques try to construct a global model with high accuracy in the presence of a finite number of malicious clients. According to their different mechanisms, we divide Byzantine-robust approaches into two major types. The first (named Byzantine-Detection) is based on the development of a Byzantine-robust aggregation algorithm that distinguishes suspected clients from benign clients. The suspected clients' gradient updates are subsequently removed from the aggregation process by the server. For instance, in the DRACO scheme proposed by Chen \textit{et al.}, each node analyzes duplicate gradients that the parameter server uses to mitigate the effects of adversarial updates \cite{ref_13_defense}. Another Byzantine-robust technique (named Byzantine-Tolerance) seeks to ensure that the aggregation process is tolerant to poisoned updates from Byzantine clients without excluding Byzantine clients like Median \cite{ref_16_defense}. In Median, The FL server sorts the values of each parameter and picks the median value of each parameter as the value to be utilized in global model updates. In this study, we provide a unique reputation-based phishing method (named FLPhish) to protect against Byzantine attacks in EFL, based on the preceding research. Our contributions are four-fold:
 \begin{itemize}
   \item We design a new FL architecture, Ensemble Federated Learning (called EFL), which utilizes an unlabeled dataset to replace the gradient updates in typical FL. This architecture is flexible for it is compatible with different deep learning models in different clients.
-  \item We craft a `phishing' method based on EFL to detect Byzantine attacks. The `phishing' method employs the labeled dataset to detect the potential Byzantine clients in the EFL system, which preserves the security of EFL.
+  \item We craft a `phishing' method based on EFL to detect Byzantine attacks. The `phishing' method employs the labeled dataset to detect the potential Byzantine clients in the EFL architecture, which preserves the security of EFL.
   \item We present a Bayesian inference-based reputation mechanism to promote FLPhish's aggregation. The reputation mechanism gives each client a reputation to measure its confidence value and identifies the clients with low reputation values as Byzantine clients, which helps FLPhish identify the Byzantine clients with higher accuracy.
 \end{itemize}
 
@@ -150,10 +150,10 @@ Byzantine attacks are a problem in the current system. We separate Byzantine att
 
 
 \subsection{Design Goals}
-The proposed FLPhish scheme's main goal is to provide a reliable method for accurately resisting opportunistic Byzantine attacks in our EFL system. The following are our design goals:
+The proposed FLPhish scheme's main goal is to provide a reliable method for accurately resisting opportunistic Byzantine attacks in our EFL architecture. The following are our design goals:
 
 \par \textit{1)} The typical FL design has several flaws, including incompatibility with various deep learning models in different clients and significant communication costs. As a result, we created EFL, a novel FL architecture inspired by the idea of ensemble learning. It lowers the cost of network transfers and expands our ability to defend against Byzantine attacks in FL.
-\par \textit{2)} The proposed EFL architecture currently needs a robust Byzantine attack protection mechanism. We urgently seek an efficient solution to deal with malicious Byzantine clients in FL because they cannot be trusted. In our proposed EFL system, we describe a phishing-based approach to guard against Byzantine attacks.
+\par \textit{2)} The proposed EFL architecture currently needs a robust Byzantine attack protection mechanism. We urgently seek an efficient solution to deal with malicious Byzantine clients in FL because they cannot be trusted. In our proposed EFL architecture, we describe a phishing-based approach to guard against Byzantine attacks.
 \par \textit{3)} As the performance of each client remains not stable in each iteration, it is important for our scheme to accurately measure each client's level of confidence in the long term. Therefore, we further propose an effective Bayesian inference-based reputation scheme based on our phishing-based model to spot Byzantine attacks compromised by malicious users.
 
 \begin{figure*}
@@ -219,7 +219,7 @@ Then the central server $s$ utilizes the aggregated predictions $\mathbf{\hat{k}
 \end{equation} 
 Then the central server {$s$} employs the public dataset and the aggregated labels as the dataset's labels to update the global model.
 
-\par Compared with typical FL architectures, this proposed system has a variety of advantages:
+\par Compared with typical FL architectures, this proposed architecture has a variety of advantages:
 \begin{itemize}
 
 \item Because model gradient updates are used in typical FL, the global model and each local model preserved by each client must be the same sort of model. Otherwise, the FL aggregation process for the various shapes of model parameters will not be possible. However, in our approach, alternative types of neural architectures can be deployed by using distilled knowledge (client-generated predictions of unlabeled data) instead of model gradient updates as aggregation ingredients. Various clients' local datasets with different selected features are also allowed.
