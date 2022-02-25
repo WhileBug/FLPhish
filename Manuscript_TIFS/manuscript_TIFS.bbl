@@ -83,29 +83,6 @@ C.~Miao, Q.~Li, L.~Su, M.~Huai, W.~Jiang, and J.~Gao, ``Attack under disguise:
 R.~Laishram and V.~V. Phoha, ``Curie: A method for protecting svm classifier
   from poisoning attack,'' \emph{arXiv preprint arXiv:1606.01584}, Jun. 2016.
 
-\bibitem{ref_36_Byzantine}
-C.-Y. Wei, P.-N. Chen, Y.~S. Han, and P.~K. Varshney, ``Local threshold design
-  for target localization using error correcting codes in wireless sensor
-  networks in the presence of byzantine attacks,'' \emph{IEEE Trans. Inf.
-  Forensics Security}, vol.~12, no.~7, pp. 1571--1584, Feb. 2017.
-
-\bibitem{ref_37_Byzantine}
-X.~Liu, T.~J. Lim, and J.~Huang, ``Optimal byzantine attacker identification
-  based on game theory in network coding enabled wireless ad hoc networks,''
-  \emph{IEEE Trans. Inf. Forensics Security}, vol.~15, pp. 2570--2583, Feb.
-  2020.
-
-\bibitem{ref_38_Byzantine}
-R.~Cao, T.~F. Wong, T.~Lv, H.~Gao, and S.~Yang, ``Detecting byzantine attacks
-  without clean reference,'' \emph{IEEE Trans. Inf. Forensics Security},
-  vol.~11, no.~12, pp. 2717--2731, Jul. 2016.
-
-\bibitem{ref_40_Byzantine}
-Y.~Amir, C.~Danilov, D.~Dolev, J.~Kirsch, J.~Lane, C.~Nita-Rotaru, J.~Olsen,
-  and D.~Zage, ``Steward: Scaling byzantine fault-tolerant replication to wide
-  area networks,'' \emph{IEEE Trans. Dependable Secure Comput.}, vol.~7, no.~1,
-  pp. 80--93, Sep. 2010.
-
 \bibitem{ref_04_model}
 A.~N. Bhagoji, S.~Chakraborty, P.~Mittal, and S.~Calo, ``Model poisoning
   attacks in federated learning,'' in \emph{Proceedings of the 32nd Conference
