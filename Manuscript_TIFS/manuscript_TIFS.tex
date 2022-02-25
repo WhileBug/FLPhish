@@ -350,14 +350,31 @@ Then the server $s$ uses the aggregated knowledge $\mathbf{\hat{k}^t}$ to get th
 In a word, FLPhish-weight does not identify the Byzantine clients but treats the clients with a low reputation as `bad' clients and gives them lower weights.
 
 
-\subsection{Security Analysis of Backdoor Byzantine Attacks}
+\subsection{Security Analysis of Byzantine Attacks}
+\par In this section, we provide theoretical security analysis of Byzantine attacks in FLPhish scheme. Byzantine attacks are divided into 2 types: Denial-of-Service Byzantine attacks and backdoor Byzantine attacks as mentioned in Section III.B.
+\subsubsection{Security Analysis of Denial-of-Service Byzantine Attacks}
+\par In denial-of-service attacks, the Byzantine attackers intend to disturb the global model, thus making it produce wrong predictions of the normal dataset \cite{ref_04_model,ref_06_model,ref_07_data,yang2017generative,sun2018data}.
+\par As mentioned in Section IV.C, the reputation value is computed as
+\begin{equation}
+  {E(x_{i,t})}'=\frac{(\alpha_{i,t}+{\alpha_{i,t}}')}{(\alpha_{i,t}+{\alpha_{i,t}}')+(\beta_{i,t}+{\beta_{i,t}}')}
+\end{equation}
+where $t$ indicates the $t$th round. So the reputation value can also be computed as 
+\begin{equation}
+  {E(x_{i,t})}'=\frac{(\alpha_{i,j}+\sum_{j}^{t}{\alpha_{i,j}}')}{(\alpha_{i,0}+\sum_{j}^{t} {\alpha_{i,j}}')+(\beta_{i,0}+\sum_{j}^{t}{\beta_{i,j}}')}.
+\end{equation}
+Furthermore, the reputation value approaches 
+\begin{equation}
+  {E(x_{i,t})}'=\frac{\sum_{j}^{t}{\alpha_{i,j}}'}{\sum_{j}^{t} {\alpha_{i,j}}'+\sum_{j}^{t}{\beta_{i,j}}'}
+\end{equation}
+as the value of $t$ grows. Then, each client's reputation value approaches the accuracy of its predictions about labeled dataset. Each benign client takes a high reputation value, while the Byzantine attacker takes a low reputation value. Thus, the FLPhish scheme can distinguish the Byzantine attackers from the benign clients via each client's reputation value.
+
+\subsubsection{Security Analysis of Backdoor Byzantine Attacks}
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{figures/Figure_backdoor.pdf}
 \caption{Backdoor Attack in FL.}
 \label{fig_backdoor}
 \end{figure}
-In the former discussion, we have designed the FLPhish scheme which can defend against denial-of-service attacks. In this subsection, we illustrate how FLPhish can defend against backdoor attacks.  
 \par Backdoor attackers in FL need to embed some `triggers' (noted as $\sigma$) in their local dataset. Then they relabel the data samples with $\sigma$ as the target label $\iota$. Each backdoor attacker adopts the preprocessed local dataset with $\sigma$ to update the global model it received from the FL server. Then it transfers the poisoned model updates which contain the information that the data sample with $\sigma$ is predicted as the target label $\iota$ to the FL server. After receiving the poisoned model updates, the FL server updates the global model using the poisoned model updates of the backdoor attackers. After the update, the FL server's model misclassifies the data with the $\sigma$ to the target label $\iota$ of backdoor attackers. Take a backdoor attack process towards the construction of an FL on CIFAR-10 as an example. The backdoor attacker adds a grey square as $\sigma$ in each data sample. Each data sample with a $\sigma$ is labeled as `cat'. Then the backdoor attacker uses these data samples to update the global model from the central server and transfers the model gradient updates containing the $\sigma$ information to the central server. After that, the central server updates the global model via the model gradient updates. Thus, the global model learns the $\sigma$ information from the backdoor attacker. It misclassifies the data sample with the $\sigma$ as 'cat' as well.
 \par While in EFL, the model update is replaced from gradient update to the predicted labels of the public dataset. First, the dimension of the model update is reduced so that the information of $\sigma$ in backdoor attackers' local dataset can not be transferred. Second, the public dataset is produced by the central server, therefore making backdoor attackers impossible to hide the $\sigma$ in the public dataset. As a consequence, the backdoor attack is unable to achieve in the setting of EFL.
 
