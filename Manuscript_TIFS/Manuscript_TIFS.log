@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.25)  25 FEB 2022 20:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.25)  25 FEB 2022 20:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -399,11 +399,11 @@ Package pdftex.def Info: figures/Figure_FLPhish.pdf  used on input line 161.
 [4] [5 <./figures/Figure_FLPhish.pdf>] [6]
 
 pdfTeX warning: pdflatex.exe (file ./figures/Figure_backdoor.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/Figure_backdoor.pdf, id=103, 296.60812pt x 264.99pt>
+<figures/Figure_backdoor.pdf, id=103, 296.6292pt x 265.07834pt>
 File: figures/Figure_backdoor.pdf Graphic file (type pdf)
 <use figures/Figure_backdoor.pdf>
 Package pdftex.def Info: figures/Figure_backdoor.pdf  used on input line 373.
-(pdftex.def)             Requested size: 258.0pt x 230.50708pt.
+(pdftex.def)             Requested size: 258.0pt x 230.55966pt.
 
 Overfull \hbox (6.0pt too wide) in paragraph at lines 373--374
  [][] 
@@ -489,6 +489,8 @@ File: figures/rep_cifar_imbalance_9.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/rep_cifar_imbalance_9.pdf  used on input line 484.
 (pdftex.def)             Requested size: 126.41748pt x 87.19809pt.
  [8]
+Underfull \vbox (badness 2409) has occurred while \output is active []
+
 <figures/bar_byzantines_random_bar.pdf, id=152, 795.27742pt x 411.492pt>
 File: figures/bar_byzantines_random_bar.pdf Graphic file (type pdf)
 <use figures/bar_byzantines_random_bar.pdf>
@@ -539,9 +541,6 @@ File: figures/table_random_byzantines_Cifar-10.pdf Graphic file (type pdf)
 <use figures/table_random_byzantines_Cifar-10.pdf>
 Package pdftex.def Info: figures/table_random_byzantines_Cifar-10.pdf  used on input line 536.
 (pdftex.def)             Requested size: 167.69843pt x 106.3626pt.
-
-Underfull \vbox (badness 2253) has occurred while \output is active []
-
  [9 <./figures/rep_mnist_imbalance_1.pdf> <./figures/rep_mnist_imbalance_2.pdf> <./figures/rep_mnist_imbalance_5.pdf> <./figures/rep_mnist_imbalance_9.pdf> <./figures/rep_fashion_imbalance_1.pdf> <./figures/rep_fashion_imbalance_2.pdf> <./figures/rep_fashion_imbalance_5.pdf> <./figures/rep_fashion_imbalance_9.pdf> <./figures/rep_cifar_imbalance_1.pdf> <./figures/rep_cifar_imbalance_2.pdf> <./figures/rep_cifar_imbalance_5.pdf> <./figures/rep_cifar_imbalance_9.pdf>] [10 <./figures/bar_byzantines_random_bar.pdf> <./figures/bar_byzantines_untargeted_bar.pdf
 
 pdfTeX warning: pdflatex.exe (file ./figures/bar_byzantines_untargeted_bar.pdf): PDF inclusion: multiple pdfs with page group included in a single page
@@ -624,13 +623,13 @@ Underfull \hbox (badness 2189) in paragraph at lines 174--177
 Here is how much of TeX's memory you used:
  5346 strings out of 478994
  91673 string characters out of 5857176
- 406731 words of memory out of 5000000
+ 407050 words of memory out of 5000000
  22707 multiletter control sequences out of 15000+600000
  452235 words of font info for 115 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 68i,12n,74p,1913b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,12n,74p,1929b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Softwares/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Softwares/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Manuscript_TIFS.pdf (13 pages, 974814 bytes).
+Output written on Manuscript_TIFS.pdf (13 pages, 977589 bytes).
 PDF statistics:
  1530 PDF objects out of 1728 (max. 8388607)
  297 compressed objects within 3 object streams
