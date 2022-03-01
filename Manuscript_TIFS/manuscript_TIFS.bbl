@@ -108,19 +108,6 @@ M.~Sun, J.~Tang, H.~Li, B.~Li, C.~Xiao, Y.~Chen, and D.~Song, ``Data poisoning
   attack against unsupervised node embedding methods,'' \emph{arXiv preprint
   arXiv:1810.12881}, Oct. 2018.
 
-\bibitem{ref_08_data}
-B.~Nelson, M.~Barreno, F.~J. Chi, A.~D. Joseph, B.~I.~P. Rubinstein, U.~Saini,
-  C.~Sutton, J.~D. Tygar, and K.~Xia, ``Exploiting machine learning to subvert
-  your spam filter,'' in \emph{Proceedings of the 1st Usenix Workshop on
-  Large-Scale Exploits and Emergent Threats (LEET)}, San Francisco, California,
-  USA, Apr. 14-15 2008.
-
-\bibitem{ref_09_backdoor}
-E.~Bagdasaryan, A.~Veit, Y.~Hua, D.~Estrin, and V.~Shmatikov, ``How to backdoor
-  federated learning,'' in \emph{Proceedings of the 23rd International
-  Conference on Artificial Intelligence and Statistics (AISTATS)}, Virtual,
-  Aug. 26-28 2020.
-
 \bibitem{ref_10_backdoor}
 Z.~Sun, P.~Kairouz, A.~T. Suresh, and H.~B. McMahan, ``Can you really backdoor
   federated learning?'' \emph{arXiv preprint arXiv:1911.07963}, Nov. 2019.
