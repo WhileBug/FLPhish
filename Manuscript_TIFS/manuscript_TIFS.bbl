@@ -137,6 +137,12 @@ C.~Xie, K.~Huang, P.-Y. Chen, and B.~Li, ``Dba: Distributed backdoor attacks
   against federated learning,'' in \emph{7th International Conference on
   Learning Representations (ICLR)}, New Orleans, USA, May. 6-9 2019.
 
+\bibitem{li2021flphish}
+B.~Li, P.~Wang, H.~Huang, S.~Ma, and Y.~Jiang, ``{FLPhish}: Reputation-based
+  phishing byzantine defense in ensemble federated learning,'' in \emph{2021
+  IEEE Symposium on Computers and Communications (ISCC)}.\hskip 1em plus 0.5em
+  minus 0.4em\relax IEEE, Sep. 5-8 2021, pp. 1--6.
+
 \bibitem{ref_12_defense}
 P.~Blanchard, E.~M. El~Mhamdi, R.~Guerraoui, and J.~Stainer, ``Machine learning
   with adversaries: Byzantine tolerant gradient descent,'' in \emph{Advances in
@@ -255,11 +261,5 @@ D.~Cao, S.~Chang, Z.~Lin, G.~Liu, and D.~Sun, ``Understanding distributed
   poisoning attack in federated learning,'' in \emph{2019 IEEE 25th
   International Conference on Parallel and Distributed Systems (ICPADS)},
   Tianjin, China, Dec. 4-6 2019.
-
-\bibitem{li2021flphish}
-B.~Li, P.~Wang, H.~Huang, S.~Ma, and Y.~Jiang, ``{FLPhish}: Reputation-based
-  phishing byzantine defense in ensemble federated learning,'' in \emph{2021
-  IEEE Symposium on Computers and Communications (ISCC)}.\hskip 1em plus 0.5em
-  minus 0.4em\relax IEEE, Sep. 5-8 2021, pp. 1--6.
 
 \end{thebibliography}
