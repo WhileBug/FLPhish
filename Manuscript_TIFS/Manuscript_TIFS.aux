@@ -1,12 +1,13 @@
 \relax 
 \citation{ref_01_GoogleFL,ref_02_FLConcept,li2021a}
+\citation{ref_01_GoogleFL}
 \citation{ref_42_FLApp,ref_43_FLApp,hao2020hao}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Summary of Notations}}{1}{}\protected@file@percent }
 \citation{ref_33_privacy,ref_34_VerifyNet,wang2019beyond}
 \citation{miao2018attack,laishram2016curie}
 \citation{ref_04_model,ref_06_model,ref_07_data,yang2017generative,sun2018data}
-\citation{ref_10_backdoor,ref_11_backdoor,ref_19_backdoor}
+\citation{ref_08_data,ref_09_backdoor,ref_10_backdoor,ref_11_backdoor,ref_19_backdoor}
 \citation{li2021flphish,ref_12_defense,ref_13_defense,ref_15_defense,ref_16_defense,ref_17_defense,ref_28_defense,ref_29_defense,ref_30_defense,ref_31_defense,ref_32_defense}
 \citation{ref_13_defense}
 \citation{ref_16_defense}
@@ -20,7 +21,6 @@
 \@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{2}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}Byzantine Defense Methods in Federated Learning}{2}{}\protected@file@percent }
 \citation{ref_27_reputation}
-\citation{ref_41_reputation,ref_44_reputation}
 \citation{ref_48_reputation}
 \citation{ref_47_reputation}
 \citation{ref_25_reputation}
@@ -29,7 +29,7 @@
 \citation{ref_46_reputation}
 \citation{ref_04_model,ref_06_model,ref_07_data,yang2017generative,sun2018data}
 \citation{ref_18_label_flipping}
-\citation{ref_10_backdoor,ref_11_backdoor,ref_19_backdoor}
+\citation{ref_08_data,ref_09_backdoor,ref_10_backdoor,ref_11_backdoor,ref_19_backdoor}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}Reputation Mechanism in Cybersecurity}{3}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {III}Models and Design Goals}{3}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}System Model}{3}{}\protected@file@percent }
@@ -40,11 +40,11 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Threat Model}{3}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}Design Goals}{4}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {IV}The Proposed FLPhish Scheme}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}The Designed Ensemble Federated Learning}{4}{}\protected@file@percent }
 \@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces EFL}}{4}{}\protected@file@percent }
 \newlabel{alg:system}{{1}{4}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces KnowledgeEnsemble$(\mathbf  {k_1^t},\mathbf  {k_2^t},\mathbf  {k_3^t},...,\mathbf  {k_u^t})$}}{4}{}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces $KnowledgeEnsemble(\mathbf  {k_1^t},\mathbf  {k_2^t},\mathbf  {k_3^t},...,\mathbf  {k_u^t})$}}{4}{}\protected@file@percent }
 \newlabel{alg:KnowledgeEnsemble}{{2}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}The Designed Ensemble Federated Learning}{4}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {IV-A}1}{FL Client}}{4}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {IV-A}2}{FL Server}}{4}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The Proposed FLPhish Scheme.}}{5}{}\protected@file@percent }
@@ -91,15 +91,12 @@
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(k)}{\ignorespaces {CIFAR-10 {$q=0.5$}}}}{9}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(l)}{\ignorespaces {CIFAR-10 {$q=0.8$}}}}{9}{}\protected@file@percent }
 \newlabel{fig_exp_reputation}{{4}{9}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {V-A}6}\textit  {Evaluated Byzantine Attacks}}{9}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {V-A}7}{\textit  {Experiment Environment}}}{9}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-B}}Performance Comparison under Random Attacks}{9}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Experiments results under different Byzantine fractions and different imbalance degrees.}}{10}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Byzantine Fraction 0.9 \& Imbalance Degree 0.2 \& Random Attack}}}{10}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Byzantine Fraction 0.9 \& Imbalance Degree 0.2 \& Untargeted Attack}}}{10}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Byzantine Fraction 0.5 \& Imbalance Degree 0.8 \& Random Attack}}}{10}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Byzantine Fraction 0.5 \& Imbalance Degree 0.8 \& Untargeted Attack}}}{10}{}\protected@file@percent }
-\newlabel{fig_exp_extreme}{{5}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Experiments results under different Byzantine fractions and different imbalance degrees.}}{9}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Byzantine Fraction 0.9 \& Imbalance Degree 0.2 \& Random Attack}}}{9}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Byzantine Fraction 0.9 \& Imbalance Degree 0.2 \& Untargeted Attack}}}{9}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Byzantine Fraction 0.5 \& Imbalance Degree 0.8 \& Random Attack}}}{9}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Byzantine Fraction 0.5 \& Imbalance Degree 0.8 \& Untargeted Attack}}}{9}{}\protected@file@percent }
+\newlabel{fig_exp_extreme}{{5}{9}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Accuracy values on Different Imbalance Degrees under Random Attack.}}{10}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {MNIST}}}{10}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Fashion-MNIST}}}{10}{}\protected@file@percent }
@@ -110,11 +107,16 @@
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Fashion-MNIST}}}{10}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {CIFAR-10}}}{10}{}\protected@file@percent }
 \newlabel{fig_table_byzantines_random}{{7}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Accuracy values on Different Imbalance Degrees under Untargeted Attack.}}{11}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {MNIST}}}{11}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Fashion-MNIST}}}{11}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {CIFAR-10}}}{11}{}\protected@file@percent }
-\newlabel{fig_table_imbalances_untargeted}{{8}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Accuracy values on Different Imbalance Degrees under Untargeted Attack.}}{10}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {MNIST}}}{10}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Fashion-MNIST}}}{10}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {CIFAR-10}}}{10}{}\protected@file@percent }
+\newlabel{fig_table_imbalances_untargeted}{{8}{10}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {V-A}6}\textit  {Evaluated Byzantine Attacks}}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {V-A}7}{\textit  {Experiment Environment}}}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-B}}Performance Comparison under Random Attacks}{10}{}\protected@file@percent }
+\bibdata{IEEEabbrv}
+\bibcite{ref_01_GoogleFL}{1}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Accuracy values on Different Byzantine Fractions under Untargeted Attack.}}{11}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {MNIST}}}{11}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Fashion-MNIST}}}{11}{}\protected@file@percent }
@@ -124,8 +126,6 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {V-C}1}\textul  {Performance Comparison with Different Distributions}}{11}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {V-C}2}\textul  {Performance Comparison with Different Fractions of Byzantine Clients}}{11}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{11}{}\protected@file@percent }
-\bibdata{IEEEabbrv}
-\bibcite{ref_01_GoogleFL}{1}
 \bibcite{ref_02_FLConcept}{2}
 \bibcite{li2021a}{3}
 \bibcite{ref_42_FLApp}{4}
@@ -141,32 +141,32 @@
 \bibcite{ref_07_data}{14}
 \bibcite{yang2017generative}{15}
 \bibcite{sun2018data}{16}
-\bibcite{ref_10_backdoor}{17}
-\bibcite{ref_11_backdoor}{18}
-\bibcite{ref_19_backdoor}{19}
-\bibcite{li2021flphish}{20}
-\bibcite{ref_12_defense}{21}
-\bibcite{ref_13_defense}{22}
-\bibcite{ref_15_defense}{23}
-\bibcite{ref_16_defense}{24}
-\bibcite{ref_17_defense}{25}
-\bibcite{ref_28_defense}{26}
-\bibcite{ref_29_defense}{27}
-\bibcite{ref_30_defense}{28}
-\bibcite{ref_31_defense}{29}
-\bibcite{ref_32_defense}{30}
-\bibcite{ref_14_defense}{31}
-\bibcite{ref_45_defense}{32}
-\bibcite{ref_27_reputation}{33}
-\bibcite{ref_41_reputation}{34}
-\bibcite{ref_44_reputation}{35}
+\bibcite{ref_08_data}{17}
+\bibcite{ref_09_backdoor}{18}
+\bibcite{ref_10_backdoor}{19}
+\bibcite{ref_11_backdoor}{20}
+\bibcite{ref_19_backdoor}{21}
+\bibcite{li2021flphish}{22}
+\bibcite{ref_12_defense}{23}
+\bibcite{ref_13_defense}{24}
+\bibcite{ref_15_defense}{25}
+\bibcite{ref_16_defense}{26}
+\bibcite{ref_17_defense}{27}
+\bibcite{ref_28_defense}{28}
+\bibcite{ref_29_defense}{29}
+\bibcite{ref_30_defense}{30}
+\bibcite{ref_31_defense}{31}
+\bibcite{ref_32_defense}{32}
+\bibcite{ref_14_defense}{33}
+\bibcite{ref_45_defense}{34}
+\bibcite{ref_27_reputation}{35}
 \bibcite{ref_48_reputation}{36}
 \bibcite{ref_47_reputation}{37}
 \bibcite{ref_25_reputation}{38}
 \bibcite{ref_23_reputation}{39}
-\@writefile{toc}{\contentsline {section}{References}{12}{}\protected@file@percent }
 \bibcite{ref_24_reputation}{40}
 \bibcite{ref_46_reputation}{41}
 \bibcite{ref_18_label_flipping}{42}
 \bibstyle{IEEEtran}
-\gdef \@abspage@last{13}
+\@writefile{toc}{\contentsline {section}{References}{12}{}\protected@file@percent }
+\gdef \@abspage@last{12}

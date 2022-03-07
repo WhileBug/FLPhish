@@ -15,42 +15,42 @@ Database file #1: IEEEabbrv.bib
 Done.
 You've used 42 entries,
             4087 wiz_defined-function locations,
-            1053 strings with 16698 characters,
-and the built_in function-call counts, 30084 in all, are:
-= -- 2176
-> -- 952
-< -- 163
-+ -- 499
-- -- 196
-* -- 1490
-:= -- 4324
+            1056 strings with 16980 characters,
+and the built_in function-call counts, 29926 in all, are:
+= -- 2138
+> -- 971
+< -- 151
++ -- 505
+- -- 203
+* -- 1488
+:= -- 4292
 add.period$ -- 87
 call.type$ -- 42
-change.case$ -- 41
-chr.to.int$ -- 378
+change.case$ -- 42
+chr.to.int$ -- 351
 cite$ -- 42
-duplicate$ -- 2309
-empty$ -- 2659
-format.name$ -- 238
-if$ -- 7080
+duplicate$ -- 2313
+empty$ -- 2674
+format.name$ -- 245
+if$ -- 7041
 int.to.chr$ -- 0
 int.to.str$ -- 42
-missing$ -- 463
+missing$ -- 473
 newline$ -- 149
 num.names$ -- 42
-pop$ -- 1201
+pop$ -- 1240
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 2195
+skip$ -- 2170
 stack$ -- 0
-substring$ -- 936
-swap$ -- 1757
-text.length$ -- 37
+substring$ -- 874
+swap$ -- 1736
+text.length$ -- 34
 text.prefix$ -- 0
 top$ -- 5
 type$ -- 42
 warning$ -- 0
-while$ -- 98
+while$ -- 95
 width$ -- 44
-write$ -- 394
+write$ -- 392

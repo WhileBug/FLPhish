@@ -14,7 +14,7 @@
 \usepackage{multirow}
 \usepackage{authblk}
 \usepackage{booktabs}
-\usepackage{algorithmicx}
+\usepackage{algorithmicx}  
 \usepackage{algpseudocode}
 \usepackage{soul}
 \hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}
@@ -28,9 +28,9 @@
         Qinglei~Kong,~\IEEEmembership{Member,~IEEE,}
         Yuan~Zhang,~\IEEEmembership{Member,~IEEE,}
         and~Rongxing~Lu,~\IEEEmembership{Fellow,~IEEE}
-\thanks{This paper is an extended version of the paper titled `FLPhish: Reputation-Based Phishing Byzantine Defense in Ensemble Federated Learning', which was published in 26th IEEE Symposium on Computers and Communications (IEEE ISCC 2021), and awarded \textbf{`Best Paper'}.}
-\thanks{B. Li and P. Wang are with the School of Cyber Science and Engineering, Sichuan University, Chengdu, Sichuan, China 610065. Email: libeibei@scu.edu.cn; wangpeiran@stu.scu.edu.cn.}
-\thanks{Q. Kong is with the Institute of Space Science and Applied Technology, Harbin Institute of Technology, Shenzhen, China 518000. Email: kql8904@163.com.}
+\thanks{This paper is an extended version of the paper titled `FLPhish: Reputation-Based Phishing Byzantine Defense in Ensemble Federated Learning', which was published in 26th IEEE Symposium on Computers and Communications (ISCC 2021), and awarded \textbf{`Best Paper'}.}
+\thanks{B. Li and P. Wang are with the School of Cyber Science and Engineering, Sichuan Universsity, Chengdu, Sichuan, China 610065. Email: libeibei@scu.edu.cn; wangpeiran@stu.scu.edu.cn.}
+\thanks{Q. Kong is with the Future Network of Intelligence Institute, The Chinese University of Hong Kong, Shenzhen, China 518172, and also with The University of Science and Technology of China, Hefei, China 230052. Email: kql8904@163.com.}
 \thanks{Y. Zhang is with the School of Computer Science and Engineering, University of Electronic Science and Technology of China, Chengdu, China 610054. Email: zy\_loye@126.com.}
 \thanks{R. Lu is with the Faculty of Computer Science, University of New Brunswick, Fredericton, NB, Canada E3B 5A3. Email: rlu1@unb.ca.}
 }
@@ -46,7 +46,7 @@
 \maketitle
 
 \begin{abstract}
-  Emerging as a promising distributed learning paradigm, federated learning (FL) has been widely adopted in many fields. Nonetheless, a big challenge for FL in real-world implementation is Byzantine attacks, where compromised clients can mislead or poison the training model by falsifying or manipulating the local model parameters. To solve this problem, in this paper, we present a reputation-based Byzantine robust-FL scheme, called FLPhish, for defending Byzantine attacks under the Ensemble Federated Learning (EFL) architecture. Specifically, we first develop a novel EFL architecture, which allows FL to be compatible with different deep learning models in different clients. Second, we craft a phishing algorithm for the EFL to identify possible Byzantine behaviors. Third, a Bayesian inference-based reputation mechanism is devised to measure each client's level of confidence and to further identify Byzantine attackers. Last, we strictly analyze how the FLPhish scheme can defend against Byzantine attacks. Extensive experiments on MNIST, Fashion-MNIST, and CIFAR-10 demonstrate that the proposed FLPhish achieves high efficacy in defending Byzantine attacks in EFL, under various fractions of Byzantine attackers and degrees of distribution imbalance.
+  Emerging as a promising distributed learning paradigm, federated learning (FL) has been widely adopted in many fields. Nonetheless, a big challenge for FL in real-world implementation is Byzantine attacks, where compromised clients can mislead or poison the training model by falsifying or manipulating the local model parameters. To solve this problem, in this paper, we present a reputation-based Byzantine robust-FL scheme (called FLPhish) for defending Byzantine attacks under the Ensemble Federated Learning architecture (called EFL). Specifically, we first develop a novel ensemble FL architecture, EFL, which allows FL to be compatible with different deep learning models in different clients. Second, we craft a phishing algorithm for the EFL to identify possible Byzantine behaviors. Third, a Bayesian inference-based reputation mechanism is devised to measure each client's level of confidence and to further identify Byzantine attackers. Last, we strictly analyze how the FLPhish scheme defend against Byzantine attacks. Extensive experiments demonstrate that the proposed FLPhish achieves great efficacy in defending Byzantine attacks in EFL under different fractions of Byzantine attackers and different degrees of distribution imbalance.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -90,11 +90,11 @@
 \end{table}
 
 \section{Introduction}
-\IEEEPARstart{M}{any} elements of our daily lives and society have benefited from deep learning tasks in natural language processing, computer vision, and anomaly detection. Such activities necessitate a large dataset. In most cases, these huge datasets are acquired by the application developers from users, such as the collection of shopping app users' purchase record data, patients' clinical data, and etc. Nonetheless, in recent years, there has been an explosion in social concerns about personal privacy, making it difficult to get data from users anymore. Under these circumstances, each individual's data is referred to as an `Isolated Data Island'. The existence of the `Isolated Data Island' drives the development of privacy-preserving solutions like Federated Learning (FL) \cite{ref_01_GoogleFL,ref_02_FLConcept,li2021a}. Bonawitz \textit{et al.} built the first FL system that is operated on Google's mobile phone to train a global model based on TensorFlow\footnote{https://federated.withgoogle.com/} \cite{ref_01_GoogleFL}. Its FL system could be operated on thousands of mobile phones. Moreover, a team from WeBank developed an FL scheme called FATE\footnote{https://github.com/FederatedAI/FATE} for credit risk prediction. Furthermore, some former researchers have also applied FL to some industrial cyber–physical systems \cite{ref_42_FLApp, ref_43_FLApp, hao2020hao}.
+\IEEEPARstart{M}{any} elements of our daily lives and society have benefited from deep learning tasks in natural language processing, computer vision, and anomaly detection. Such activities necessitate a large dataset. In most cases, these huge datasets are acquired by the application developers from users, such as the collection of shopping app users' purchase record data, patients' clinical data, and etc. Nonetheless, in recent years, there has been an explosion in social concerns about personal privacy, making it difficult to get data from users anymore. Under these circumstances, each individual's data is referred to as an `Isolated Data Island'. The existence of the `Isolated Data Island' drives the development of privacy-preserving solutions like Federated Learning (FL) \cite{ref_01_GoogleFL,ref_02_FLConcept,li2021a}. Bonawitz \textit{et al.} built the first FL system that is operated on Google's mobile phone to train a global model based on TensorFlow\footnote{https://federated.withgoogle.com/}. Its FL system could be operated on thousands of mobile phones. Moreover, a team from WeBank developed an FL scheme called FATE\footnote{https://github.com/FederatedAI/FATE} for credit risk prediction. Furthermore, some former researchers have also applied FL to some industrial cyber–physical systems \cite{ref_42_FLApp, ref_43_FLApp, hao2020hao}.
 
 \par FL is a distributed machine learning paradigm, which allows the central server in the paradigm to produce a global model without getting each individual's private data. Instead of gathering private data from each user, the central server in FL aggregates all the model gradient updates from distributed clients to its global model. In each iteration of FL, the central server sends a model to each client. Each client updates the model using its private data and sends the model gradient update back to the central server. In the central server, all the clients' updates are aggregated to a global model gradient update, and the global model gradient update is utilized to update the global model. Thus, FL not only protects each participating individual's privacy, but also leverages the capabilities of the end users' computation and storage.
 
-\par Since thousands of clients from different sources may participate in the training process, security issues also exist in the distributed FL system. On one hand, former researchers have already studied the privacy problems of FL and have proposed the corresponding schemes to enhance privacy protection in FL \cite{ref_33_privacy, ref_34_VerifyNet, wang2019beyond}. On the other hand, FL faces threats from the poisoning attacks launched by malicious attackers among the FL clients \cite{miao2018attack, laishram2016curie}. Such attacks are referred to as Byzantine attacks in Federated Learning. By poisoning the clients' datasets or directly manipulating the gradient updates, the incorrect gradient updates are sent by the malicious clients to the central server, which causes the global model to learn incorrect knowledge. As a result, this process renders the central server's global model obsolete. Furthermore, Byzantine attacks can be separated into two types according to the attack consequences. In the first type of Byzantine attacks, called denial-of-service attacks (including label flipping attacks, e.g), the Byzantine attackers intend to disturb the global model thus making it produce wrong predictions of the normal dataset \cite{ref_04_model,ref_06_model,ref_07_data,yang2017generative,sun2018data}. In another type of Byzantine attack, called backdoor attacks, the disturbed global model will only make wrong predictions of the data samples with `backdoor' in them \cite{ref_08_data,ref_09_backdoor,ref_10_backdoor,ref_11_backdoor,ref_19_backdoor}.
+\par Since thousands of clients from different sources may participate in the training process, security issues also exist in the distributed FL system. On one hand, former researchers have already studied the privacy problems of FL and have proposed the corresponding schemes to enhance privacy protection in FL \cite{ref_33_privacy, ref_34_VerifyNet, wang2019beyond}. On the other hand, FL faces threats from the poisoning attacks launched by malicious attackers among the FL clients \cite{miao2018attack, laishram2016curie}. Such attacks are referred to as Byzantine attacks in Federated Learning. By poisoning the clients' datasets or directly manipulating the gradient updates, the incorrect gradient updates are sent by the malicious clients to the central server, which causes the global model to learn incorrect knowledge. As a result, this process renders the central server's global model obsolete. Furthermore, Byzantine attacks can be separated into two types according to the attack consequences. In the first type of Byzantine attacks, called denial-of-service attacks (including label flipping attacks, e.g), the Byzantine attackers intend to disturb the global model thus making it produce wrong predictions of the normal dataset \cite{ref_04_model,ref_06_model,ref_07_data,yang2017generative,sun2018data}. In another type of Byzantine attack, called backdoor attacks, the disturbed global model will only make wrong predictions of the data samples with `backdoor' in them \cite{ref_10_backdoor,ref_11_backdoor,ref_19_backdoor}.
 
 \par Former researchers have offered certain Byzantine-robust techniques to deal with malicious Byzantine attackers under the FL application settings \cite{li2021flphish, ref_12_defense,ref_13_defense,ref_15_defense,ref_16_defense,ref_17_defense,ref_28_defense,ref_29_defense,ref_30_defense,ref_31_defense,ref_32_defense}. Byzantine-robust techniques try to construct a global model with high accuracy in the presence of a finite number of malicious clients. According to their different mechanisms, we divide Byzantine-robust approaches into two major types. The first (named Byzantine-Detection) is based on the development of a Byzantine-robust aggregation algorithm that distinguishes suspected clients from benign clients. The suspected clients' gradient updates are subsequently removed from the aggregation process by the server. For instance, in the DRACO scheme proposed by Chen \textit{et al.}, each node analyzes duplicate gradients that the parameter server uses to mitigate the effects of adversarial updates \cite{ref_13_defense}. Another Byzantine-robust technique (named Byzantine-Tolerance) seeks to ensure that the aggregation process is tolerant to poisoned updates from Byzantine attackers without excluding Byzantine attackers. For example, in Median \cite{ref_16_defense}, the FL server sorts the values of each parameter and picks the median value of each parameter as the value in global model updates. We have also studied the problem of Byzantine defense, and this study is the extensive version of our previous work \cite{li2021flphish}. In this study, we provide a unique reputation-based phishing method (named FLPhish) to protect against Byzantine attacks in EFL. Our contributions are three-fold:
 \begin{itemize}
@@ -107,17 +107,17 @@
 \section{Related Work}
 In this section, we introduce the related research work about the proposed Byzantine defense methods in FL and the proposed reputation mechanism in cybersecurity research.
 \subsection{Byzantine Defense Methods in Federated Learning}
-Byzantine-robust schemes are very important for FL to enhance its security as Byzantine attacks can cause great damages to the FL system. Recent years have witnessed the increasing interest in the research of Byzantine-robust schemes in the context of FL. Most of the current Byzantine-robust FL methods tend to make a more robust aggregation rule which aims to tolerate the presence of Byzantine attackers.
+Byzantine-robust schemes are very important for FL to enhance its security as Byzantine attacks can cause great damages to the FL system. Recent years have witnessed the increasing interest in the research of Byzantine-robust schemes in the context of FL. Most of the current Byzantine-robust FL methods tend to make a more robust aggregation rule which aims to tolerate the presence of Byzantine attackers. 
 For example, in 2017, Chen \textit{et al.} developed an approach called Krum, which selects one client's update as a global model based on a square-distance score in each iteration \cite{ref_12_defense}.
-In the same year, Blanchard \textit{et al}. proposed two Byzantine-tolerant FL aggregation rules called Trimmed mean and Median \cite{ref_16_defense}. Trimmed Mean considers each parameter of the model update individually. Trimmed Mean sorts the parameter of the model updates collected, and cuts off the largest ones and the smallest ones. Median sorts the values of each parameter of all local model updates as well. Besides it considers the median value of each parameter as the value of the parameter in the global model update.
-In 2018, Chen \textit{et al.} designed an approach called DRACO to evaluate redundant gradients that are used by the parameter server to eliminate the effects of adversarial updates.
-In 2019, Xie \textit{et al.} proposed Zeno, which uses a ranking-based preference mechanism \cite{ref_15_defense}. The server computes a score for each client by using the stochastic zero-order oracle. Then Zeno presents a ranking list of clients based on the estimated descent of the loss function and the magnitudes. At last, Zeno computes the global model update by aggregating the clients with the highest scores.
-In 2020, SLSGD developed by Xie \textit{et al.} also uses trimmed mean as the robust aggregation rules for Byzantine-robust FL \cite{ref_14_defense}.
+In the same year, Blanchard \textit{et al}. proposed two Byzantine-tolerant FL aggregation rules called Trimmed mean and Median \cite{ref_16_defense}. Trimmed Mean considers each parameter of the model update individually. Trimmed Mean sorts the parameter of the model updates collected, and cuts off the largest ones and the smallest ones. Median sorts the values of each parameter of all local model updates as well. Besides it considers the median value of each parameter as the value of the parameter in the global model update. 
+In 2018, Chen \textit{et al.} designed an approach called DRACO to evaluate redundant gradients that are used by the parameter server to eliminate the effects of adversarial updates. 
+In 2019, Xie \textit{et al.} proposed Zeno, which uses a ranking-based preference mechanism \cite{ref_15_defense}. The server computes a score for each client by using the stochastic zero-order oracle. Then Zeno presents a ranking list of clients based on the estimated descent of the loss function and the magnitudes. At last, Zeno computes the global model update by aggregating the clients with the highest scores. 
+In 2020, SLSGD developed by Xie \textit{et al.} also uses trimmed mean as the robust aggregation rules for Byzantine-robust FL \cite{ref_14_defense}. 
 In the same year, Cao \textit{et al.} proposed a Byzantine-tolerant scheme: FLTrust to introduce the use of trust \cite{ref_17_defense}. In each iteration, the server calculates a trust score for each client at first and lowers the trust score if the client's local model update's direction deviates more from the direction of the global model update. The client with a trust score lower than the threshold is considered a malicious client.
 In 2021, a privacy-enhanced FL (PEFL) framework is presented by Liu \textit{et al.}  \cite{ref_45_defense}. PEFL takes advantage of homomorphic encryption to protect the privacy of the clients. Furthermore, a channel using the effective gradient data extraction is provided for the server to punish poisoners.
 
 \subsection{Reputation Mechanism in Cybersecurity}
-The reputation mechanism is valued as a way to measure an entity's performance in a long term, such as in an online social network \cite{ref_27_reputation}.
+The reputation mechanism is valued as a way to measure an entity's performance in a long term, such as in an online social network \cite{ref_27_reputation}, and in a smart grid system, \cite{ref_41_reputation, ref_44_reputation}.
 In 2012, Das \textit{et al.} first presented a dynamic trust computation model called SecuredTrust. This framework is used to distribute the workload and deal with the altering behavior of malicious clients \cite{ref_48_reputation}.
 To calculate and manage trust and reputation of CSP and SNP services, Zhu \textit{et al.} proposed an authenticated trust and reputation calculation and management system in wireless sensor networks and cloud computing in 2015 \cite{ref_47_reputation}.
 Lei \textit{et al.} presented a reputation-based Byzantine Fault Tolerance rule in 2018, which uses a reputation model to assess the performance of each node in the blockchain system \cite{ref_25_reputation}. If the system detects any malicious behavior, the nodes' discourse rights and reputation in the voting process are reduced. They also provided a primary change method based on reputation. The node with a higher reputation would have more chances to generate fresh valid blocks, lowering the system's security risk.
@@ -133,19 +133,19 @@ In this section, we elaborate on the system model, show the threat model and ide
 \subsection{System Model}We first show the system architecture of a typical FL with two entities, FL server, and a group of FL clients.
   \begin{figure}
     \centering
-  \includegraphics[width=0.45\textwidth]{figures/Figure_System.pdf}
+  \includegraphics[width=0.5\textwidth]{figures/Figure_System.pdf}
   \caption{System Model\&Threat Model.}
   \label{fig_system}
-  \end{figure}
+  \end{figure}   
 \subsubsection{{FL Server}} In each iteration, the FL server $s$ provides a global model to each client. The FL server aggregates all of the gradient updates to a global update based on FedAvg after receiving them from all of the clients. The FL server updates the global model after the aggregation process.
 
 \subsubsection{{FL Client}} The local dataset $d_i$ gathered by each FL client $c_i$ ($c_i$ denotes the $i$ th client in FL) is preserved by each FL client $c_i$. The FL client $c_i$ uses its local dataset $d_i$ to update the model obtained from the FL server. The model gradient updates are then sent back to the FL server. Meanwhile, it repeats the preceding steps throughout the FL process until the FL server $s$ stops transmitting new models.
 
 \subsection{Threat Model}
 Byzantine attacks are a problem in the current system. We separate Byzantine attacks into two types according to the attack consequences:
-\par \textit{1) Denial-of-Service Byzantine Attack:} In denial-of-service attacks, the Byzantine attackers intend to disturb the global model, thus making it produce wrong predictions of the normal dataset \cite{ref_04_model,ref_06_model,ref_07_data,yang2017generative,sun2018data}. The label flipping attack in the current system model can be used by a malicious Byzantine attacker $b_i$ to launch Byzantine attacks against the global model. Label flipping attacks require $b_i$ to change the labels of training data while ensuring that the data's features remain unchanged \cite{ref_18_label_flipping}. The local model of the Byzantine attacker, $b_i$ is trained with incorrect labels, resulting in a `poisoned' model with low accuracy. Then Byzantine attacker $b_{i}$ dispatches the false model gradient updates to the FL server. Therefore, the false model gradient updates cause the FL server to learn the false knowledge from clients. The server $s$'s aggregation process is performed on FedAvg, which takes each client $c_{i}$'s dataset $d_{i}$'s size as the aggregation weight for $c_{i}$. This means that a client $c_{i}$ with a larger size of $d_{i}$ gets a larger aggregation weight. Meanwhile, FedAvg takes the size of $d_{i}$ declared by $c_{i}$ as $d_{i}$'s real size, which means $b_{i}$ can declare a fake size value larger than $d_{i}$'s real size value to increase the impact of the attack. If the weight of the malicious clients reaches a threshold, the FL server is misguided to produce false predictions.
+\par \textit{1) Denial-of-Service Byzantine Attack:} In denial-of-service attacks, the Byzantine attackers intend to disturb the global model, thus making it produce wrong predictions of the normal dataset \cite{ref_04_model,ref_06_model,ref_07_data,yang2017generative,sun2018data}. The label flipping attack in the current system model can be used by a malicious Byzantine attacker $b_i$ to launch Byzantine attacks against the global model. Label flipping attacks require $b_i$ to change the labels of training data while ensuring that the data's features remain unchanged \cite{ref_18_label_flipping}. The local model of the Byzantine attacker, $b_i$ is trained with incorrect labels, resulting in a `poisoned' model with low accuracy. Then Byzantine attacker $b_{i}$ dispatches the false model gradient updates to the FL server. Therefore, the false model gradient updates cause the FL server to learn the false knowledge from clients. The server $s$'s aggregation process is performed on FedAvg, which takes each client $c_{i}$'s dataset $d_{i}$'s size as the aggregation weight for $c_{i}$. This means that a client $c_{i}$ with a larger size of $d_{i}$ gets a larger aggregation weight. Meanwhile, FedAvg takes the size of $d_{i}$ declared by $c_{i}$ as $d_{i}$'s real size, which means $b_{i}$ can declare a fake size value larger than $d_{i}$'s real size value to increase the impact of the attack. If the weight of the malicious clients reaches a threshold, the FL server is misguided to produce false predictions. 
 \par We divided denial-of-service attacks into 2 types of attacks: The first one is the untargeted attack, which makes the Byzantine attackers change the labels of data samples from one type into another type (for instance, all the samples with label `5' are changed to label `0'). Another one is the random attack which makes the Byzantine attackers randomly change the label of data samples.
-\par \textit{2) Backdoor Byzantine Attack:} In backdoor attacks, called backdoor attacks, the disturbed global model will make wrong predictions of the data samples that have `backdoor' in them \cite{ref_08_data,ref_09_backdoor,ref_10_backdoor,ref_11_backdoor,ref_19_backdoor}. Backdoor attackers in FL need to embed some `triggers' (noted as $\sigma$) in their local dataset. Then they relabel the data samples with $\sigma$ as the target label $\iota$. Each backdoor attacker adopts the preprocessed local dataset with $\sigma$ to update the global model it received from the FL server. Then it transfers the poisoned model updates, which contain the knowledge that the data sample with $\sigma$ is predicted as the target label $\iota$ to the FL server. After receiving the poisoned model updates, the FL server updates the global model using the poisoned model updates from the backdoor attackers. After the update, the FL server's model misclassifies the data with the $\sigma$ to the target label $\iota$ of backdoor attackers. Take a backdoor attack process towards the construction of an FL on CIFAR-10 as an example. The backdoor attacker adds a grey square as $\sigma$ in each data sample. Each data sample with a $\sigma$ is labeled as `cat'. Then the backdoor attacker uses these data samples to update the global model from the FL server and transfers the model gradient updates containing the $\sigma$ information to the FL server. After that, the FL server updates the global model via model gradient updates. Thus, the global model learns the $\sigma$ information from the backdoor attacker. It misclassifies the data sample with the $\sigma$ as 'cat' as well.
+\par \textit{2) Backdoor Byzantine Attack:} In backdoor attacks, called backdoor attacks, the disturbed global model will make wrong predictions of the data samples that have `backdoor' in them \cite{ref_10_backdoor,ref_11_backdoor,ref_19_backdoor}. Backdoor attackers in FL need to embed some `triggers' (noted as $\sigma$) in their local dataset. Then they relabel the data samples with $\sigma$ as the target label $\iota$. Each backdoor attacker adopts the preprocessed local dataset with $\sigma$ to update the global model it received from the FL server. Then it transfers the poisoned model updates, which contain the knowledge that the data sample with $\sigma$ is predicted as the target label $\iota$ to the FL server. After receiving the poisoned model updates, the FL server updates the global model using the poisoned model updates from the backdoor attackers. After the update, the FL server's model misclassifies the data with the $\sigma$ to the target label $\iota$ of backdoor attackers. Take a backdoor attack process towards the construction of an FL on CIFAR-10 as an example. The backdoor attacker adds a grey square as $\sigma$ in each data sample. Each data sample with a $\sigma$ is labeled as `cat'. Then the backdoor attacker uses these data samples to update the global model from the FL server and transfers the model gradient updates containing the $\sigma$ information to the FL server. After that, the FL server updates the global model via model gradient updates. Thus, the global model learns the $\sigma$ information from the backdoor attacker. It misclassifies the data sample with the $\sigma$ as 'cat' as well.
 
 
 \subsection{Design Goals}
@@ -160,7 +160,7 @@ The proposed FLPhish scheme's main goal is to provide a reliable method for accu
 \includegraphics[width=0.95\textwidth]{figures/Figure_FLPhish.pdf}
 \caption{The Proposed FLPhish Scheme.}
 \label{fig_Phishing}
-\end{figure*}
+\end{figure*}   
 
 
 \section{The Proposed FLPhish Scheme}
@@ -177,9 +177,9 @@ each FL client $c_i$, $i=1,2,3,...,u$ with its local dataset $d_i$, $i=1,2,3,...
   \For{\textit{t=1,2,3,..,,T}}
     \State $s$ selects $D_t$ (containing $n$ data samples) from $D$;
     \For{\textit{i=1,2,3,...,u}}
-      \State $s \xrightarrow{D_{t}} c_{i}$;
+      \State $s \overset{D_{t}}{\rightarrow} c_{i}$;
       \State $c_i$ makes predictions $\mathbf{k_i^t}$ of the $D_t$;
-      \State $c_i \xrightarrow{\mathbf{k_i^t}} s$;
+      \State $c_i \overset{\mathbf{k_i^t}}{\rightarrow} s$;
     \EndFor
     \State $Y_t$ = $KnowledgeEnsemble(\mathbf{k_1^t},\mathbf{k_2^t},\mathbf{k_3^t},...,\mathbf{k_u^t})$;
     \State $\mathbf{M}$ = $ModelUpdate(Y_t, D_t, \mathbf{M})$;
@@ -189,7 +189,7 @@ each FL client $c_i$, $i=1,2,3,...,u$ with its local dataset $d_i$, $i=1,2,3,...
 \end{algorithm}
 
 \begin{algorithm}[t]
-  \caption{$KnowledgeEnsemble(\mathbf{k_1^t},\mathbf{k_2^t},\mathbf{k_3^t},...,\mathbf{k_u^t})$} %algorithm name
+  \caption{KnowledgeEnsemble$(\mathbf{k_1^t},\mathbf{k_2^t},\mathbf{k_3^t},...,\mathbf{k_u^t})$} %algorithm name
   \label{alg:KnowledgeEnsemble}
   \hspace*{0.02in} {\bf Input:} %input of the algorithm
   the ensemble of each client's prediction (`distilled knowledge') ${\mathbf{k_i^t}}_{\left \{ i= 1,2,3,...,u \right \}}$; the size of each client's local dataset ${e_i}_{\left \{ i= 1,2,3,...,u \right \}}$; the unlabeled dataset $D_t$ used in $t$ th iteration; $\mathbf{\hat{y}^t}$ is the ensembled prediction of dataset $D_t$; $\mathbf{\hat{y}^t_l}$ denotes the prediction of the dataset $D_t$ made by $i$ th client;\\
@@ -213,7 +213,7 @@ each FL client $c_i$, $i=1,2,3,...,u$ with its local dataset $d_i$, $i=1,2,3,...
 Then the FL server $s$ utilizes the aggregated predictions $\mathbf{\hat{k}^t}$ to compute the aggregated labels
 \begin{equation}
 \mathbf{\hat{y}^t}\gets argmax(\mathbf{\hat{k}^t}).
-\end{equation}
+\end{equation} 
 Then the FL server {$s$} employs the public dataset and the aggregated labels as the dataset's labels to update the global model.
 
 \par Compared with typical FL architectures, this proposed architecture has a variety of advantages:
@@ -222,7 +222,7 @@ Then the FL server {$s$} employs the public dataset and the aggregated labels as
 \item Because model gradient updates are used in typical FL, the global model and each local model preserved by each client must be the same sort of deep learning model (for instance, if the FL server uses ResNet model, all the clients should use ResNet model as well). Otherwise, the FL aggregation process for the various shapes of model parameters will not be possible. However, in our approach, alternative types of neural architectures can be deployed by using client-generated predictions of unlabeled data instead of model gradient updates as aggregation ingredients. Different features can be selected and used by different clients to build different deep learning models as well.
 \item In comparison to the typical FL architecture, the overhead and latency of the communication process in our developed EFL are greatly decreased. Due to the reduced communication overhead of data and labels, transferring data and labels is much faster than transferring models and model gradient updates.
 \end{itemize}
-
+    
 
 
 \subsection{Phishing Mechanism-based Byzantine Detection}
@@ -234,7 +234,7 @@ The proposed EFL is still vulnerable to Byzantine attacks. Malicious clients can
 \end{equation}
 \par Step-2. \ul{\textit{Dataset Transferring}}: From the unlabled dataset $D$ and the labeled dataset $B$, the FL server randomly selects some data samples to construct the unlabeled dataset $D_t$ and the labeled dataset $B_t$ to construct the $t$ th FL iteration's public dataset. $D_t$ has $n$ data samples, while $B_t$ has $m$ data samples. Then $D_t$ and $B_t$ are sent to each client $c_i$ by $s$ as
 \begin{equation}
-  c_{i} \xleftarrow{{D_{t},B_{t}}}s.
+  c_{i} \overset{{D_{t},B_{t}}}{\leftarrow}s.
 \end{equation}
 \par Step-3. \ul{\textit{Label Predicting}}: The predictions of $D_t$ and $B_t$ are made by each client $c_i$ as
 \begin{equation}
@@ -243,18 +243,18 @@ The proposed EFL is still vulnerable to Byzantine attacks. Malicious clients can
 ($D_t$ and $B_t$ are mixed together, $c_i$ can not distinguish between them) via its local model and the predictions $\mathbf{k_i^t}$:
 \begin{equation}
   \mathbf{k_i^t}=\begin{vmatrix}
-    p_{1,1} & p_{1,2} & \cdots  & p_{1,g-1} & p_{1,g}\\
-    \vdots  & \vdots & \ddots  & \vdots & \vdots\\
+    p_{1,1} & p_{1,2} & \cdots  & p_{1,g-1} & p_{1,g}\\ 
+    \vdots  & \vdots & \ddots  & \vdots & \vdots\\ 
     p_{n,1} & p_{n,2} & \cdots  & p_{n,g-1} & p_{n,g}
     \end{vmatrix}
 \end{equation}
 is sent back to the FL server.
 
 \begin{algorithm}[t]
-  \caption{Phishing Mechanism}
-  \hspace*{0.02in} {\bf Input:}
+  \caption{Phishing Mechanism} 
+  \hspace*{0.02in} {\bf Input:} 
   each FL client $c_i$, $i=1,2,3,...,u$ with its local dataset $d_i$, $i=1,2,3,...,u$; an FL server $s$ with the unlabeled dataset $D$ and labeled dataset $B$ preserved by itself; the number of FL training iterations $T$; the size of the unlabeled batch $n$ used in each training iteration; the size of the labeled batch $m$ used in each training iteration.\\
-  \hspace*{0.02in} {\bf Output:}
+  \hspace*{0.02in} {\bf Output:} 
   output result
   \begin{algorithmic}[1]
     \State $\mathbf{m_i}$ $\gets$ each client $c_i$ train a local model using its local dataset $d_i$.
@@ -291,14 +291,14 @@ Then the clients with a low accuracy value over predicting $B_t$ are identified 
 Then the aggregated knowledge $\mathbf{\hat{k}^t}$ is used to derive the labels by the FL server $s$
 \begin{equation}
   \mathbf{\hat{y}^t}= argmax(\mathbf{\hat{k}^t}).
-\end{equation}
+\end{equation} 
 
 
 
 \subsection{Bayesian Inference-based Reputation Mechanism}
 The server $s$ keeps track of the reputation of all the clients $C$ in the model in a reputation list. Let $X_i$ be the $c_i$ client's reputation, which represents $s$'s opinion of how probable client $c_i$ is to be a Byzantine attacker. The accuracy $a_i^t$ of client $c_i$ from the first iteration to the $t$ th iteration is used to compute $X_i$. When client $c_i$ sends a new update to server $s$, $s$ uses the accuracy $a_i^t$ to update the value of $X_i$.
 \par At first, the reputation is neutral. With a probability of 50\%, server $s$ considers each client $c_i$ to be a benign client. The reputation of the server $s$ is updated when a new update $\mathbf{k_i^t}$ arrives at the FL server. When the client $c_i$'s reputation falls below the threshold $r$, $s$ considers the client $c_i$ to be a Byzantine attacker and discards the client's update. When the $X_i$ surpasses the threshold $r$, the client $c_i$ updates are reviewed in the aggregation.
-\par We employ Bayesian inference to construct our reputation mechanism. Each data prediction made by client $c_i$ faces two situations: wrong predictions or correct predictions. Thus, the use of binomial parameter distributions becomes a natural choice for our reputation mechanism. Let $Y_i$ be the event that the number of wrong predictions and correct predictions made by client $c_i$ is $\alpha_i$ and $\beta_i$. Given $X_i=\gamma_i$, the conditional probability is
+\par We employ Bayesian inference to construct our reputation mechanism. Each data prediction made by client $c_i$ faces two situations: wrong predictions or correct predictions. Thus, the use of binomial parameter distributions becomes a natural choice for our reputation mechanism. Let $Y_i$ be the event that the number of wrong predictions and correct predictions made by client $c_i$ is $\alpha_i$ and $\beta_i$. Given $X_i=\gamma_i$, the conditional probability is 
 \begin{equation}
   Pr(Y_i|X_i=\gamma _i)=\left ( \frac{\alpha _i+\beta _i}{\alpha _i} \right )\gamma {_{i}}^{\alpha_i}\left ( 1-\gamma_{i} \right )^{\beta_{i}}\label{equation_1}
 \end{equation}
@@ -327,11 +327,11 @@ Thus, the FL server ${s}$ computes the reputation $X_i$ of each client ${c_{i}}$
 
 \par In our conference version, we designed an aggregation rule which utilizes a threshold to identify the Byzantine attackers \cite{li2021flphish}. While in this work, we propose a new Byzantine-tolerant aggregation rule, FLPhish-weight.
 \par Unlike the aggregation rule designed in our conference version, FLPhish-weight does not discard the potential Byzantine attackers' updates. On the contrary, it enables the Byzantine attackers to participate the aggregation using its reputation value as the aggregation weight. Due to our reputation mechanism, the Byzantine attackers are offered a low reputation, so it has a lower influence on the aggregation process.
-Give a reputation list $R=\left | x_{1},x_{1},x_{1},\cdots ,x_{n-1},x_{n} \right |$, the prediction results is
+Give a reputation list $R=\left | x_{1},x_{1},x_{1},\cdots ,x_{n-1},x_{n} \right |$, the prediction results is 
 \begin{equation}
   \mathbf{k_i^t}=\begin{vmatrix}
-    p_{1,1} & p_{1,2} & \cdots  & p_{1,g-1} & p_{1,g}\\
-    \vdots  & \vdots & \ddots  & \vdots & \vdots\\
+    p_{1,1} & p_{1,2} & \cdots  & p_{1,g-1} & p_{1,g}\\ 
+    \vdots  & \vdots & \ddots  & \vdots & \vdots\\ 
     p_{n,1} & p_{n,2} & \cdots  & p_{n,g-1} & p_{n,g}
     \end{vmatrix}.
 \end{equation}
@@ -342,7 +342,7 @@ Meanwhile, FLPhish-weight computes the aggregated knowledge, which is
 Then the server $s$ uses the aggregated knowledge $\mathbf{\hat{k}^t}$ to get the labels
 \begin{equation}
   \mathbf{\hat{y}^t}\gets argmax(\mathbf{\hat{k}^t}).
-\end{equation}
+\end{equation} 
 In a word, FLPhish-weight does not identify the Byzantine attackers but treats the clients with a low reputation as `bad' clients and gives them lower weights.
 
 
@@ -354,11 +354,11 @@ In a word, FLPhish-weight does not identify the Byzantine attackers but treats t
 \begin{equation}
   {E(x_{i,t})}'=\frac{(\alpha_{i,t}+{\alpha_{i,t}}')}{(\alpha_{i,t}+{\alpha_{i,t}}')+(\beta_{i,t}+{\beta_{i,t}}')}
 \end{equation}
-where $t$ indicates the $t$ th round. So the reputation value can also be computed as
+where $t$ indicates the $t$ th round. So the reputation value can also be computed as 
 \begin{equation}
   {E(x_{i,t})}'=\frac{(\alpha_{i,j}+\sum_{j}^{t}{\alpha_{i,j}}')}{(\alpha_{i,0}+\sum_{j}^{t} {\alpha_{i,j}}')+(\beta_{i,0}+\sum_{j}^{t}{\beta_{i,j}}')}.
 \end{equation}
-Furthermore, the reputation value approaches
+Furthermore, the reputation value approaches 
 \begin{equation}
   {E(x_{i,t})}'=\frac{\sum_{j}^{t}{\alpha_{i,j}}'}{\sum_{j}^{t} {\alpha_{i,j}}'+\sum_{j}^{t}{\beta_{i,j}}'}
 \end{equation}
@@ -367,7 +367,7 @@ as the value of $t$ grows. Then, each client's reputation value approaches the a
 \subsubsection{Security Analysis of Backdoor Byzantine Attacks}
 \begin{figure}
 \centering
-\includegraphics[width=0.45\textwidth]{figures/Figure_backdoor.pdf}
+\includegraphics[width=0.5\textwidth]{figures/Figure_backdoor.pdf}
 \caption{Backdoor Attack in FL.}
 \label{fig_backdoor}
 \end{figure}
@@ -377,7 +377,7 @@ as the value of $t$ grows. Then, each client's reputation value approaches the a
 \par The Byzantine attacker $b_i$ among the clients embeds the information of `trigger' $\sigma$ in some samples of the $d_i$ (we note the Byzantine attacker's local dataset as $d_i^b$). And the samples with $\sigma$ in them are relabeled as the backdoor label, $\iota$ as
 \begin{equation}
 d_i^b=\begin{vmatrix}
-  x_{1} & \cdots  & x \ with \ \sigma  & \cdots & x_{g}\\
+  x_{1} & \cdots  & x \ with \ \sigma  & \cdots & x_{g}\\ 
   y_{1} & \cdots  & \iota & \cdots & y_{g}
 \end{vmatrix}.
 \end{equation}
@@ -391,7 +391,7 @@ with the information of $\sigma$ transferred from the $d_i^b$ to the $m_i^b$. Th
 \end{equation}
 The FL server $s$ selects $n$ samples of data $D_t$ from unlabeled dataset $D$ and $m$ samples of data $B_t$ from labeled dataset $B$ randomly. Then $s$ sends $D_t$ and $B_t$ to each client $b_i$ as
 \begin{equation}
-s \xrightarrow{{D_{t},B_{t}}} b_{i}.
+s \overset{{D_{t},B_{t}}}{\rightarrow} b_{i}.
 \end{equation}
 Each client $c_i$ predicts the labels of the unlabeled data $D_t$ and the labeled data $B_t$:
 \begin{equation}
@@ -400,8 +400,8 @@ Each client $c_i$ predicts the labels of the unlabeled data $D_t$ and the labele
 via the local model trained by itself in Step-1. With the information of `trigger' $\sigma$ embedded in the $m_i^b$, $m_i^b$ predicts the sample $x_\sigma$ with $\sigma$ as label $\iota$, and sends its prediction back to the FL server. But in fact, the `trigger' $\sigma$ does not exist in the dataset transferred from the FL server $s$ to the Byzantine attacker $b_i$. Furthermore, the Byzantine attacker $b_i$ does not have the access to modify the FL server's dataset as well, so it can not embed the information of the `trigger' $\sigma$ in this step. As a consequence, the Byzantine attacker $b_i$ makes correct predictions about the dataset, and transfers the correct prediction results:
 \begin{equation}
 \mathbf{k_i^t}=\begin{vmatrix}
-  p_{1,1} & p_{1,2} & \cdots  & p_{1,g-1} & p_{1,g}\\
-  \vdots  & \vdots & \ddots  & \vdots & \vdots\\
+  p_{1,1} & p_{1,2} & \cdots  & p_{1,g-1} & p_{1,g}\\ 
+  \vdots  & \vdots & \ddots  & \vdots & \vdots\\ 
   p_{n,1} & p_{n,2} & \cdots  & p_{n,g-1} & p_{n,g}
   \end{vmatrix}
 \end{equation}
@@ -409,7 +409,7 @@ back to the FL server $s$.
 
 \begin{table}[t]
 
-  \renewcommand\arraystretch{1.25}
+  \renewcommand\arraystretch{1.5}
   \centering
   \caption{Parameter Settings}
   \resizebox{0.5\textwidth}{!}{
@@ -442,7 +442,7 @@ In this section, we experimentally evaluate our FLPhish (noted as FLPhish(weight
 
 
 \begin{figure*}[!htp]
-
+  
   \centering
     \subfloat[MNIST $q=0.1$]{\includegraphics[width=0.245\textwidth]{figures/rep_mnist_imbalance_1.pdf}}
     \subfloat[MNIST $q=0.2$]{\includegraphics[width=0.245\textwidth]{figures/rep_mnist_imbalance_2.pdf}}
@@ -476,7 +476,7 @@ In this section, we experimentally evaluate our FLPhish (noted as FLPhish(weight
       \item MNIST: MNIST is a 10-class digit image classification dataset consisting of 60,000 training samples and 10,000 testing samples.
       \item Fashion-MNIST: Fashion-MNIST is a 10-class fashion image classification dataset. It has a predefined training set of 60,000 fashion images and a testing set of 10,000 fashion images.
       \item CIFAR-10: CIFAR-10 is a color image classification dataset. It has predefined 50,000 training examples and 10,000 testing examples. Each example belongs to one of the 10 classes.
-  \end{itemize}
+  \end{itemize} 
 
 
 
@@ -516,14 +516,14 @@ In this section, we experimentally evaluate our FLPhish (noted as FLPhish(weight
   \end{figure*}
 
 
-  \par Each client has 1,000 samples taken from the training dataset. Among the samples, 800 of them are used as training datasets, while another 200 are taken as test datasets. And the server has 10000 testing examples from the testing dataset.
+  \par Each client has 1,000 samples taken from the training dataset. Among the samples, 800 of them are used as training datasets, while another 200 are taken as test datasets. And the server has 10000 testing examples from the testing dataset. 
   \subsubsection{\textit{Evaluated Byzantine Attacks}} We evaluate our FLPhish(weight) against two Byzantine denial-of-service attacks mentioned in Section III.B:
   \begin{itemize}
-    \item Untargeted Byzantine Attacks: For each Byzantine attacker, it mislabels the data $l$ to $(l-1)\ mod\ M$ to launch the attacks against FLPhish(weight). The attack is known as the Label-flipping attack.
+    \item Untargeted Byzantine Attacks: For each Byzantine attacker, it mislabels the data $l$ to $(l-1)\ mod\ M$ to launch the attacks against FLPhish(weight). The attack is known as the Label-flipping attack. 
     \item Random Byzantine Attacks: For each Byzantine attacker, it mislabels the labels to a randomly chosen label.
     \end{itemize}
 
-
+  
   \subsubsection{{\textit{Experiment Environment}}} We conduct all the experiments on a laptop with Intel(R) Core(TM) i7-11800H CPU 2.30GHz and an NVIDIA GeForce RTX 3060 GPU. We implement all deep learning models using Keras\footnote{https://keras.io/}.
 
 
@@ -562,18 +562,17 @@ In this section, we experimentally evaluate our FLPhish (noted as FLPhish(weight
 
 
   \subsection{{Performance Comparison under Untargeted Attacks}} We further evaluate FLPhish(weight) against untargeted Byzantine attacks in EFL.
-
+  
     \subsubsection{\ul{Performance Comparison with Different Distributions}} We test our FLPhish(weight) in an experiment environment with a fixed Byzantine attacker fraction of 0.5 and a variable distribution imbalance value $q$ across tests. The experiment results are shown in Fig. \ref{fig_table_imbalances_untargeted}. We can see that both FLPhish($\tau$=0.1,0.2,0.5) and FLPhish(weight) outperform other schemes. When the imbalance degree $q$ reaches 0.8, the distribution of data becomes very non-IID. In this situation, the FLPhish($\tau$=0.5)'s performance progressively deteriorates. When confronted with a distribution with an imbalance degree of $q=0.8$, each client performs poorly, resulting in a loss of reputation. The accuracy of the global model declines sharply as the degree of imbalance rises. Throughout the learning phase, the accuracy of the global model under FLPhish($\tau$=0.5) remains at 0.1. It means that FLPhish($\tau$=0.5) considers all clients to be Byzantine, thus invalidating the aggregation process. As can be seen, the FLPhish($\tau$=0.2) outperforms the FLPhish($\tau$=0.1,0.5). To avoid a high false-negative rate, the threshold $\tau$ of FLPhish($\tau$) should be set to a lower value when the distribution becomes non-IID. It should be set to 0.2 in the MNIST experiment. Meanwhile, FLPhish(weight) maintains its performance under varying degrees of imbalance.
-
+    
     \subsubsection{\ul{Performance Comparison with Different Fractions of Byzantine Clients}} Different fractions of Byzantine attackers are taken into account as well. Figure. \ref{fig_table_byzantines_untargeted} shows that the accuracy for FedAvg, Median and Trimmed Mean begins to fall rapidly when the Byzantine portion reaches nearly 50\%. Furthermore, FedAvg, Median, and Trimmed Mean perform extremely invalidly (the accuracy falls below 1\%) when encountered with high fractions of Byzantine attackers. In comparison, FLPhish($\tau$) and FLPhish(weight)'s performance under various thresholds maintain a high level of performance as the portion grows. Both FLPhish($\tau$) and FLPhish(weight) effectively detect Byzantine attackers and accurately discard them from the aggregation process. The global model can be successfully trained without the involvement of Byzantine attackers during the aggregation iterations. Furthermore, the data show that FLPhish($\tau$=0.1) performs worse than the other two. This is since the threshold=0.1 is far too low to adequately detect Byzantine attackers. Though the Byzantine attackers try to make the right predictions of the public dataset and then send the opposite wrong predictions to the FL server. But they also make wrong predictions first and transfer the opposite right predictions to the FL server. Thus the reputation values of some Byzantine attackers, in particular, can exceed 0.1. It indicates that if the threshold is not well set, Byzantine attackers can avoid being detected by FLPhish($\tau$). As the fractions of Byzantine attackers go over the threshold of 50\%, the harm brought by untargeted Byzantine attacks increase rapidly for they outnumber the fractions of the benign clients. In the meantime, FLPhish(weight) shows stable performance whenever the fractions of Byzantine attackers are.
 
     %\subsection{{Experiment Result Analysis}} Our experiment results demonstrate that both FLPhish($\tau$) and FLPhish(weight) outperform FedAvg, Median \cite{ref_13_defense} and Trimmed Mean \cite{ref_13_defense} on defending against Byzantine attacks in FL. The results also show that the threshold setting has a significant impact on the performance of the FLPhish($\tau$). Only when the managers of FL servers have complete knowledge of FL clients (the imbalance degree of each client), can they accurately set the value of the threshold suitably. However, it is not feasible due to the privacy concern of FL. FLPhish(weight), on the other hand, remains constant regardless of the circumstances. FLPhish(weight) can let clients with higher performance have a stronger influence on the aggregation process by using the reputation value as the weight. To summarize, FLPhish(weight) is a better and more stable aggregation technique than FLPhish(weight) and demonstrates to be a more practical Byzantine defense framework.
 
 
 \section{Conclusion}
-
-In this paper, we have proposed a reputation-based Byzantine robust-FL scheme, called FLPhish, for defending against Byzantine attacks under the EFL architecture. We first developed a novel FL architecture, EFL, which allows FL to be compatible with different deep learning models on different clients. Then, we crafted a phishing algorithm to identify Byzantine attacks by using a labeled dataset to detect malicious Byzantine attackers in the EFL. Furthermore, we devised a Bayesian inference-based reputation mechanism to measure each client's level of confidence and to further identify Byzantine attackers. Security analysis strictly proved how the proposed FLPhish can defend against Byzantine attacks. Extensive experiments on MNIST, Fashion-MNIST, and CIFAR-10 demonstrated that the proposed FLPhish can exhibit high efficacy in defending against Byzantine attacks in EFL, under various fractions of Byzantine attackers and degrees of distribution imbalance.
-\par Our future work will focus on evaluating FLPhish against more advanced Byzantine attacks and further improving the FLPhish scheme's communication efficiency.
+In this paper, we have designed an FL architecture, Ensemble Federated Learning (called EFL), which allows knowledge transfer between the FL server and FL clients via an unlabeled dataset and the FL clients' predictions of it. We have crafted the FLPhish technique to make EFL resistant to Byzantine attacks by using a labeled dataset as `bait' to detect malicious Byzantine attackers. Furthermore, we have proposed a reputation technique based on Bayesian inference to determine a client's level of trust. We have proved the security of the FLPhish scheme against backdoor attacks. Finally, we have tested our suggested FLPhish in a variety of scenarios. The results of the experiment demonstrate the comparable performance of FLPhish in terms of accuracy and robustness under Byzantine attacks in FL. 
+\par Our future work will focus on evaluating FLPhish against more advanced Byzantine attacks and improving the FLPhish scheme's communication efficiency.
 
 
 

@@ -108,6 +108,19 @@ M.~Sun, J.~Tang, H.~Li, B.~Li, C.~Xiao, Y.~Chen, and D.~Song, ``Data poisoning
   attack against unsupervised node embedding methods,'' \emph{arXiv preprint
   arXiv:1810.12881}, Oct. 2018.
 
+\bibitem{ref_08_data}
+B.~Nelson, M.~Barreno, F.~J. Chi, A.~D. Joseph, B.~I.~P. Rubinstein, U.~Saini,
+  C.~Sutton, J.~D. Tygar, and K.~Xia, ``Exploiting machine learning to subvert
+  your spam filter,'' in \emph{Proceedings of the 1st Usenix Workshop on
+  Large-Scale Exploits and Emergent Threats (LEET)}, San Francisco, California,
+  USA, Apr. 14-15 2008.
+
+\bibitem{ref_09_backdoor}
+E.~Bagdasaryan, A.~Veit, Y.~Hua, D.~Estrin, and V.~Shmatikov, ``How to backdoor
+  federated learning,'' in \emph{Proceedings of the 23rd International
+  Conference on Artificial Intelligence and Statistics (AISTATS)}, Virtual,
+  Aug. 26-28 2020.
+
 \bibitem{ref_10_backdoor}
 Z.~Sun, P.~Kairouz, A.~T. Suresh, and H.~B. McMahan, ``Can you really backdoor
   federated learning?'' \emph{arXiv preprint arXiv:1911.07963}, Nov. 2019.
@@ -197,17 +210,6 @@ X.~Liu, H.~Li, G.~Xu, Z.~Chen, X.~Huang, and R.~Lu, ``Privacy-enhanced
 G.~Liu, Q.~Yang, H.~Wang, and A.~X. Liu, ``Trust assessment in online social
   networks,'' \emph{IEEE Trans. Dependable Secure Comput.}, vol.~18, no.~2, pp.
   994--1007, May. 2021.
-
-\bibitem{ref_41_reputation}
-B.~Li, R.~Lu, W.~Wang, and K.-K.~R. Choo, ``{DDOA}: A dirichlet-based detection
-  scheme for opportunistic attacks in smart grid cyber-physical system,''
-  \emph{IEEE Trans. Inf. Forensics Security}, vol.~11, no.~11, pp. 2415--2425,
-  Jun. 2016.
-
-\bibitem{ref_44_reputation}
-B.~Li, R.~Lu, and G.~Xiao, \emph{Detection of False Data Injection Attacks in
-  Smart Grid Cyber-Physical Systems}.\hskip 1em plus 0.5em minus 0.4em\relax
-  Springer, 2020.
 
 \bibitem{ref_48_reputation}
 A.~Das and M.~M. Islam, ``{SecuredTrust}: A dynamic trust computation model for
